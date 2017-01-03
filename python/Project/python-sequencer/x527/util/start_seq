@@ -1,0 +1,7 @@
+site_count=${1}
+
+for ((i=0; i < $site_count; i++));
+    do python ${X527_FCT}/x527/sequencer/sequencer.py -s $i &
+done;
+
+

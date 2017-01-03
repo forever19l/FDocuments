@@ -1,0 +1,710 @@
+2016-03-26 09:38:41 [scrapy] INFO: Scrapy 1.0.5 started (bot: lagou_spider)
+2016-03-26 09:38:41 [scrapy] INFO: Optional features available: ssl, http11
+2016-03-26 09:38:41 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'lagou_spider.spiders', 'SPIDER_MODULES': ['lagou_spider.spiders'], 'BOT_NAME': 'lagou_spider', 'COOKIES_ENABLED': False, 'USER_AGENT': '', 'SCHEDULER': 'lagou_spider.scrapy_redis.scheduler.Scheduler', 'LOG_FILE': 'logs/scrapy.log', 'DOWNLOAD_DELAY': 1}
+2016-03-26 09:38:41 [scrapy] INFO: Enabled extensions: CloseSpider, TelnetConsole, LogStats, CoreStats, SpiderState, AutoThrottle
+2016-03-26 09:38:41 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/scrapy_redis/dupefilter.py:7: ScrapyDeprecationWarning: Module `scrapy.dupefilter` is deprecated, use `scrapy.dupefilters` instead
+  from scrapy.dupefilter import BaseDupeFilter
+
+2016-03-26 09:38:41 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/utils/deprecate.py:155: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2016-03-26 09:38:41 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/contrib/downloadmiddleware/rotate_useragent.py:5: ScrapyDeprecationWarning: Module `scrapy.contrib.downloadermiddleware.useragent` is deprecated, use `scrapy.downloadermiddlewares.useragent` instead
+  from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+
+2016-03-26 09:38:41 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2016-03-26 09:38:41 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2016-03-26 09:38:41 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/pipelines/__init__.py:21: ScrapyDeprecationWarning: ITEM_PIPELINES defined as a list or a set is deprecated, switch to a dict
+  category=ScrapyDeprecationWarning, stacklevel=1)
+
+2016-03-26 09:38:41 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/bookfile.py:6: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2016-03-26 09:38:41 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/file.py:18: ScrapyDeprecationWarning: Module `scrapy.contrib.pipeline` is deprecated, use `scrapy.pipelines` instead
+  from scrapy.contrib.pipeline.images import MediaPipeline
+
+2016-03-26 09:38:41 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/file.py:18: ScrapyDeprecationWarning: Module `scrapy.contrib.pipeline.images` is deprecated, use `scrapy.pipelines.images` instead
+  from scrapy.contrib.pipeline.images import MediaPipeline
+
+2016-03-26 09:38:41 [twisted] ERROR: Unhandled error in Deferred:
+2016-03-26 09:38:41 [twisted] ERROR: Unhandled Error
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/scrapy/cmdline.py", line 150, in _run_command
+    cmd.run(args, opts)
+  File "/Library/Python/2.7/site-packages/scrapy/commands/crawl.py", line 57, in run
+    self.crawler_process.crawl(spname, **opts.spargs)
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 153, in crawl
+    d = crawler.crawl(*args, **kwargs)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1237, in unwindGenerator
+    return _inlineCallbacks(None, gen, Deferred())
+--- <exception caught here> ---
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1099, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 71, in crawl
+    self.engine = self._create_engine()
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 83, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "/Library/Python/2.7/site-packages/scrapy/core/engine.py", line 69, in __init__
+    self.scraper = Scraper(crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/core/scraper.py", line 70, in __init__
+    self.itemproc = itemproc_cls.from_crawler(crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/middleware.py", line 56, in from_crawler
+    return cls.from_settings(crawler.settings, crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/middleware.py", line 32, in from_settings
+    mwcls = load_object(clspath)
+  File "/Library/Python/2.7/site-packages/scrapy/utils/misc.py", line 44, in load_object
+    mod = import_module(module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/drop_none_download.py", line 6, in <module>
+    from lagou_spider.pipelines.bookfile import NofilesDrop
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/bookfile.py", line 14, in <module>
+    from lagou_spider.pipelines.file import FilePipeline,FSFilesStore,FileException
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/file.py", line 18, in <module>
+    from scrapy.contrib.pipeline.images import MediaPipeline
+  File "/Library/Python/2.7/site-packages/scrapy/contrib/pipeline/images.py", line 7, in <module>
+    from scrapy.pipelines.images import *
+  File "/Library/Python/2.7/site-packages/scrapy/pipelines/images.py", line 15, in <module>
+    from PIL import Image
+exceptions.ImportError: No module named PIL
+
+2016-03-26 09:41:28 [scrapy] INFO: Scrapy 1.0.5 started (bot: lagou_spider)
+2016-03-26 09:41:28 [scrapy] INFO: Optional features available: ssl, http11
+2016-03-26 09:41:28 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'lagou_spider.spiders', 'SPIDER_MODULES': ['lagou_spider.spiders'], 'BOT_NAME': 'lagou_spider', 'COOKIES_ENABLED': False, 'USER_AGENT': '', 'SCHEDULER': 'lagou_spider.scrapy_redis.scheduler.Scheduler', 'LOG_FILE': 'logs/scrapy.log', 'DOWNLOAD_DELAY': 1}
+2016-03-26 09:41:28 [scrapy] INFO: Enabled extensions: CloseSpider, TelnetConsole, LogStats, CoreStats, SpiderState, AutoThrottle
+2016-03-26 09:41:28 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/scrapy_redis/dupefilter.py:7: ScrapyDeprecationWarning: Module `scrapy.dupefilter` is deprecated, use `scrapy.dupefilters` instead
+  from scrapy.dupefilter import BaseDupeFilter
+
+2016-03-26 09:41:28 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/utils/deprecate.py:155: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2016-03-26 09:41:28 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/contrib/downloadmiddleware/rotate_useragent.py:5: ScrapyDeprecationWarning: Module `scrapy.contrib.downloadermiddleware.useragent` is deprecated, use `scrapy.downloadermiddlewares.useragent` instead
+  from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+
+2016-03-26 09:41:28 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2016-03-26 09:41:28 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2016-03-26 09:41:28 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/pipelines/__init__.py:21: ScrapyDeprecationWarning: ITEM_PIPELINES defined as a list or a set is deprecated, switch to a dict
+  category=ScrapyDeprecationWarning, stacklevel=1)
+
+2016-03-26 09:41:28 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/bookfile.py:6: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2016-03-26 09:41:28 [twisted] ERROR: Unhandled error in Deferred:
+2016-03-26 09:41:28 [twisted] ERROR: Unhandled Error
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/scrapy/cmdline.py", line 150, in _run_command
+    cmd.run(args, opts)
+  File "/Library/Python/2.7/site-packages/scrapy/commands/crawl.py", line 57, in run
+    self.crawler_process.crawl(spname, **opts.spargs)
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 153, in crawl
+    d = crawler.crawl(*args, **kwargs)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1237, in unwindGenerator
+    return _inlineCallbacks(None, gen, Deferred())
+--- <exception caught here> ---
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1099, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 71, in crawl
+    self.engine = self._create_engine()
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 83, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "/Library/Python/2.7/site-packages/scrapy/core/engine.py", line 69, in __init__
+    self.scraper = Scraper(crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/core/scraper.py", line 70, in __init__
+    self.itemproc = itemproc_cls.from_crawler(crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/middleware.py", line 56, in from_crawler
+    return cls.from_settings(crawler.settings, crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/middleware.py", line 32, in from_settings
+    mwcls = load_object(clspath)
+  File "/Library/Python/2.7/site-packages/scrapy/utils/misc.py", line 44, in load_object
+    mod = import_module(module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/drop_none_download.py", line 6, in <module>
+    from lagou_spider.pipelines.bookfile import NofilesDrop
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/bookfile.py", line 14, in <module>
+    from lagou_spider.pipelines.file import FilePipeline,FSFilesStore,FileException
+exceptions.ImportError: cannot import name FilePipeline
+
+2016-03-26 09:43:38 [scrapy] INFO: Scrapy 1.0.5 started (bot: lagou_spider)
+2016-03-26 09:43:38 [scrapy] INFO: Optional features available: ssl, http11
+2016-03-26 09:43:38 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'lagou_spider.spiders', 'SPIDER_MODULES': ['lagou_spider.spiders'], 'BOT_NAME': 'lagou_spider', 'COOKIES_ENABLED': False, 'USER_AGENT': '', 'SCHEDULER': 'lagou_spider.scrapy_redis.scheduler.Scheduler', 'LOG_FILE': 'logs/scrapy.log', 'DOWNLOAD_DELAY': 1}
+2016-03-26 09:43:38 [scrapy] INFO: Enabled extensions: CloseSpider, TelnetConsole, LogStats, CoreStats, SpiderState, AutoThrottle
+2016-03-26 09:43:38 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/scrapy_redis/dupefilter.py:7: ScrapyDeprecationWarning: Module `scrapy.dupefilter` is deprecated, use `scrapy.dupefilters` instead
+  from scrapy.dupefilter import BaseDupeFilter
+
+2016-03-26 09:43:38 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/utils/deprecate.py:155: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2016-03-26 09:43:38 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/contrib/downloadmiddleware/rotate_useragent.py:5: ScrapyDeprecationWarning: Module `scrapy.contrib.downloadermiddleware.useragent` is deprecated, use `scrapy.downloadermiddlewares.useragent` instead
+  from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+
+2016-03-26 09:43:38 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2016-03-26 09:43:38 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2016-03-26 09:43:38 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/pipelines/__init__.py:21: ScrapyDeprecationWarning: ITEM_PIPELINES defined as a list or a set is deprecated, switch to a dict
+  category=ScrapyDeprecationWarning, stacklevel=1)
+
+2016-03-26 09:43:38 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/bookfile.py:6: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2016-03-26 09:43:38 [twisted] ERROR: Unhandled error in Deferred:
+2016-03-26 09:43:38 [twisted] ERROR: Unhandled Error
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/scrapy/cmdline.py", line 150, in _run_command
+    cmd.run(args, opts)
+  File "/Library/Python/2.7/site-packages/scrapy/commands/crawl.py", line 57, in run
+    self.crawler_process.crawl(spname, **opts.spargs)
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 153, in crawl
+    d = crawler.crawl(*args, **kwargs)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1237, in unwindGenerator
+    return _inlineCallbacks(None, gen, Deferred())
+--- <exception caught here> ---
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1099, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 71, in crawl
+    self.engine = self._create_engine()
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 83, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "/Library/Python/2.7/site-packages/scrapy/core/engine.py", line 69, in __init__
+    self.scraper = Scraper(crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/core/scraper.py", line 70, in __init__
+    self.itemproc = itemproc_cls.from_crawler(crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/middleware.py", line 56, in from_crawler
+    return cls.from_settings(crawler.settings, crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/middleware.py", line 32, in from_settings
+    mwcls = load_object(clspath)
+  File "/Library/Python/2.7/site-packages/scrapy/utils/misc.py", line 44, in load_object
+    mod = import_module(module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/drop_none_download.py", line 6, in <module>
+    from lagou_spider.pipelines.bookfile import NofilesDrop
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/bookfile.py", line 35, in <module>
+    class lagouBookFile(FilePipeline):
+exceptions.NameError: name 'FilePipeline' is not defined
+
+2016-03-26 09:44:31 [scrapy] INFO: Scrapy 1.0.5 started (bot: lagou_spider)
+2016-03-26 09:44:31 [scrapy] INFO: Optional features available: ssl, http11
+2016-03-26 09:44:31 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'lagou_spider.spiders', 'SPIDER_MODULES': ['lagou_spider.spiders'], 'BOT_NAME': 'lagou_spider', 'COOKIES_ENABLED': False, 'USER_AGENT': '', 'SCHEDULER': 'lagou_spider.scrapy_redis.scheduler.Scheduler', 'LOG_FILE': 'logs/scrapy.log', 'DOWNLOAD_DELAY': 1}
+2016-03-26 09:44:31 [scrapy] INFO: Enabled extensions: CloseSpider, TelnetConsole, LogStats, CoreStats, SpiderState, AutoThrottle
+2016-03-26 09:44:31 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/scrapy_redis/dupefilter.py:7: ScrapyDeprecationWarning: Module `scrapy.dupefilter` is deprecated, use `scrapy.dupefilters` instead
+  from scrapy.dupefilter import BaseDupeFilter
+
+2016-03-26 09:44:31 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/utils/deprecate.py:155: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2016-03-26 09:44:31 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/contrib/downloadmiddleware/rotate_useragent.py:5: ScrapyDeprecationWarning: Module `scrapy.contrib.downloadermiddleware.useragent` is deprecated, use `scrapy.downloadermiddlewares.useragent` instead
+  from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+
+2016-03-26 09:44:31 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2016-03-26 09:44:31 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2016-03-26 09:44:31 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/pipelines/__init__.py:21: ScrapyDeprecationWarning: ITEM_PIPELINES defined as a list or a set is deprecated, switch to a dict
+  category=ScrapyDeprecationWarning, stacklevel=1)
+
+2016-03-26 09:44:31 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/bookfile.py:6: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2016-03-26 09:44:31 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/file.py:18: ScrapyDeprecationWarning: Module `scrapy.contrib.pipeline` is deprecated, use `scrapy.pipelines` instead
+  from scrapy.contrib.pipeline.images import MediaPipeline
+
+2016-03-26 09:44:31 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/file.py:18: ScrapyDeprecationWarning: Module `scrapy.contrib.pipeline.images` is deprecated, use `scrapy.pipelines.images` instead
+  from scrapy.contrib.pipeline.images import MediaPipeline
+
+2016-03-26 09:44:31 [twisted] ERROR: Unhandled error in Deferred:
+2016-03-26 09:44:31 [twisted] ERROR: Unhandled Error
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/scrapy/cmdline.py", line 150, in _run_command
+    cmd.run(args, opts)
+  File "/Library/Python/2.7/site-packages/scrapy/commands/crawl.py", line 57, in run
+    self.crawler_process.crawl(spname, **opts.spargs)
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 153, in crawl
+    d = crawler.crawl(*args, **kwargs)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1237, in unwindGenerator
+    return _inlineCallbacks(None, gen, Deferred())
+--- <exception caught here> ---
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1099, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 71, in crawl
+    self.engine = self._create_engine()
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 83, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "/Library/Python/2.7/site-packages/scrapy/core/engine.py", line 69, in __init__
+    self.scraper = Scraper(crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/core/scraper.py", line 70, in __init__
+    self.itemproc = itemproc_cls.from_crawler(crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/middleware.py", line 56, in from_crawler
+    return cls.from_settings(crawler.settings, crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/middleware.py", line 32, in from_settings
+    mwcls = load_object(clspath)
+  File "/Library/Python/2.7/site-packages/scrapy/utils/misc.py", line 44, in load_object
+    mod = import_module(module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/drop_none_download.py", line 6, in <module>
+    from lagou_spider.pipelines.bookfile import NofilesDrop
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/bookfile.py", line 14, in <module>
+    from lagou_spider.pipelines.file import FilePipeline,FSFilesStore,FileException
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/file.py", line 18, in <module>
+    from scrapy.contrib.pipeline.images import MediaPipeline
+  File "/Library/Python/2.7/site-packages/scrapy/contrib/pipeline/images.py", line 7, in <module>
+    from scrapy.pipelines.images import *
+  File "/Library/Python/2.7/site-packages/scrapy/pipelines/images.py", line 15, in <module>
+    from PIL import Image
+exceptions.ImportError: No module named PIL
+
+2016-03-26 11:04:41 [scrapy] INFO: Scrapy 1.0.5 started (bot: lagou_spider)
+2016-03-26 11:04:41 [scrapy] INFO: Optional features available: ssl, http11
+2016-03-26 11:04:41 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'lagou_spider.spiders', 'SPIDER_MODULES': ['lagou_spider.spiders'], 'BOT_NAME': 'lagou_spider', 'COOKIES_ENABLED': False, 'USER_AGENT': '', 'SCHEDULER': 'lagou_spider.scrapy_redis.scheduler.Scheduler', 'LOG_FILE': 'logs/scrapy.log', 'DOWNLOAD_DELAY': 1}
+2016-03-26 11:04:41 [scrapy] INFO: Enabled extensions: CloseSpider, TelnetConsole, LogStats, CoreStats, SpiderState, AutoThrottle
+2016-03-26 11:04:41 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/scrapy_redis/dupefilter.py:7: ScrapyDeprecationWarning: Module `scrapy.dupefilter` is deprecated, use `scrapy.dupefilters` instead
+  from scrapy.dupefilter import BaseDupeFilter
+
+2016-03-26 11:04:41 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/utils/deprecate.py:155: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2016-03-26 11:04:41 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/contrib/downloadmiddleware/rotate_useragent.py:5: ScrapyDeprecationWarning: Module `scrapy.contrib.downloadermiddleware.useragent` is deprecated, use `scrapy.downloadermiddlewares.useragent` instead
+  from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+
+2016-03-26 11:04:41 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2016-03-26 11:04:41 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2016-03-26 11:04:41 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/pipelines/__init__.py:21: ScrapyDeprecationWarning: ITEM_PIPELINES defined as a list or a set is deprecated, switch to a dict
+  category=ScrapyDeprecationWarning, stacklevel=1)
+
+2016-03-26 11:04:41 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/bookfile.py:6: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2016-03-26 11:04:41 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/file.py:18: ScrapyDeprecationWarning: Module `scrapy.contrib.pipeline` is deprecated, use `scrapy.pipelines` instead
+  from scrapy.contrib.pipeline.images import MediaPipeline
+
+2016-03-26 11:04:41 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/file.py:18: ScrapyDeprecationWarning: Module `scrapy.contrib.pipeline.images` is deprecated, use `scrapy.pipelines.images` instead
+  from scrapy.contrib.pipeline.images import MediaPipeline
+
+2016-03-26 11:04:41 [twisted] ERROR: Unhandled error in Deferred:
+2016-03-26 11:04:41 [twisted] ERROR: Unhandled Error
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/scrapy/cmdline.py", line 150, in _run_command
+    cmd.run(args, opts)
+  File "/Library/Python/2.7/site-packages/scrapy/commands/crawl.py", line 57, in run
+    self.crawler_process.crawl(spname, **opts.spargs)
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 153, in crawl
+    d = crawler.crawl(*args, **kwargs)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1237, in unwindGenerator
+    return _inlineCallbacks(None, gen, Deferred())
+--- <exception caught here> ---
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1099, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 71, in crawl
+    self.engine = self._create_engine()
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 83, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "/Library/Python/2.7/site-packages/scrapy/core/engine.py", line 69, in __init__
+    self.scraper = Scraper(crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/core/scraper.py", line 70, in __init__
+    self.itemproc = itemproc_cls.from_crawler(crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/middleware.py", line 56, in from_crawler
+    return cls.from_settings(crawler.settings, crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/middleware.py", line 32, in from_settings
+    mwcls = load_object(clspath)
+  File "/Library/Python/2.7/site-packages/scrapy/utils/misc.py", line 44, in load_object
+    mod = import_module(module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/drop_none_download.py", line 6, in <module>
+    from lagou_spider.pipelines.bookfile import NofilesDrop
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/bookfile.py", line 14, in <module>
+    from lagou_spider.pipelines.file import FilePipeline,FSFilesStore,FileException
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/file.py", line 18, in <module>
+    from scrapy.contrib.pipeline.images import MediaPipeline
+exceptions.ImportError: cannot import name MediaPipeline
+
+2016-03-26 11:25:05 [scrapy] INFO: Scrapy 1.0.5 started (bot: lagou_spider)
+2016-03-26 11:25:05 [scrapy] INFO: Optional features available: ssl, http11
+2016-03-26 11:25:05 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'lagou_spider.spiders', 'SPIDER_MODULES': ['lagou_spider.spiders'], 'BOT_NAME': 'lagou_spider', 'COOKIES_ENABLED': False, 'USER_AGENT': '', 'SCHEDULER': 'lagou_spider.scrapy_redis.scheduler.Scheduler', 'LOG_FILE': 'logs/scrapy.log', 'DOWNLOAD_DELAY': 1}
+2016-03-26 11:25:05 [scrapy] INFO: Enabled extensions: CloseSpider, TelnetConsole, LogStats, CoreStats, SpiderState, AutoThrottle
+2016-03-26 11:25:05 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/scrapy_redis/dupefilter.py:7: ScrapyDeprecationWarning: Module `scrapy.dupefilter` is deprecated, use `scrapy.dupefilters` instead
+  from scrapy.dupefilter import BaseDupeFilter
+
+2016-03-26 11:25:05 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/utils/deprecate.py:155: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2016-03-26 11:25:05 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/contrib/downloadmiddleware/rotate_useragent.py:5: ScrapyDeprecationWarning: Module `scrapy.contrib.downloadermiddleware.useragent` is deprecated, use `scrapy.downloadermiddlewares.useragent` instead
+  from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+
+2016-03-26 11:25:05 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2016-03-26 11:25:05 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2016-03-26 11:25:05 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/pipelines/__init__.py:21: ScrapyDeprecationWarning: ITEM_PIPELINES defined as a list or a set is deprecated, switch to a dict
+  category=ScrapyDeprecationWarning, stacklevel=1)
+
+2016-03-26 11:25:05 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/bookfile.py:6: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2016-03-26 11:25:05 [twisted] ERROR: Unhandled error in Deferred:
+2016-03-26 11:25:05 [twisted] ERROR: Unhandled Error
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/scrapy/cmdline.py", line 150, in _run_command
+    cmd.run(args, opts)
+  File "/Library/Python/2.7/site-packages/scrapy/commands/crawl.py", line 57, in run
+    self.crawler_process.crawl(spname, **opts.spargs)
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 153, in crawl
+    d = crawler.crawl(*args, **kwargs)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1237, in unwindGenerator
+    return _inlineCallbacks(None, gen, Deferred())
+--- <exception caught here> ---
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1099, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 71, in crawl
+    self.engine = self._create_engine()
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 83, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "/Library/Python/2.7/site-packages/scrapy/core/engine.py", line 69, in __init__
+    self.scraper = Scraper(crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/core/scraper.py", line 70, in __init__
+    self.itemproc = itemproc_cls.from_crawler(crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/middleware.py", line 56, in from_crawler
+    return cls.from_settings(crawler.settings, crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/middleware.py", line 32, in from_settings
+    mwcls = load_object(clspath)
+  File "/Library/Python/2.7/site-packages/scrapy/utils/misc.py", line 44, in load_object
+    mod = import_module(module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/drop_none_download.py", line 6, in <module>
+    from lagou_spider.pipelines.bookfile import NofilesDrop
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/bookfile.py", line 14, in <module>
+    from lagou_spider.pipelines.file import FilePipeline,FSFilesStore,FileException
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/file.py", line 18, in <module>
+    from scrapy.pipeline.media import MediaPipeline
+exceptions.ImportError: No module named pipeline.media
+
+2016-03-26 11:25:08 [scrapy] INFO: Scrapy 1.0.5 started (bot: lagou_spider)
+2016-03-26 11:25:08 [scrapy] INFO: Optional features available: ssl, http11
+2016-03-26 11:25:08 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'lagou_spider.spiders', 'SPIDER_MODULES': ['lagou_spider.spiders'], 'BOT_NAME': 'lagou_spider', 'COOKIES_ENABLED': False, 'USER_AGENT': '', 'SCHEDULER': 'lagou_spider.scrapy_redis.scheduler.Scheduler', 'LOG_FILE': 'logs/scrapy.log', 'DOWNLOAD_DELAY': 1}
+2016-03-26 11:25:08 [scrapy] INFO: Enabled extensions: CloseSpider, TelnetConsole, LogStats, CoreStats, SpiderState, AutoThrottle
+2016-03-26 11:25:08 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/scrapy_redis/dupefilter.py:7: ScrapyDeprecationWarning: Module `scrapy.dupefilter` is deprecated, use `scrapy.dupefilters` instead
+  from scrapy.dupefilter import BaseDupeFilter
+
+2016-03-26 11:25:08 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/utils/deprecate.py:155: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2016-03-26 11:25:08 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/contrib/downloadmiddleware/rotate_useragent.py:5: ScrapyDeprecationWarning: Module `scrapy.contrib.downloadermiddleware.useragent` is deprecated, use `scrapy.downloadermiddlewares.useragent` instead
+  from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+
+2016-03-26 11:25:08 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2016-03-26 11:25:08 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2016-03-26 11:25:08 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/pipelines/__init__.py:21: ScrapyDeprecationWarning: ITEM_PIPELINES defined as a list or a set is deprecated, switch to a dict
+  category=ScrapyDeprecationWarning, stacklevel=1)
+
+2016-03-26 11:25:08 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/bookfile.py:6: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2016-03-26 11:25:08 [twisted] ERROR: Unhandled error in Deferred:
+2016-03-26 11:25:08 [twisted] ERROR: Unhandled Error
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/scrapy/cmdline.py", line 150, in _run_command
+    cmd.run(args, opts)
+  File "/Library/Python/2.7/site-packages/scrapy/commands/crawl.py", line 57, in run
+    self.crawler_process.crawl(spname, **opts.spargs)
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 153, in crawl
+    d = crawler.crawl(*args, **kwargs)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1237, in unwindGenerator
+    return _inlineCallbacks(None, gen, Deferred())
+--- <exception caught here> ---
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1099, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 71, in crawl
+    self.engine = self._create_engine()
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 83, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "/Library/Python/2.7/site-packages/scrapy/core/engine.py", line 69, in __init__
+    self.scraper = Scraper(crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/core/scraper.py", line 70, in __init__
+    self.itemproc = itemproc_cls.from_crawler(crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/middleware.py", line 56, in from_crawler
+    return cls.from_settings(crawler.settings, crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/middleware.py", line 32, in from_settings
+    mwcls = load_object(clspath)
+  File "/Library/Python/2.7/site-packages/scrapy/utils/misc.py", line 44, in load_object
+    mod = import_module(module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/drop_none_download.py", line 6, in <module>
+    from lagou_spider.pipelines.bookfile import NofilesDrop
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/bookfile.py", line 14, in <module>
+    from lagou_spider.pipelines.file import FilePipeline,FSFilesStore,FileException
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/file.py", line 18, in <module>
+    from scrapy.pipeline.media import MediaPipeline
+exceptions.ImportError: No module named pipeline.media
+
+2016-03-26 11:25:22 [scrapy] INFO: Scrapy 1.0.5 started (bot: lagou_spider)
+2016-03-26 11:25:22 [scrapy] INFO: Optional features available: ssl, http11
+2016-03-26 11:25:22 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'lagou_spider.spiders', 'SPIDER_MODULES': ['lagou_spider.spiders'], 'BOT_NAME': 'lagou_spider', 'COOKIES_ENABLED': False, 'USER_AGENT': '', 'SCHEDULER': 'lagou_spider.scrapy_redis.scheduler.Scheduler', 'LOG_FILE': 'logs/scrapy.log', 'DOWNLOAD_DELAY': 1}
+2016-03-26 11:25:22 [scrapy] INFO: Enabled extensions: CloseSpider, TelnetConsole, LogStats, CoreStats, SpiderState, AutoThrottle
+2016-03-26 11:25:22 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/scrapy_redis/dupefilter.py:7: ScrapyDeprecationWarning: Module `scrapy.dupefilter` is deprecated, use `scrapy.dupefilters` instead
+  from scrapy.dupefilter import BaseDupeFilter
+
+2016-03-26 11:25:22 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/utils/deprecate.py:155: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2016-03-26 11:25:22 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/contrib/downloadmiddleware/rotate_useragent.py:5: ScrapyDeprecationWarning: Module `scrapy.contrib.downloadermiddleware.useragent` is deprecated, use `scrapy.downloadermiddlewares.useragent` instead
+  from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+
+2016-03-26 11:25:22 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2016-03-26 11:25:22 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2016-03-26 11:25:22 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/pipelines/__init__.py:21: ScrapyDeprecationWarning: ITEM_PIPELINES defined as a list or a set is deprecated, switch to a dict
+  category=ScrapyDeprecationWarning, stacklevel=1)
+
+2016-03-26 11:25:22 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/bookfile.py:6: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2016-03-26 11:25:22 [twisted] ERROR: Unhandled error in Deferred:
+2016-03-26 11:25:22 [twisted] ERROR: Unhandled Error
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/scrapy/cmdline.py", line 150, in _run_command
+    cmd.run(args, opts)
+  File "/Library/Python/2.7/site-packages/scrapy/commands/crawl.py", line 57, in run
+    self.crawler_process.crawl(spname, **opts.spargs)
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 153, in crawl
+    d = crawler.crawl(*args, **kwargs)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1237, in unwindGenerator
+    return _inlineCallbacks(None, gen, Deferred())
+--- <exception caught here> ---
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1099, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 71, in crawl
+    self.engine = self._create_engine()
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 83, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "/Library/Python/2.7/site-packages/scrapy/core/engine.py", line 69, in __init__
+    self.scraper = Scraper(crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/core/scraper.py", line 70, in __init__
+    self.itemproc = itemproc_cls.from_crawler(crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/middleware.py", line 56, in from_crawler
+    return cls.from_settings(crawler.settings, crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/middleware.py", line 32, in from_settings
+    mwcls = load_object(clspath)
+  File "/Library/Python/2.7/site-packages/scrapy/utils/misc.py", line 44, in load_object
+    mod = import_module(module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/mongodb.py", line 10, in <module>
+    from pymongo.connection import MongoClient
+exceptions.ImportError: No module named pymongo.connection
+
+2016-03-26 11:27:04 [scrapy] INFO: Scrapy 1.0.5 started (bot: lagou_spider)
+2016-03-26 11:27:04 [scrapy] INFO: Optional features available: ssl, http11
+2016-03-26 11:27:04 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'lagou_spider.spiders', 'SPIDER_MODULES': ['lagou_spider.spiders'], 'BOT_NAME': 'lagou_spider', 'COOKIES_ENABLED': False, 'USER_AGENT': '', 'SCHEDULER': 'lagou_spider.scrapy_redis.scheduler.Scheduler', 'LOG_FILE': 'logs/scrapy.log', 'DOWNLOAD_DELAY': 1}
+2016-03-26 11:27:04 [scrapy] INFO: Enabled extensions: CloseSpider, TelnetConsole, LogStats, CoreStats, SpiderState, AutoThrottle
+2016-03-26 11:27:04 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/scrapy_redis/dupefilter.py:7: ScrapyDeprecationWarning: Module `scrapy.dupefilter` is deprecated, use `scrapy.dupefilters` instead
+  from scrapy.dupefilter import BaseDupeFilter
+
+2016-03-26 11:27:04 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/utils/deprecate.py:155: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2016-03-26 11:27:04 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/contrib/downloadmiddleware/rotate_useragent.py:5: ScrapyDeprecationWarning: Module `scrapy.contrib.downloadermiddleware.useragent` is deprecated, use `scrapy.downloadermiddlewares.useragent` instead
+  from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+
+2016-03-26 11:27:04 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2016-03-26 11:27:04 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2016-03-26 11:27:04 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/pipelines/__init__.py:21: ScrapyDeprecationWarning: ITEM_PIPELINES defined as a list or a set is deprecated, switch to a dict
+  category=ScrapyDeprecationWarning, stacklevel=1)
+
+2016-03-26 11:27:04 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/bookfile.py:6: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2016-03-26 11:27:04 [twisted] ERROR: Unhandled error in Deferred:
+2016-03-26 11:27:04 [twisted] ERROR: Unhandled Error
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/scrapy/cmdline.py", line 150, in _run_command
+    cmd.run(args, opts)
+  File "/Library/Python/2.7/site-packages/scrapy/commands/crawl.py", line 57, in run
+    self.crawler_process.crawl(spname, **opts.spargs)
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 153, in crawl
+    d = crawler.crawl(*args, **kwargs)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1237, in unwindGenerator
+    return _inlineCallbacks(None, gen, Deferred())
+--- <exception caught here> ---
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1099, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 71, in crawl
+    self.engine = self._create_engine()
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 83, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "/Library/Python/2.7/site-packages/scrapy/core/engine.py", line 69, in __init__
+    self.scraper = Scraper(crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/core/scraper.py", line 70, in __init__
+    self.itemproc = itemproc_cls.from_crawler(crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/middleware.py", line 56, in from_crawler
+    return cls.from_settings(crawler.settings, crawler)
+  File "/Library/Python/2.7/site-packages/scrapy/middleware.py", line 32, in from_settings
+    mwcls = load_object(clspath)
+  File "/Library/Python/2.7/site-packages/scrapy/utils/misc.py", line 44, in load_object
+    mod = import_module(module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/mongodb.py", line 10, in <module>
+    from pymongo.connection import MongoClient
+exceptions.ImportError: No module named connection
+
+2016-03-26 11:32:11 [scrapy] INFO: Scrapy 1.0.5 started (bot: lagou_spider)
+2016-03-26 11:32:11 [scrapy] INFO: Optional features available: ssl, http11
+2016-03-26 11:32:11 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'lagou_spider.spiders', 'SPIDER_MODULES': ['lagou_spider.spiders'], 'BOT_NAME': 'lagou_spider', 'COOKIES_ENABLED': False, 'USER_AGENT': '', 'SCHEDULER': 'lagou_spider.scrapy_redis.scheduler.Scheduler', 'LOG_FILE': 'logs/scrapy.log', 'DOWNLOAD_DELAY': 1}
+2016-03-26 11:32:11 [scrapy] INFO: Enabled extensions: CloseSpider, TelnetConsole, LogStats, CoreStats, SpiderState, AutoThrottle
+2016-03-26 11:32:11 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/scrapy_redis/dupefilter.py:7: ScrapyDeprecationWarning: Module `scrapy.dupefilter` is deprecated, use `scrapy.dupefilters` instead
+  from scrapy.dupefilter import BaseDupeFilter
+
+2016-03-26 11:32:11 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/utils/deprecate.py:155: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2016-03-26 11:32:11 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/contrib/downloadmiddleware/rotate_useragent.py:5: ScrapyDeprecationWarning: Module `scrapy.contrib.downloadermiddleware.useragent` is deprecated, use `scrapy.downloadermiddlewares.useragent` instead
+  from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+
+2016-03-26 11:32:11 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2016-03-26 11:32:11 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2016-03-26 11:32:11 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/pipelines/__init__.py:21: ScrapyDeprecationWarning: ITEM_PIPELINES defined as a list or a set is deprecated, switch to a dict
+  category=ScrapyDeprecationWarning, stacklevel=1)
+
+2016-03-26 11:32:11 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/bookfile.py:6: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2016-03-26 11:32:11 [scrapy] INFO: Enabled item pipelines: DropNoneBookFile, ShardMongodbPipeline, FinalTestPipeline
+2016-03-26 11:32:11 [scrapy] INFO: Spider opened
+2016-03-26 11:32:11 [twisted] ERROR: Unhandled error in Deferred:
+2016-03-26 11:32:11 [twisted] ERROR: Unhandled Error
+Traceback (most recent call last):
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1237, in unwindGenerator
+    return _inlineCallbacks(None, gen, Deferred())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1099, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 73, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1237, in unwindGenerator
+    return _inlineCallbacks(None, gen, Deferred())
+--- <exception caught here> ---
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1099, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Python/2.7/site-packages/scrapy/core/engine.py", line 238, in open_spider
+    yield scheduler.open(spider)
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/scrapy_redis/scheduler.py", line 67, in open
+    if len(self.queue):
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/scrapy_redis/queue.py", line 75, in __len__
+    return self.server.zcard(self.key)
+  File "/Library/Python/2.7/site-packages/redis/client.py", line 1595, in zcard
+    return self.execute_command('ZCARD', name)
+  File "/Library/Python/2.7/site-packages/redis/client.py", line 578, in execute_command
+    connection.send_command(*args)
+  File "/Library/Python/2.7/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Library/Python/2.7/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Library/Python/2.7/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to localhost:6379. Connection refused.
+
+2016-03-26 11:53:38 [scrapy] INFO: Scrapy 1.0.5 started (bot: lagou_spider)
+2016-03-26 11:53:38 [scrapy] INFO: Optional features available: ssl, http11
+2016-03-26 11:53:38 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'lagou_spider.spiders', 'SPIDER_MODULES': ['lagou_spider.spiders'], 'BOT_NAME': 'lagou_spider', 'COOKIES_ENABLED': False, 'USER_AGENT': '', 'SCHEDULER': 'lagou_spider.scrapy_redis.scheduler.Scheduler', 'LOG_FILE': 'logs/scrapy.log', 'DOWNLOAD_DELAY': 1}
+2016-03-26 11:53:38 [scrapy] INFO: Enabled extensions: CloseSpider, TelnetConsole, LogStats, CoreStats, SpiderState, AutoThrottle
+2016-03-26 11:53:38 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/scrapy_redis/dupefilter.py:7: ScrapyDeprecationWarning: Module `scrapy.dupefilter` is deprecated, use `scrapy.dupefilters` instead
+  from scrapy.dupefilter import BaseDupeFilter
+
+2016-03-26 11:53:38 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/utils/deprecate.py:155: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2016-03-26 11:53:38 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/contrib/downloadmiddleware/rotate_useragent.py:5: ScrapyDeprecationWarning: Module `scrapy.contrib.downloadermiddleware.useragent` is deprecated, use `scrapy.downloadermiddlewares.useragent` instead
+  from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+
+2016-03-26 11:53:38 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2016-03-26 11:53:38 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2016-03-26 11:53:38 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/pipelines/__init__.py:21: ScrapyDeprecationWarning: ITEM_PIPELINES defined as a list or a set is deprecated, switch to a dict
+  category=ScrapyDeprecationWarning, stacklevel=1)
+
+2016-03-26 11:53:38 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/bookfile.py:6: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2016-03-26 11:53:38 [scrapy] INFO: Enabled item pipelines: DropNoneBookFile, ShardMongodbPipeline, FinalTestPipeline
+2016-03-26 11:53:38 [scrapy] INFO: Spider opened
+2016-03-26 11:53:38 [twisted] ERROR: Unhandled error in Deferred:
+2016-03-26 11:53:38 [twisted] ERROR: Unhandled Error
+Traceback (most recent call last):
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1237, in unwindGenerator
+    return _inlineCallbacks(None, gen, Deferred())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1099, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 73, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1237, in unwindGenerator
+    return _inlineCallbacks(None, gen, Deferred())
+--- <exception caught here> ---
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1099, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Python/2.7/site-packages/scrapy/core/engine.py", line 238, in open_spider
+    yield scheduler.open(spider)
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/scrapy_redis/scheduler.py", line 67, in open
+    if len(self.queue):
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/scrapy_redis/queue.py", line 75, in __len__
+    return self.server.zcard(self.key)
+  File "/Library/Python/2.7/site-packages/redis/client.py", line 1595, in zcard
+    return self.execute_command('ZCARD', name)
+  File "/Library/Python/2.7/site-packages/redis/client.py", line 578, in execute_command
+    connection.send_command(*args)
+  File "/Library/Python/2.7/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Library/Python/2.7/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Library/Python/2.7/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to localhost:6379. Connection refused.
+
+2016-03-26 12:13:24 [scrapy] INFO: Scrapy 1.0.5 started (bot: lagou_spider)
+2016-03-26 12:13:24 [scrapy] INFO: Optional features available: ssl, http11
+2016-03-26 12:13:24 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'lagou_spider.spiders', 'SPIDER_MODULES': ['lagou_spider.spiders'], 'BOT_NAME': 'lagou_spider', 'COOKIES_ENABLED': False, 'USER_AGENT': '', 'SCHEDULER': 'lagou_spider.scrapy_redis.scheduler.Scheduler', 'LOG_FILE': 'logs/scrapy.log', 'DOWNLOAD_DELAY': 1}
+2016-03-26 12:13:24 [scrapy] INFO: Enabled extensions: CloseSpider, TelnetConsole, LogStats, CoreStats, SpiderState, AutoThrottle
+2016-03-26 12:13:24 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/scrapy_redis/dupefilter.py:7: ScrapyDeprecationWarning: Module `scrapy.dupefilter` is deprecated, use `scrapy.dupefilters` instead
+  from scrapy.dupefilter import BaseDupeFilter
+
+2016-03-26 12:13:24 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/utils/deprecate.py:155: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2016-03-26 12:13:24 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/contrib/downloadmiddleware/rotate_useragent.py:5: ScrapyDeprecationWarning: Module `scrapy.contrib.downloadermiddleware.useragent` is deprecated, use `scrapy.downloadermiddlewares.useragent` instead
+  from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+
+2016-03-26 12:13:24 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2016-03-26 12:13:24 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2016-03-26 12:13:24 [py.warnings] WARNING: /Library/Python/2.7/site-packages/scrapy/pipelines/__init__.py:21: ScrapyDeprecationWarning: ITEM_PIPELINES defined as a list or a set is deprecated, switch to a dict
+  category=ScrapyDeprecationWarning, stacklevel=1)
+
+2016-03-26 12:13:24 [py.warnings] WARNING: /Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/pipelines/bookfile.py:6: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2016-03-26 12:13:24 [scrapy] INFO: Enabled item pipelines: DropNoneBookFile, ShardMongodbPipeline, FinalTestPipeline
+2016-03-26 12:13:24 [scrapy] INFO: Spider opened
+2016-03-26 12:13:25 [twisted] ERROR: Unhandled error in Deferred:
+2016-03-26 12:13:25 [twisted] ERROR: Unhandled Error
+Traceback (most recent call last):
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1237, in unwindGenerator
+    return _inlineCallbacks(None, gen, Deferred())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1099, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 73, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1237, in unwindGenerator
+    return _inlineCallbacks(None, gen, Deferred())
+--- <exception caught here> ---
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1099, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Python/2.7/site-packages/scrapy/core/engine.py", line 238, in open_spider
+    yield scheduler.open(spider)
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/scrapy_redis/scheduler.py", line 67, in open
+    if len(self.queue):
+  File "/Users/mac/Documents/pytest/pachong/lagou_spider/lagou_spider/scrapy_redis/queue.py", line 75, in __len__
+    return self.server.zcard(self.key)
+  File "/Library/Python/2.7/site-packages/redis/client.py", line 1595, in zcard
+    return self.execute_command('ZCARD', name)
+  File "/Library/Python/2.7/site-packages/redis/client.py", line 578, in execute_command
+    connection.send_command(*args)
+  File "/Library/Python/2.7/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Library/Python/2.7/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Library/Python/2.7/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to 127.0.0.1:6379. Connection refused.
+

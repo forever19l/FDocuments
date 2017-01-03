@@ -1,0 +1,18 @@
+GROUP,TID,DESCRIPTION,FUNCTION,TIMEOUT,PARAM1,PARAM2,UNIT,LOW,HIGH,KEY,VAL,VALIDATE
+INTELLIGENT,INTEL_HOG_100_STAT_UNITSTAGE,Get Station Type,station,,,[[unitStage]],,,,,,
+INTELLIGENT,INTEL_HOG_110_CHAN_CHANNELID,Get Channel ID,channel,500,,{{channelId}},,,,,,val in range(4)
+BOOT THE UNIT,BOOT_BATT_100_RELA,Connect the Battery,relay,,BATTERY_POWER,{{dummy_return}},,1,2,,,
+BOOT THE UNIT,BOOT_BATT_110_SUPP,Supply 3.85V to PP_BATT_VCC,supply,,PP_BATT_VCC,3.85,V,,,,,
+BOOT THE UNIT,BOOT_BATT_120_DELA,Delay,delay,,2000,,,,,,,
+BOOT THE UNIT,BOOT_BATT_130_BUTT,Press BUTTON_TO_PMU_BTN_L,button,,BUTTON_TO_PMU_BTN_L,,,,,,,
+BOOT THE UNIT,BOOT_DIAGS_100_DETE,Get into :-),detect,,:-),,,,,,,
+SYSCFG,SYSCFG_OFF_100_DIAG,measure a voltage,measure,,PP_VBUS,,,,,,,
+SYSCFG,SYSCFG_OFF_110_DIAG,Initialize SysCfg,diags,,syscfg init,,,,,,,
+SYSCFG,SYSCFG_MLB_100_DIAG,Print MLB SN,diags,,syscfg print MLB#,,,,,,,
+SYSCFG,SYSCFG_MLB_110_PARS_MLBSN_VERIFY,Parse MLB SN,parse,,{{mlbsn}},[[mlbsn_verify]],,12345,12345,,,
+SYSCFG,SYSCFG_WMAC_100_DIAG,Print Address,diags,,syscfg print WMac,,,,,,,
+SYSCFG,SYSCFG_WMAC_110_PARS_WMAC_VERIFY,Parse Address,parse,,{{wmac}},{{wmac_verify}},,,,,,
+INFANCY,INF_ACT_NTC3_PARS_ACTIVE_ADC_TEMP3,Measure NTC3 (10K),parse,,{{temp3}},{{active_adc_temp3}},Ohm,5000,200000,{{unitStage}},6000,
+INFANCY,INF_ACT_NTC4_PARS_ACTIVE_ADC_TEMP4,Measure NTC4 (R2195),parse,,{{temp4}},{{active_adc_temp4}},Ohm,5000,200000,{{unitStage}},6000,
+CAL,CAL_BUCK0_B0_MEAS_SLEEP1_BUCK0_CAL_VALUE,Measure PP0V6_SLEEP1_BUCK0,measure,,PP0V6_SLEEP1_BUCK0,{{sleep1_buck0_cal_value}},V,0.59,0.61,,,
+CAL,CAL_BUCK0_140_CALC_SLEEP1_BUCK0_CAL_VALUE_MV,Convert V to mV,calculate,,smokeyshell -e 'print([[sleep1_buck0_cal_value]]*1000)',{{sleep1_buck0_cal_value_mv}},mV,590,610,,,

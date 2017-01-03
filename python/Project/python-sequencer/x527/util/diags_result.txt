@@ -1,0 +1,5 @@
+[001F296E:1812E626] :-) i2c -s 0
+Sweeping bus 0
+Bus 0 IC exists at Address: (7-bit) 0x31 (8-bit) 0x62
+Bus 0 IC exists at Address: (7-bit) 0x3C (8-bit) 0x78
+[001F296E:1812E626] :-) 
