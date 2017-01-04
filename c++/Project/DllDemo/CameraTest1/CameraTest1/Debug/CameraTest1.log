@@ -1,0 +1,19 @@
+﻿生成启动时间为 12/20/16 16:55:36。
+     1>项目“C:\Project\CameraTest1\CameraTest1\CameraTest1.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Project\CameraTest1\lua\lua-5.1.4\src" /I"C:\Project\CameraTest1\tolua++\tolua++-1.0.93\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D CAMERATEST1_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt CameraTest1_function.cpp global_lua.cpp interface.cpp
+         interface.cpp
+         global_lua.cpp
+         CameraTest1_function.cpp
+         正在生成代码...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Project\CameraTest1\Debug\CameraTest1.dll" /INCREMENTAL /NOLOGO /LIBPATH:C:\Project\CameraTest1\CameraTest1.slnDebug /LIBPATH:C:\Project\CameraTest1\CameraTest1\..\Debug lua.lib tolua++.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Project\CameraTest1\Debug\CameraTest1.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Project\CameraTest1\Debug\CameraTest1.lib" /MACHINE:X86 /DLL Debug\CameraTest1_function.obj
+         Debug\global_lua.obj
+         Debug\interface.obj
+            正在创建库 C:\Project\CameraTest1\Debug\CameraTest1.lib 和对象 C:\Project\CameraTest1\Debug\CameraTest1.exp
+         CameraTest1.vcxproj -> C:\Project\CameraTest1\Debug\CameraTest1.dll
+     1>已完成生成项目“C:\Project\CameraTest1\CameraTest1\CameraTest1.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.84
