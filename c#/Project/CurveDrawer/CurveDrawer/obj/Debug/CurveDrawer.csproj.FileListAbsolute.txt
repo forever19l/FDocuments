@@ -1,0 +1,28 @@
+C:\Documents\Visual Studio 2013\Projects\Oculus\CurveDrawer\CurveDrawer\bin\Debug\CurveDrawer.exe.config
+C:\Documents\Visual Studio 2013\Projects\Oculus\CurveDrawer\CurveDrawer\obj\Debug\CurveDrawer.CurveDrawer.resources
+C:\Documents\Visual Studio 2013\Projects\Oculus\CurveDrawer\CurveDrawer\obj\Debug\CurveDrawer.Properties.Resources.resources
+C:\Documents\Visual Studio 2013\Projects\Oculus\CurveDrawer\CurveDrawer\obj\Debug\CurveDrawer.csproj.GenerateResource.Cache
+C:\Documents\Visual Studio 2013\Projects\Oculus\CurveDrawer\CurveDrawer\bin\Debug\CurveDrawer.exe
+C:\Documents\Visual Studio 2013\Projects\Oculus\CurveDrawer\CurveDrawer\bin\Debug\CurveDrawer.pdb
+C:\Documents\Visual Studio 2013\Projects\Oculus\CurveDrawer\CurveDrawer\obj\Debug\CurveDrawer.exe
+C:\Documents\Visual Studio 2013\Projects\Oculus\CurveDrawer\CurveDrawer\obj\Debug\CurveDrawer.pdb
+C:\Documents\Visual Studio 2013\Projects\Oculus\CurveDrawer\CurveDrawer\obj\Debug\CurveDrawer.csprojResolveAssemblyReference.cache
+C:\Project\CurveDrawer\CurveDrawer\bin\Debug\c.exe.config
+C:\Project\CurveDrawer\CurveDrawer\bin\Debug\c.exe
+C:\Project\CurveDrawer\CurveDrawer\bin\Debug\c.pdb
+C:\Project\CurveDrawer\CurveDrawer\obj\Debug\CurveDrawer.csprojResolveAssemblyReference.cache
+C:\Project\CurveDrawer\CurveDrawer\obj\Debug\CurveDrawer.CurveDrawer.resources
+C:\Project\CurveDrawer\CurveDrawer\obj\Debug\CurveDrawer.Properties.Resources.resources
+C:\Project\CurveDrawer\CurveDrawer\obj\Debug\CurveDrawer.csproj.GenerateResource.Cache
+C:\Project\CurveDrawer\CurveDrawer\obj\Debug\c.exe
+C:\Project\CurveDrawer\CurveDrawer\obj\Debug\c.pdb
+D:\git\CurveDrawer\CurveDrawer\bin\Debug\c.exe.config
+D:\git\CurveDrawer\CurveDrawer\obj\Debug\c.exe
+D:\git\CurveDrawer\CurveDrawer\obj\Debug\c.pdb
+D:\git\CurveDrawer\CurveDrawer\bin\Debug\c.exe
+D:\git\CurveDrawer\CurveDrawer\bin\Debug\c.pdb
+D:\git\CurveDrawer\CurveDrawer\obj\Debug\CurveDrawer.csprojResolveAssemblyReference.cache
+D:\git\CurveDrawer\CurveDrawer\obj\Debug\CurveDrawer.CurveDrawer.resources
+D:\git\CurveDrawer\CurveDrawer\obj\Debug\CurveDrawer.Properties.Resources.resources
+D:\git\CurveDrawer\CurveDrawer\obj\Debug\CurveDrawer.csproj.GenerateResource.Cache
+D:\git\CurveDrawer\CurveDrawer\obj\Debug\CurveDrawer.Form2.resources

@@ -1,0 +1,6 @@
+###################
+#2017.1.4    v1.0.0
+CurveDrawer is my first contract c#, it’s a tool to parse a data file and show the curve.
+
+###################
+#
