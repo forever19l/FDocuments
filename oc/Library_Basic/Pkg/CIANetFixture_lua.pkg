@@ -1,0 +1,49 @@
+//
+//  FCTDemo.h
+//  FCTDemo
+//
+//  Created by Louis on 13-8-14.
+//  Copyright (c) 2013年 Louis. All rights reserved.
+//
+
+$#include "CIANetFixture.h"
+
+class CIANetFixture {
+public:
+    void Read();
+    void Write();
+    void CancelTest();
+    void StartTest();
+
+    int getTestPlatNum();
+    int getTestDutNum(int plat);
+    
+    long GrabOnce();
+    int CalculateServoPoint(int platnum,int dutnum,int modelname);
+    float CalTestPointX();
+    float CalTestPointY();
+    int GetDUTTypeFromCamera(int PlatNum,int HandNum,int modelname);
+
+    void ReadPosition();
+    double getTestPoint(int platnum,int dutnum,string key,string xyz);
+    double getTestPointcal(int platnum,int dutnum,string key,string xyz);
+    double getRotatePoint(int platnum,int dutnum,int key);
+    double getCameraPoint(int plantnum,int dutnum,string key,string xyz);
+    
+    void ClearLoadData();
+    double getLoadCellMarketData(int Index);
+    int ShowJoystick();
+    
+    long SendCmdPLC(ushort cmd_count, ushort cmd_type, ushort cmd_id, ushort cmd_v1, ushort cmd_v2);
+    long SendCMDJoystick(int downORrotate ,ushort d1,ushort d2);
+    long SendCmdLoadcell(int KeyIndex,char* localCmd,int PlcCmdTimeout);
+    
+    int ZipRawdata(const char* zippathfile);
+    int ClearTmpDatafile();
+    
+    int SF_Login();
+    int SF_CheckRoute(string web, string sn);
+    int SF_SaveJson(string value,string key,string name);
+    int SF_SendJson(string web ,string sn,string date,int result);
+};
+

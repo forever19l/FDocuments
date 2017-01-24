@@ -1,0 +1,11 @@
+//
+//  FCTDemo.h
+//  FCTDemo
+//
+//  Created by Louis on 13-8-14.
+//  Copyright (c) 2013年 Louis. All rights reserved.
+//
+#pragma once
+$#include "IANetFixture_global.h"
+
+extern CIANetFixture *IANetFixture@IANETFIXTURE;
