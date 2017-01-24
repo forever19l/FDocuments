@@ -11,3 +11,5 @@ IIC, read data from serial.
 halcon, camera api.
 
 CVLib, Image processing
+
+TMLibrary, Using NSTask to launch external app.
