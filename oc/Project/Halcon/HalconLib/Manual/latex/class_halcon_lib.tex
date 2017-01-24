@@ -1,0 +1,391 @@
+\hypertarget{class_halcon_lib}{}\section{Halcon\+Lib Class Reference}
+\label{class_halcon_lib}\index{Halcon\+Lib@{Halcon\+Lib}}
+
+
+{\ttfamily \#include $<$Halcon\+Lib.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_halcon_lib_a8154f7bdc3f6fbb7acc6bfef2662bd7c}{Halcon\+Lib} ()
+\item 
+\hyperlink{class_halcon_lib_a75847d7a43923b3bcb6944fe78a6e880}{$\sim$\+Halcon\+Lib} ()
+\item 
+void \hyperlink{class_halcon_lib_a7880d9c4e9c78110e05f84c114b213d7}{set\+Root\+Path} (const char $\ast$p\+Path)
+\begin{DoxyCompactList}\small\item\em Set image files root path. \end{DoxyCompactList}\item 
+void \hyperlink{class_halcon_lib_a7b05ea88cb64ed04e198e24e058adaa9}{init\+Window} (N\+S\+View $\ast$View)
+\begin{DoxyCompactList}\small\item\em Set a view to display image. \end{DoxyCompactList}\item 
+void \hyperlink{class_halcon_lib_af4c7b850657286f3eb11a45b87ac9f3d}{display\+Pic} (const char $\ast$p\+File\+Path)
+\begin{DoxyCompactList}\small\item\em Display a image in view. \end{DoxyCompactList}\item 
+void \hyperlink{class_halcon_lib_a4488149174812b1ad97739c7415d087b}{display\+Pic} (H\+Image p\+Image)
+\begin{DoxyCompactList}\small\item\em Display a image in view. \end{DoxyCompactList}\item 
+B\+O\+OL \hyperlink{class_halcon_lib_adf353278dfe0866e55a73db505d09a84}{train\+Model} ()
+\begin{DoxyCompactList}\small\item\em Train shape model with image in view. \end{DoxyCompactList}\item 
+B\+O\+OL \hyperlink{class_halcon_lib_a0af40bc307d6a45621df4002f5535ad7}{train\+Model} (H\+Image p\+Image)
+\begin{DoxyCompactList}\small\item\em Train shape model with selected image. \end{DoxyCompactList}\item 
+B\+O\+OL \hyperlink{class_halcon_lib_a2cf6456936f0eb65aae80ad118bf8dda}{train\+Model} (H\+Image p\+Image, int p\+Index, B\+O\+OL is\+Draw=T\+R\+UE, B\+O\+OL is\+Save=T\+R\+UE)
+\begin{DoxyCompactList}\small\item\em Train shape model with selected image. \end{DoxyCompactList}\item 
+B\+O\+OL \hyperlink{class_halcon_lib_a1f9d94d6cf0335fc0764ed71a8822f11}{train\+Model} (H\+Image p\+Image, B\+O\+OL is\+Draw, B\+O\+OL is\+Save, const char $\ast$p\+Region, int p\+Index)
+\begin{DoxyCompactList}\small\item\em Train shape model with selected image and set its name. \end{DoxyCompactList}\item 
+B\+O\+OL \hyperlink{class_halcon_lib_a2b4bc13a1bd54a16b96c1402be4d69e6}{save\+Model} (const char $\ast$p\+Region, int p\+Index)
+\begin{DoxyCompactList}\small\item\em Save trained model in local. \end{DoxyCompactList}\item 
+void \hyperlink{class_halcon_lib_aa40ae11a5d4fbd0e81e40513ed634bf8}{test\+Region} (const char $\ast$p\+File\+Paht, int index)
+\begin{DoxyCompactList}\small\item\em Test saved region data. \end{DoxyCompactList}\item 
+B\+O\+OL \hyperlink{class_halcon_lib_a3f25a17ca0d2ed5e5da4c4e2dea72b16}{model\+Test} (H\+Image p\+Image, const char $\ast$p\+Region, int p\+Index)
+\begin{DoxyCompactList}\small\item\em Test all model with selected image. \end{DoxyCompactList}\item 
+void \hyperlink{class_halcon_lib_a8318bfa1879ededf76f0d1ab4c0b95fd}{add\+Region} (const char $\ast$p\+Region)
+\begin{DoxyCompactList}\small\item\em Add a class name in vec. \end{DoxyCompactList}\item 
+void \hyperlink{class_halcon_lib_a85a729a88ba92f4f618b9f098fb964f0}{show\+Result} (int p\+Img\+Index, int p\+Index)
+\begin{DoxyCompactList}\small\item\em Display an image in view via its class name and index. \end{DoxyCompactList}\item 
+H\+Tuple \hyperlink{class_halcon_lib_ab37c035ef94f56fa0d3040d943e2d527}{detect\+Sample} (H\+Image p\+Image, const char $\ast$p\+Region, int p\+Index)
+\begin{DoxyCompactList}\small\item\em Input a sample and its class name and index, output its detected score. \end{DoxyCompactList}\item 
+H\+Tuple \hyperlink{class_halcon_lib_a5bf510980e465e97eac020ddf39d0fde}{detect\+Sample} (H\+Image p\+Image, const char $\ast$p\+Region, int p\+Index, H\+Tuple $\ast$hv\+\_\+\+Row, H\+Tuple $\ast$hv\+\_\+\+Column, H\+Tuple $\ast$hv\+\_\+\+Angle, H\+Tuple $\ast$hv\+\_\+\+Scale, H\+Tuple $\ast$hv\+\_\+I)
+\begin{DoxyCompactList}\small\item\em Input a sample and its class name and index, output its detected score. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Halcon\+Lib@{Halcon\+Lib}!Halcon\+Lib@{Halcon\+Lib}}
+\index{Halcon\+Lib@{Halcon\+Lib}!Halcon\+Lib@{Halcon\+Lib}}
+\subsubsection[{\texorpdfstring{Halcon\+Lib()}{HalconLib()}}]{\setlength{\rightskip}{0pt plus 5cm}Halcon\+Lib\+::\+Halcon\+Lib (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_halcon_lib_a8154f7bdc3f6fbb7acc6bfef2662bd7c}{}\label{class_halcon_lib_a8154f7bdc3f6fbb7acc6bfef2662bd7c}
+\index{Halcon\+Lib@{Halcon\+Lib}!````~Halcon\+Lib@{$\sim$\+Halcon\+Lib}}
+\index{````~Halcon\+Lib@{$\sim$\+Halcon\+Lib}!Halcon\+Lib@{Halcon\+Lib}}
+\subsubsection[{\texorpdfstring{$\sim$\+Halcon\+Lib()}{~HalconLib()}}]{\setlength{\rightskip}{0pt plus 5cm}Halcon\+Lib\+::$\sim$\+Halcon\+Lib (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_halcon_lib_a75847d7a43923b3bcb6944fe78a6e880}{}\label{class_halcon_lib_a75847d7a43923b3bcb6944fe78a6e880}
+
+
+\subsection{Member Function Documentation}
+\index{Halcon\+Lib@{Halcon\+Lib}!add\+Region@{add\+Region}}
+\index{add\+Region@{add\+Region}!Halcon\+Lib@{Halcon\+Lib}}
+\subsubsection[{\texorpdfstring{add\+Region(const char $\ast$p\+Region)}{addRegion(const char *pRegion)}}]{\setlength{\rightskip}{0pt plus 5cm}void Halcon\+Lib\+::add\+Region (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p\+Region}
+\end{DoxyParamCaption}
+)}\hypertarget{class_halcon_lib_a8318bfa1879ededf76f0d1ab4c0b95fd}{}\label{class_halcon_lib_a8318bfa1879ededf76f0d1ab4c0b95fd}
+
+
+Add a class name in vec. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Region} & Class name \\
+\hline
+\end{DoxyParams}
+\index{Halcon\+Lib@{Halcon\+Lib}!detect\+Sample@{detect\+Sample}}
+\index{detect\+Sample@{detect\+Sample}!Halcon\+Lib@{Halcon\+Lib}}
+\subsubsection[{\texorpdfstring{detect\+Sample(\+H\+Image p\+Image, const char $\ast$p\+Region, int p\+Index)}{detectSample(HImage pImage, const char *pRegion, int pIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}H\+Tuple Halcon\+Lib\+::detect\+Sample (
+\begin{DoxyParamCaption}
+\item[{H\+Image}]{p\+Image, }
+\item[{const char $\ast$}]{p\+Region, }
+\item[{int}]{p\+Index}
+\end{DoxyParamCaption}
+)}\hypertarget{class_halcon_lib_ab37c035ef94f56fa0d3040d943e2d527}{}\label{class_halcon_lib_ab37c035ef94f56fa0d3040d943e2d527}
+
+
+Input a sample and its class name and index, output its detected score. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Image} & Sample image ptr \\
+\hline
+{\em p\+Region} & Sample\textquotesingle{}s class name \\
+\hline
+{\em p\+Index} & Sample\textquotesingle{}s index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Detected score 
+\end{DoxyReturn}
+\index{Halcon\+Lib@{Halcon\+Lib}!detect\+Sample@{detect\+Sample}}
+\index{detect\+Sample@{detect\+Sample}!Halcon\+Lib@{Halcon\+Lib}}
+\subsubsection[{\texorpdfstring{detect\+Sample(\+H\+Image p\+Image, const char $\ast$p\+Region, int p\+Index, H\+Tuple $\ast$hv\+\_\+\+Row, H\+Tuple $\ast$hv\+\_\+\+Column, H\+Tuple $\ast$hv\+\_\+\+Angle, H\+Tuple $\ast$hv\+\_\+\+Scale, H\+Tuple $\ast$hv\+\_\+\+I)}{detectSample(HImage pImage, const char *pRegion, int pIndex, HTuple *hv_Row, HTuple *hv_Column, HTuple *hv_Angle, HTuple *hv_Scale, HTuple *hv_I)}}]{\setlength{\rightskip}{0pt plus 5cm}H\+Tuple Halcon\+Lib\+::detect\+Sample (
+\begin{DoxyParamCaption}
+\item[{H\+Image}]{p\+Image, }
+\item[{const char $\ast$}]{p\+Region, }
+\item[{int}]{p\+Index, }
+\item[{H\+Tuple $\ast$}]{hv\+\_\+\+Row, }
+\item[{H\+Tuple $\ast$}]{hv\+\_\+\+Column, }
+\item[{H\+Tuple $\ast$}]{hv\+\_\+\+Angle, }
+\item[{H\+Tuple $\ast$}]{hv\+\_\+\+Scale, }
+\item[{H\+Tuple $\ast$}]{hv\+\_\+I}
+\end{DoxyParamCaption}
+)}\hypertarget{class_halcon_lib_a5bf510980e465e97eac020ddf39d0fde}{}\label{class_halcon_lib_a5bf510980e465e97eac020ddf39d0fde}
+
+
+Input a sample and its class name and index, output its detected score. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Image} & Input a sample and its class name and index, output its detected score \\
+\hline
+{\em p\+Region} & Sample image ptr \\
+\hline
+{\em p\+Index} & Sample\textquotesingle{}s class name \\
+\hline
+{\em hv\+\_\+\+Row} & Detected row \\
+\hline
+{\em hv\+\_\+\+Column} & Detected col \\
+\hline
+{\em hv\+\_\+\+Angle} & Detected angle \\
+\hline
+{\em hv\+\_\+\+Scale} & Detected scale \\
+\hline
+{\em hv\+\_\+I} & Detected index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Detected score 
+\end{DoxyReturn}
+\index{Halcon\+Lib@{Halcon\+Lib}!display\+Pic@{display\+Pic}}
+\index{display\+Pic@{display\+Pic}!Halcon\+Lib@{Halcon\+Lib}}
+\subsubsection[{\texorpdfstring{display\+Pic(const char $\ast$p\+File\+Path)}{displayPic(const char *pFilePath)}}]{\setlength{\rightskip}{0pt plus 5cm}void Halcon\+Lib\+::display\+Pic (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p\+File\+Path}
+\end{DoxyParamCaption}
+)}\hypertarget{class_halcon_lib_af4c7b850657286f3eb11a45b87ac9f3d}{}\label{class_halcon_lib_af4c7b850657286f3eb11a45b87ac9f3d}
+
+
+Display a image in view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+File\+Path} & Image path \\
+\hline
+\end{DoxyParams}
+\index{Halcon\+Lib@{Halcon\+Lib}!display\+Pic@{display\+Pic}}
+\index{display\+Pic@{display\+Pic}!Halcon\+Lib@{Halcon\+Lib}}
+\subsubsection[{\texorpdfstring{display\+Pic(\+H\+Image p\+Image)}{displayPic(HImage pImage)}}]{\setlength{\rightskip}{0pt plus 5cm}void Halcon\+Lib\+::display\+Pic (
+\begin{DoxyParamCaption}
+\item[{H\+Image}]{p\+Image}
+\end{DoxyParamCaption}
+)}\hypertarget{class_halcon_lib_a4488149174812b1ad97739c7415d087b}{}\label{class_halcon_lib_a4488149174812b1ad97739c7415d087b}
+
+
+Display a image in view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Image} & Image ptr \\
+\hline
+\end{DoxyParams}
+\index{Halcon\+Lib@{Halcon\+Lib}!init\+Window@{init\+Window}}
+\index{init\+Window@{init\+Window}!Halcon\+Lib@{Halcon\+Lib}}
+\subsubsection[{\texorpdfstring{init\+Window(\+N\+S\+View $\ast$\+View)}{initWindow(NSView *View)}}]{\setlength{\rightskip}{0pt plus 5cm}void Halcon\+Lib\+::init\+Window (
+\begin{DoxyParamCaption}
+\item[{N\+S\+View $\ast$}]{View}
+\end{DoxyParamCaption}
+)}\hypertarget{class_halcon_lib_a7b05ea88cb64ed04e198e24e058adaa9}{}\label{class_halcon_lib_a7b05ea88cb64ed04e198e24e058adaa9}
+
+
+Set a view to display image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em View} & A N\+S\+View \\
+\hline
+\end{DoxyParams}
+\index{Halcon\+Lib@{Halcon\+Lib}!model\+Test@{model\+Test}}
+\index{model\+Test@{model\+Test}!Halcon\+Lib@{Halcon\+Lib}}
+\subsubsection[{\texorpdfstring{model\+Test(\+H\+Image p\+Image, const char $\ast$p\+Region, int p\+Index)}{modelTest(HImage pImage, const char *pRegion, int pIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+OL Halcon\+Lib\+::model\+Test (
+\begin{DoxyParamCaption}
+\item[{H\+Image}]{p\+Image, }
+\item[{const char $\ast$}]{p\+Region, }
+\item[{int}]{p\+Index}
+\end{DoxyParamCaption}
+)}\hypertarget{class_halcon_lib_a3f25a17ca0d2ed5e5da4c4e2dea72b16}{}\label{class_halcon_lib_a3f25a17ca0d2ed5e5da4c4e2dea72b16}
+
+
+Test all model with selected image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Image} & Sample image \\
+\hline
+{\em p\+Region} & Sample\textquotesingle{}s name \\
+\hline
+{\em p\+Index} & Sample\textquotesingle{}s index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Test done? 
+\end{DoxyReturn}
+\index{Halcon\+Lib@{Halcon\+Lib}!save\+Model@{save\+Model}}
+\index{save\+Model@{save\+Model}!Halcon\+Lib@{Halcon\+Lib}}
+\subsubsection[{\texorpdfstring{save\+Model(const char $\ast$p\+Region, int p\+Index)}{saveModel(const char *pRegion, int pIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+OL Halcon\+Lib\+::save\+Model (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p\+Region, }
+\item[{int}]{p\+Index}
+\end{DoxyParamCaption}
+)}\hypertarget{class_halcon_lib_a2b4bc13a1bd54a16b96c1402be4d69e6}{}\label{class_halcon_lib_a2b4bc13a1bd54a16b96c1402be4d69e6}
+
+
+Save trained model in local. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Region} & Model name \\
+\hline
+{\em p\+Index} & Model index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Saved? 
+\end{DoxyReturn}
+\index{Halcon\+Lib@{Halcon\+Lib}!set\+Root\+Path@{set\+Root\+Path}}
+\index{set\+Root\+Path@{set\+Root\+Path}!Halcon\+Lib@{Halcon\+Lib}}
+\subsubsection[{\texorpdfstring{set\+Root\+Path(const char $\ast$p\+Path)}{setRootPath(const char *pPath)}}]{\setlength{\rightskip}{0pt plus 5cm}void Halcon\+Lib\+::set\+Root\+Path (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p\+Path}
+\end{DoxyParamCaption}
+)}\hypertarget{class_halcon_lib_a7880d9c4e9c78110e05f84c114b213d7}{}\label{class_halcon_lib_a7880d9c4e9c78110e05f84c114b213d7}
+
+
+Set image files root path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Path} & Image files root path \\
+\hline
+\end{DoxyParams}
+\index{Halcon\+Lib@{Halcon\+Lib}!show\+Result@{show\+Result}}
+\index{show\+Result@{show\+Result}!Halcon\+Lib@{Halcon\+Lib}}
+\subsubsection[{\texorpdfstring{show\+Result(int p\+Img\+Index, int p\+Index)}{showResult(int pImgIndex, int pIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}void Halcon\+Lib\+::show\+Result (
+\begin{DoxyParamCaption}
+\item[{int}]{p\+Img\+Index, }
+\item[{int}]{p\+Index}
+\end{DoxyParamCaption}
+)}\hypertarget{class_halcon_lib_a85a729a88ba92f4f618b9f098fb964f0}{}\label{class_halcon_lib_a85a729a88ba92f4f618b9f098fb964f0}
+
+
+Display an image in view via its class name and index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Img\+Index} & Image\textquotesingle{}s class name \\
+\hline
+{\em p\+Index} & Image\textquotesingle{}s index \\
+\hline
+\end{DoxyParams}
+\index{Halcon\+Lib@{Halcon\+Lib}!test\+Region@{test\+Region}}
+\index{test\+Region@{test\+Region}!Halcon\+Lib@{Halcon\+Lib}}
+\subsubsection[{\texorpdfstring{test\+Region(const char $\ast$p\+File\+Paht, int index)}{testRegion(const char *pFilePaht, int index)}}]{\setlength{\rightskip}{0pt plus 5cm}void Halcon\+Lib\+::test\+Region (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p\+File\+Paht, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{class_halcon_lib_aa40ae11a5d4fbd0e81e40513ed634bf8}{}\label{class_halcon_lib_aa40ae11a5d4fbd0e81e40513ed634bf8}
+
+
+Test saved region data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+File\+Paht} & Region data path \\
+\hline
+{\em index} & Region data index \\
+\hline
+\end{DoxyParams}
+\index{Halcon\+Lib@{Halcon\+Lib}!train\+Model@{train\+Model}}
+\index{train\+Model@{train\+Model}!Halcon\+Lib@{Halcon\+Lib}}
+\subsubsection[{\texorpdfstring{train\+Model()}{trainModel()}}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+OL Halcon\+Lib\+::train\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_halcon_lib_adf353278dfe0866e55a73db505d09a84}{}\label{class_halcon_lib_adf353278dfe0866e55a73db505d09a84}
+
+
+Train shape model with image in view. 
+
+\begin{DoxyReturn}{Returns}
+Trained? 
+\end{DoxyReturn}
+\index{Halcon\+Lib@{Halcon\+Lib}!train\+Model@{train\+Model}}
+\index{train\+Model@{train\+Model}!Halcon\+Lib@{Halcon\+Lib}}
+\subsubsection[{\texorpdfstring{train\+Model(\+H\+Image p\+Image)}{trainModel(HImage pImage)}}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+OL Halcon\+Lib\+::train\+Model (
+\begin{DoxyParamCaption}
+\item[{H\+Image}]{p\+Image}
+\end{DoxyParamCaption}
+)}\hypertarget{class_halcon_lib_a0af40bc307d6a45621df4002f5535ad7}{}\label{class_halcon_lib_a0af40bc307d6a45621df4002f5535ad7}
+
+
+Train shape model with selected image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Image} & Image ptr \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Trained? 
+\end{DoxyReturn}
+\index{Halcon\+Lib@{Halcon\+Lib}!train\+Model@{train\+Model}}
+\index{train\+Model@{train\+Model}!Halcon\+Lib@{Halcon\+Lib}}
+\subsubsection[{\texorpdfstring{train\+Model(\+H\+Image p\+Image, int p\+Index, B\+O\+O\+L is\+Draw=\+T\+R\+U\+E, B\+O\+O\+L is\+Save=\+T\+R\+U\+E)}{trainModel(HImage pImage, int pIndex, BOOL isDraw=TRUE, BOOL isSave=TRUE)}}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+OL Halcon\+Lib\+::train\+Model (
+\begin{DoxyParamCaption}
+\item[{H\+Image}]{p\+Image, }
+\item[{int}]{p\+Index, }
+\item[{B\+O\+OL}]{is\+Draw = {\ttfamily TRUE}, }
+\item[{B\+O\+OL}]{is\+Save = {\ttfamily TRUE}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_halcon_lib_a2cf6456936f0eb65aae80ad118bf8dda}{}\label{class_halcon_lib_a2cf6456936f0eb65aae80ad118bf8dda}
+
+
+Train shape model with selected image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Image} & Image ptr \\
+\hline
+{\em p\+Index} & Region index \\
+\hline
+{\em is\+Draw} & Draw region manually/automatic \\
+\hline
+{\em is\+Save} & Save drew region or not \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Trained? 
+\end{DoxyReturn}
+\index{Halcon\+Lib@{Halcon\+Lib}!train\+Model@{train\+Model}}
+\index{train\+Model@{train\+Model}!Halcon\+Lib@{Halcon\+Lib}}
+\subsubsection[{\texorpdfstring{train\+Model(\+H\+Image p\+Image, B\+O\+O\+L is\+Draw, B\+O\+O\+L is\+Save, const char $\ast$p\+Region, int p\+Index)}{trainModel(HImage pImage, BOOL isDraw, BOOL isSave, const char *pRegion, int pIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+OL Halcon\+Lib\+::train\+Model (
+\begin{DoxyParamCaption}
+\item[{H\+Image}]{p\+Image, }
+\item[{B\+O\+OL}]{is\+Draw, }
+\item[{B\+O\+OL}]{is\+Save, }
+\item[{const char $\ast$}]{p\+Region, }
+\item[{int}]{p\+Index}
+\end{DoxyParamCaption}
+)}\hypertarget{class_halcon_lib_a1f9d94d6cf0335fc0764ed71a8822f11}{}\label{class_halcon_lib_a1f9d94d6cf0335fc0764ed71a8822f11}
+
+
+Train shape model with selected image and set its name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Image} & Image ptr \\
+\hline
+{\em is\+Draw} & Draw region manually/automatic \\
+\hline
+{\em is\+Save} & Save drew region or not \\
+\hline
+{\em p\+Region} & Image name \\
+\hline
+{\em p\+Index} & Region index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Trained? 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/\+Leakey/git/\+Halcon\+Lib/\+Halcon\+Lib/\hyperlink{_halcon_lib_8h}{Halcon\+Lib.\+h}\item 
+/\+Users/\+Leakey/git/\+Halcon\+Lib/\+Halcon\+Lib/\hyperlink{_halcon_lib_8mm}{Halcon\+Lib.\+mm}\end{DoxyCompactItemize}

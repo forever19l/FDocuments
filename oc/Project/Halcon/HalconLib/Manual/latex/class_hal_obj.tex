@@ -1,0 +1,197 @@
+\hypertarget{class_hal_obj}{}\section{Hal\+Obj Class Reference}
+\label{class_hal_obj}\index{Hal\+Obj@{Hal\+Obj}}
+
+
+{\ttfamily \#include $<$Hal\+Obj.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_hal_obj_ae47bb3241740db20891b446b1f16cc94}{Hal\+Obj} ()
+\item 
+void \hyperlink{class_hal_obj_ade3d813ba067d05d7b9c02fdc4e07e4a}{set\+Root\+Path} (const char $\ast$p\+Path)
+\item 
+void \hyperlink{class_hal_obj_acbf14df2d2aaf1c2bc0ddd7013ed67d5}{init\+Window} (N\+S\+View $\ast$View)
+\item 
+void \hyperlink{class_hal_obj_ac0ed76f88a1579df532273340883dcb2}{display\+Pic} (const char $\ast$p\+File\+Path)
+\item 
+void \hyperlink{class_hal_obj_a464cd1c80b254af85d264f713e521a0f}{display\+Pic} (H\+Image p\+Image)
+\item 
+B\+O\+OL \hyperlink{class_hal_obj_ad29667e51b2d91bd0bc0e38017a73261}{train\+Model} ()
+\item 
+B\+O\+OL \hyperlink{class_hal_obj_abad71e786275b3b1670b6e4e67740d06}{train\+Model} (H\+Image p\+Image)
+\item 
+B\+O\+OL \hyperlink{class_hal_obj_a265ed09c665f1198b6baa54d08e1270f}{train\+Model} (H\+Image p\+Image, int p\+Index, B\+O\+OL is\+Draw=T\+R\+UE, B\+O\+OL is\+Save=T\+R\+UE)
+\item 
+B\+O\+OL \hyperlink{class_hal_obj_acbb40efcf7fbafec8c35935626554284}{train\+Model} (H\+Image p\+Image, B\+O\+OL is\+Draw, B\+O\+OL is\+Save, const char $\ast$p\+Region, int p\+Index)
+\item 
+B\+O\+OL \hyperlink{class_hal_obj_aba937ee414bf89f6150c8251f893d353}{save\+Model} (const char $\ast$p\+Region, int p\+Index)
+\item 
+void \hyperlink{class_hal_obj_ac7211fefe3dd25f7e9cd32e56d86279f}{test\+Region} (const char $\ast$p\+File\+Paht, int index)
+\item 
+B\+O\+OL \hyperlink{class_hal_obj_a4c6fadd4818b372c4119c6ebba434294}{model\+Test} (H\+Image p\+Image, const char $\ast$p\+Region, int p\+Index)
+\item 
+void \hyperlink{class_hal_obj_ae776a754401b86b11868d9bd2be3b0c0}{add\+Region} (const char $\ast$p\+Region)
+\item 
+void \hyperlink{class_hal_obj_a51a90d56c896b36b1cb90d737e62041e}{show\+Result} (int p\+Img\+Index, int p\+Index)
+\item 
+H\+Tuple \hyperlink{class_hal_obj_a8b4e818aa67b55b48b3bd7fdb4863db2}{detect\+Sample} (H\+Image p\+Image, const char $\ast$p\+Region, int p\+Index)
+\item 
+H\+Tuple \hyperlink{class_hal_obj_a88c924a8b3e689dd99a659e86a100ea8}{detect\+Sample} (H\+Image p\+Image, const char $\ast$p\+Region, int p\+Index, H\+Tuple $\ast$hv\+\_\+\+Row, H\+Tuple $\ast$hv\+\_\+\+Column, H\+Tuple $\ast$hv\+\_\+\+Angle, H\+Tuple $\ast$hv\+\_\+\+Scale, H\+Tuple $\ast$hv\+\_\+I)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_halcon_lib}{Halcon\+Lib} \hyperlink{class_hal_obj_a20f13e7070ba804543cb6ecddf5e7346}{hobj}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Hal\+Obj@{Hal\+Obj}!Hal\+Obj@{Hal\+Obj}}
+\index{Hal\+Obj@{Hal\+Obj}!Hal\+Obj@{Hal\+Obj}}
+\subsubsection[{\texorpdfstring{Hal\+Obj()}{HalObj()}}]{\setlength{\rightskip}{0pt plus 5cm}Hal\+Obj\+::\+Hal\+Obj (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_hal_obj_ae47bb3241740db20891b446b1f16cc94}{}\label{class_hal_obj_ae47bb3241740db20891b446b1f16cc94}
+
+
+\subsection{Member Function Documentation}
+\index{Hal\+Obj@{Hal\+Obj}!add\+Region@{add\+Region}}
+\index{add\+Region@{add\+Region}!Hal\+Obj@{Hal\+Obj}}
+\subsubsection[{\texorpdfstring{add\+Region(const char $\ast$p\+Region)}{addRegion(const char *pRegion)}}]{\setlength{\rightskip}{0pt plus 5cm}void Hal\+Obj\+::add\+Region (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p\+Region}
+\end{DoxyParamCaption}
+)}\hypertarget{class_hal_obj_ae776a754401b86b11868d9bd2be3b0c0}{}\label{class_hal_obj_ae776a754401b86b11868d9bd2be3b0c0}
+\index{Hal\+Obj@{Hal\+Obj}!detect\+Sample@{detect\+Sample}}
+\index{detect\+Sample@{detect\+Sample}!Hal\+Obj@{Hal\+Obj}}
+\subsubsection[{\texorpdfstring{detect\+Sample(\+H\+Image p\+Image, const char $\ast$p\+Region, int p\+Index)}{detectSample(HImage pImage, const char *pRegion, int pIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}H\+Tuple Hal\+Obj\+::detect\+Sample (
+\begin{DoxyParamCaption}
+\item[{H\+Image}]{p\+Image, }
+\item[{const char $\ast$}]{p\+Region, }
+\item[{int}]{p\+Index}
+\end{DoxyParamCaption}
+)}\hypertarget{class_hal_obj_a8b4e818aa67b55b48b3bd7fdb4863db2}{}\label{class_hal_obj_a8b4e818aa67b55b48b3bd7fdb4863db2}
+\index{Hal\+Obj@{Hal\+Obj}!detect\+Sample@{detect\+Sample}}
+\index{detect\+Sample@{detect\+Sample}!Hal\+Obj@{Hal\+Obj}}
+\subsubsection[{\texorpdfstring{detect\+Sample(\+H\+Image p\+Image, const char $\ast$p\+Region, int p\+Index, H\+Tuple $\ast$hv\+\_\+\+Row, H\+Tuple $\ast$hv\+\_\+\+Column, H\+Tuple $\ast$hv\+\_\+\+Angle, H\+Tuple $\ast$hv\+\_\+\+Scale, H\+Tuple $\ast$hv\+\_\+\+I)}{detectSample(HImage pImage, const char *pRegion, int pIndex, HTuple *hv_Row, HTuple *hv_Column, HTuple *hv_Angle, HTuple *hv_Scale, HTuple *hv_I)}}]{\setlength{\rightskip}{0pt plus 5cm}H\+Tuple Hal\+Obj\+::detect\+Sample (
+\begin{DoxyParamCaption}
+\item[{H\+Image}]{p\+Image, }
+\item[{const char $\ast$}]{p\+Region, }
+\item[{int}]{p\+Index, }
+\item[{H\+Tuple $\ast$}]{hv\+\_\+\+Row, }
+\item[{H\+Tuple $\ast$}]{hv\+\_\+\+Column, }
+\item[{H\+Tuple $\ast$}]{hv\+\_\+\+Angle, }
+\item[{H\+Tuple $\ast$}]{hv\+\_\+\+Scale, }
+\item[{H\+Tuple $\ast$}]{hv\+\_\+I}
+\end{DoxyParamCaption}
+)}\hypertarget{class_hal_obj_a88c924a8b3e689dd99a659e86a100ea8}{}\label{class_hal_obj_a88c924a8b3e689dd99a659e86a100ea8}
+\index{Hal\+Obj@{Hal\+Obj}!display\+Pic@{display\+Pic}}
+\index{display\+Pic@{display\+Pic}!Hal\+Obj@{Hal\+Obj}}
+\subsubsection[{\texorpdfstring{display\+Pic(const char $\ast$p\+File\+Path)}{displayPic(const char *pFilePath)}}]{\setlength{\rightskip}{0pt plus 5cm}void Hal\+Obj\+::display\+Pic (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p\+File\+Path}
+\end{DoxyParamCaption}
+)}\hypertarget{class_hal_obj_ac0ed76f88a1579df532273340883dcb2}{}\label{class_hal_obj_ac0ed76f88a1579df532273340883dcb2}
+\index{Hal\+Obj@{Hal\+Obj}!display\+Pic@{display\+Pic}}
+\index{display\+Pic@{display\+Pic}!Hal\+Obj@{Hal\+Obj}}
+\subsubsection[{\texorpdfstring{display\+Pic(\+H\+Image p\+Image)}{displayPic(HImage pImage)}}]{\setlength{\rightskip}{0pt plus 5cm}void Hal\+Obj\+::display\+Pic (
+\begin{DoxyParamCaption}
+\item[{H\+Image}]{p\+Image}
+\end{DoxyParamCaption}
+)}\hypertarget{class_hal_obj_a464cd1c80b254af85d264f713e521a0f}{}\label{class_hal_obj_a464cd1c80b254af85d264f713e521a0f}
+\index{Hal\+Obj@{Hal\+Obj}!init\+Window@{init\+Window}}
+\index{init\+Window@{init\+Window}!Hal\+Obj@{Hal\+Obj}}
+\subsubsection[{\texorpdfstring{init\+Window(\+N\+S\+View $\ast$\+View)}{initWindow(NSView *View)}}]{\setlength{\rightskip}{0pt plus 5cm}void Hal\+Obj\+::init\+Window (
+\begin{DoxyParamCaption}
+\item[{N\+S\+View $\ast$}]{View}
+\end{DoxyParamCaption}
+)}\hypertarget{class_hal_obj_acbf14df2d2aaf1c2bc0ddd7013ed67d5}{}\label{class_hal_obj_acbf14df2d2aaf1c2bc0ddd7013ed67d5}
+\index{Hal\+Obj@{Hal\+Obj}!model\+Test@{model\+Test}}
+\index{model\+Test@{model\+Test}!Hal\+Obj@{Hal\+Obj}}
+\subsubsection[{\texorpdfstring{model\+Test(\+H\+Image p\+Image, const char $\ast$p\+Region, int p\+Index)}{modelTest(HImage pImage, const char *pRegion, int pIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+OL Hal\+Obj\+::model\+Test (
+\begin{DoxyParamCaption}
+\item[{H\+Image}]{p\+Image, }
+\item[{const char $\ast$}]{p\+Region, }
+\item[{int}]{p\+Index}
+\end{DoxyParamCaption}
+)}\hypertarget{class_hal_obj_a4c6fadd4818b372c4119c6ebba434294}{}\label{class_hal_obj_a4c6fadd4818b372c4119c6ebba434294}
+\index{Hal\+Obj@{Hal\+Obj}!save\+Model@{save\+Model}}
+\index{save\+Model@{save\+Model}!Hal\+Obj@{Hal\+Obj}}
+\subsubsection[{\texorpdfstring{save\+Model(const char $\ast$p\+Region, int p\+Index)}{saveModel(const char *pRegion, int pIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+OL Hal\+Obj\+::save\+Model (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p\+Region, }
+\item[{int}]{p\+Index}
+\end{DoxyParamCaption}
+)}\hypertarget{class_hal_obj_aba937ee414bf89f6150c8251f893d353}{}\label{class_hal_obj_aba937ee414bf89f6150c8251f893d353}
+\index{Hal\+Obj@{Hal\+Obj}!set\+Root\+Path@{set\+Root\+Path}}
+\index{set\+Root\+Path@{set\+Root\+Path}!Hal\+Obj@{Hal\+Obj}}
+\subsubsection[{\texorpdfstring{set\+Root\+Path(const char $\ast$p\+Path)}{setRootPath(const char *pPath)}}]{\setlength{\rightskip}{0pt plus 5cm}void Hal\+Obj\+::set\+Root\+Path (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p\+Path}
+\end{DoxyParamCaption}
+)}\hypertarget{class_hal_obj_ade3d813ba067d05d7b9c02fdc4e07e4a}{}\label{class_hal_obj_ade3d813ba067d05d7b9c02fdc4e07e4a}
+\index{Hal\+Obj@{Hal\+Obj}!show\+Result@{show\+Result}}
+\index{show\+Result@{show\+Result}!Hal\+Obj@{Hal\+Obj}}
+\subsubsection[{\texorpdfstring{show\+Result(int p\+Img\+Index, int p\+Index)}{showResult(int pImgIndex, int pIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}void Hal\+Obj\+::show\+Result (
+\begin{DoxyParamCaption}
+\item[{int}]{p\+Img\+Index, }
+\item[{int}]{p\+Index}
+\end{DoxyParamCaption}
+)}\hypertarget{class_hal_obj_a51a90d56c896b36b1cb90d737e62041e}{}\label{class_hal_obj_a51a90d56c896b36b1cb90d737e62041e}
+\index{Hal\+Obj@{Hal\+Obj}!test\+Region@{test\+Region}}
+\index{test\+Region@{test\+Region}!Hal\+Obj@{Hal\+Obj}}
+\subsubsection[{\texorpdfstring{test\+Region(const char $\ast$p\+File\+Paht, int index)}{testRegion(const char *pFilePaht, int index)}}]{\setlength{\rightskip}{0pt plus 5cm}void Hal\+Obj\+::test\+Region (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p\+File\+Paht, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{class_hal_obj_ac7211fefe3dd25f7e9cd32e56d86279f}{}\label{class_hal_obj_ac7211fefe3dd25f7e9cd32e56d86279f}
+\index{Hal\+Obj@{Hal\+Obj}!train\+Model@{train\+Model}}
+\index{train\+Model@{train\+Model}!Hal\+Obj@{Hal\+Obj}}
+\subsubsection[{\texorpdfstring{train\+Model()}{trainModel()}}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+OL Hal\+Obj\+::train\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_hal_obj_ad29667e51b2d91bd0bc0e38017a73261}{}\label{class_hal_obj_ad29667e51b2d91bd0bc0e38017a73261}
+\index{Hal\+Obj@{Hal\+Obj}!train\+Model@{train\+Model}}
+\index{train\+Model@{train\+Model}!Hal\+Obj@{Hal\+Obj}}
+\subsubsection[{\texorpdfstring{train\+Model(\+H\+Image p\+Image)}{trainModel(HImage pImage)}}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+OL Hal\+Obj\+::train\+Model (
+\begin{DoxyParamCaption}
+\item[{H\+Image}]{p\+Image}
+\end{DoxyParamCaption}
+)}\hypertarget{class_hal_obj_abad71e786275b3b1670b6e4e67740d06}{}\label{class_hal_obj_abad71e786275b3b1670b6e4e67740d06}
+\index{Hal\+Obj@{Hal\+Obj}!train\+Model@{train\+Model}}
+\index{train\+Model@{train\+Model}!Hal\+Obj@{Hal\+Obj}}
+\subsubsection[{\texorpdfstring{train\+Model(\+H\+Image p\+Image, int p\+Index, B\+O\+O\+L is\+Draw=\+T\+R\+U\+E, B\+O\+O\+L is\+Save=\+T\+R\+U\+E)}{trainModel(HImage pImage, int pIndex, BOOL isDraw=TRUE, BOOL isSave=TRUE)}}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+OL Hal\+Obj\+::train\+Model (
+\begin{DoxyParamCaption}
+\item[{H\+Image}]{p\+Image, }
+\item[{int}]{p\+Index, }
+\item[{B\+O\+OL}]{is\+Draw = {\ttfamily TRUE}, }
+\item[{B\+O\+OL}]{is\+Save = {\ttfamily TRUE}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_hal_obj_a265ed09c665f1198b6baa54d08e1270f}{}\label{class_hal_obj_a265ed09c665f1198b6baa54d08e1270f}
+\index{Hal\+Obj@{Hal\+Obj}!train\+Model@{train\+Model}}
+\index{train\+Model@{train\+Model}!Hal\+Obj@{Hal\+Obj}}
+\subsubsection[{\texorpdfstring{train\+Model(\+H\+Image p\+Image, B\+O\+O\+L is\+Draw, B\+O\+O\+L is\+Save, const char $\ast$p\+Region, int p\+Index)}{trainModel(HImage pImage, BOOL isDraw, BOOL isSave, const char *pRegion, int pIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+OL Hal\+Obj\+::train\+Model (
+\begin{DoxyParamCaption}
+\item[{H\+Image}]{p\+Image, }
+\item[{B\+O\+OL}]{is\+Draw, }
+\item[{B\+O\+OL}]{is\+Save, }
+\item[{const char $\ast$}]{p\+Region, }
+\item[{int}]{p\+Index}
+\end{DoxyParamCaption}
+)}\hypertarget{class_hal_obj_acbb40efcf7fbafec8c35935626554284}{}\label{class_hal_obj_acbb40efcf7fbafec8c35935626554284}
+
+
+\subsection{Member Data Documentation}
+\index{Hal\+Obj@{Hal\+Obj}!hobj@{hobj}}
+\index{hobj@{hobj}!Hal\+Obj@{Hal\+Obj}}
+\subsubsection[{\texorpdfstring{hobj}{hobj}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Halcon\+Lib} Hal\+Obj\+::hobj}\hypertarget{class_hal_obj_a20f13e7070ba804543cb6ecddf5e7346}{}\label{class_hal_obj_a20f13e7070ba804543cb6ecddf5e7346}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/\+Leakey/git/\+Halcon\+Lib/\+Halcon\+Lib/\hyperlink{_hal_obj_8h}{Hal\+Obj.\+h}\item 
+/\+Users/\+Leakey/git/\+Halcon\+Lib/\+Halcon\+Lib/\hyperlink{_hal_obj_8mm}{Hal\+Obj.\+mm}\end{DoxyCompactItemize}
