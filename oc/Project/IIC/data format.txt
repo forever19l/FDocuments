@@ -1,0 +1,19 @@
+1、maintenance date code 	0x3D~0x40
+	时间格式yywwDD，年后2位，年内月2为，年内日3位0-365
+	示例：1620131，为2016-05-10，16年，年内第20周，年内131天
+	存在eeprom内格式为:WE 003D 01 13 20 16
+	直接写入方便读写解析，符合其他地址写入规则高位在后。0x3D-0x3E为DD，3F为ww，40为yy
+
+2、Maintenance flag		0x81~0x84
+	flag为1或者0，直接按最高位来看，00 00 00 01 或者00 00 00 00
+
+3、BUCK failure code		0x85~0x88
+	16进制转为2进制，高位在后，则实际上只需要0x87-88的值即可得到16位的二进制buck failure code
+	00 00 12 34意味着真实的是3412，转出为0011010000010010
+	由于实际上在16个二进制内前4个是无意义的，则“3”的位置上的值是可忽略的。
+
+4、usage counts
+	按照以前sn的存储方式解析strtoul（）
+
+5、数据库格式
+ sn + time（check in or out） + maintenance flag + detail fail code

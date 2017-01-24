@@ -1,0 +1,28 @@
+5E040001817_159mV_Ref		2016/4/25 11:42:19	15 PCS Golden	Total Variation	38.3000	Pa/N	PASS	Maximum	40.0
+5E040001817_159mV_Ref		2016/4/25 11:43:20	15 PCS Golden	Total Variation	39.6000	Pa/N	PASS	Maximum	40.0
+5E040001817_159mV_Ref		2016/4/25 11:44:31	15 PCS Golden	Total Variation	38.7000	Pa/N	PASS	Maximum	40.0
+5E040001622_159mV_Ref		2016/4/25 11:47:18	15 PCS Golden	Total Variation	15.7000	Pa/N	PASS	Maximum	30.0
+5E040001652_159mV_Ref		2016/4/25 11:49:14	15 PCS Golden	Total Variation	9.6000	Pa/N	PASS	Maximum	30.0
+5E040001783_159mV_Ref		2016/4/25 11:50:49	15 PCS Golden	Total Variation	7.6000	Pa/N	PASS	Maximum	30.0
+5E040001802_159mV_Ref		2016/4/25 11:52:08	15 PCS Golden	Total Variation	27.7000	Pa/N	PASS	Maximum	30.0
+5E040001808_159mV_Ref		2016/4/25 11:53:19	15 PCS Golden	Total Variation	15.2000	Pa/N	PASS	Maximum	30.0
+5E040001763_159mV_Ref		2016/4/25 11:54:28	15 PCS Golden	Total Variation	6.4000	Pa/N	PASS	Maximum	30.0
+5E040001694_159mV_Ref		2016/4/25 11:55:48	15 PCS Golden	Total Variation	8.7000	Pa/N	PASS	Maximum	30.0
+5E040001703_159mV_Ref		2016/4/25 11:57:03	15 PCS Golden	Total Variation	13.1000	Pa/N	PASS	Maximum	30.0
+5E040001799_159mV_Ref		2016/4/25 11:58:15	15 PCS Golden	Total Variation	9.3000	Pa/N	PASS	Maximum	30.0
+5E040001636_159mV_Ref		2016/4/25 11:59:27	15 PCS Golden	Total Variation	126.2000	Pa/N	FAIL	Maximum	40.0
+5E040001636_159mV_Ref		2016/4/25 12:01:18	15 PCS Golden	Total Variation	11.2000	Pa/N	PASS	Maximum	30.0
+5E040001774_159mV_Ref		2016/4/25 12:02:31	15 PCS Golden	Total Variation	19.0000	Pa/N	PASS	Maximum	30.0
+5E040001525_159mV_Ref		2016/4/25 12:03:39	15 PCS Golden	Total Variation	12.6000	Pa/N	PASS	Maximum	30.0
+5E040002503_159mV_Ref		2016/4/25 12:04:45	15 PCS Golden	Total Variation	10.8000	Pa/N	PASS	Maximum	30.0
+5E040001740_159mV_Ref		2016/4/25 12:05:51	15 PCS Golden	Total Variation	9.8000	Pa/N	PASS	Maximum	30.0
+5E040002304_159mV_Mag unscrew baseline-ZQA-		2016/4/25 12:30:57	Mag connector  unscrews	Total Variation	13.8000	Pa/N	PASS	Maximum	30.0
+5E040002304_159mV_Mag unscrew baseline-ZQA-		2016/4/25 12:31:51	Mag connector  unscrews	Total Variation	12.4000	Pa/N	PASS	Maximum	30.0
+5E040002304_159mV_Mag unscrew baseline-ZQA-		2016/4/25 12:32:48	Mag connector  unscrews	Total Variation	12.6000	Pa/N	PASS	Maximum	30.0
+5E040002304_159mV_Mag unscrew 1 -ZQA-		2016/4/25 12:34:07	Mag connector  unscrews	Total Variation	10.1000	Pa/N	PASS	Maximum	30.0
+5E040002304_159mV_Mag unscrew 1 2-ZQA-		2016/4/25 12:35:38	Mag connector  unscrews	Total Variation	47.9000	Pa/N	FAIL	Maximum	40.0
+5E040002304_159mV_Mag unscrew 1 2(2)-ZQA-		2016/4/25 12:37:07	Mag connector  unscrews	Total Variation	47.8000	Pa/N	FAIL	Maximum	40.0
+5E040002304_159mV_Mag unscrew 3 4-ZQA-		2016/4/25 12:41:10	Mag connector  unscrews	Total Variation	24.8000	Pa/N	PASS	Maximum	30.0
+5E040002304_159mV_Mag unscrew 1 4-ZQA-		2016/4/25 12:44:44	Mag connector  unscrews	Total Variation	17.7000	Pa/N	PASS	Maximum	30.0
+5E040002304_159mV_Mag unscrew 2 3-ZQA-		2016/4/25 12:47:36	Mag connector  unscrews	Total Variation	30.9000	Pa/N	PASS	Maximum	35.0
+

@@ -1,0 +1,6 @@
+framework module TMLibrary {
+  umbrella header "TMLibrary.h"
+
+  export *
+  module * { export * }
+}

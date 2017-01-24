@@ -1,0 +1,4 @@
+{
+	port = "/dev/cu.usbserial-F-CTR";
+	setting = "115200,n,8,1";
+}

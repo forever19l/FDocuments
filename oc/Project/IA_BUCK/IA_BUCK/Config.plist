@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Item1</key>
+	<dict>
+		<key>Name</key>
+		<string>Position1</string>
+		<key>Lower</key>
+		<string>0.800</string>
+		<key>Upper</key>
+		<string>1.000</string>
+		<key>Unit</key>
+		<string>mm</string>
+	</dict>
+	<key>Item2</key>
+	<dict>
+		<key>Name</key>
+		<string>Position2</string>
+		<key>Lower</key>
+		<string>0.800</string>
+		<key>Upper</key>
+		<string>1.000</string>
+		<key>Unit</key>
+		<string>mm</string>
+	</dict>
+	<key>Item3</key>
+	<dict>
+		<key>Name</key>
+		<string>Position3</string>
+		<key>Lower</key>
+		<string>0.800</string>
+		<key>Upper</key>
+		<string>1.000</string>
+		<key>Unit</key>
+		<string>mm</string>
+	</dict>
+	<key>StationName</key>
+	<string>IA960</string>
+	<key>csvPath</key>
+	<string>/vault/Intelli_log/</string>
+	<key>ComPort</key>
+	<string>/dev/cu.usbserial-A700E2DX</string>
+	<key>ComSetting</key>
+	<string>19200,n,8,1</string>
+</dict>
+</plist>
