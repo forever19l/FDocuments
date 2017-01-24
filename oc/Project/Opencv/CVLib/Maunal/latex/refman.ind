@@ -1,0 +1,240 @@
+\begin{theindex}
+
+  \item {/\+Users/\+Leakey/git/\+C\+V\+Lib/\+C\+V\+Lib/\+C\+V\+Lib.\+cpp}, 
+		\hyperpage{11}
+  \item {/\+Users/\+Leakey/git/\+C\+V\+Lib/\+C\+V\+Lib/\+C\+V\+Lib.\+h}, 
+		\hyperpage{18}
+  \item {$\sim$\+K\+N\+N\+Class}
+    \subitem {K\+N\+N\+Class}, \hyperpage{6}
+  \item {$\sim$\+Object\+Cnt}
+    \subitem {Object\+Cnt}, \hyperpage{9}
+
+  \indexspace
+
+  \item {auto\+Stcer}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{12}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{20}
+
+  \indexspace
+
+  \item {C\+V\+Lib.\+cpp}
+    \subitem {auto\+Stcer}, \hyperpage{12}
+    \subitem {Canny\+Img}, \hyperpage{18}
+    \subitem {cv\+Get\+Sub\+Image}, \hyperpage{12}
+    \subitem {Exp\+Img}, \hyperpage{18}
+    \subitem {find\+Min\+Rect}, \hyperpage{13}
+    \subitem {find\+Region}, \hyperpage{13}
+    \subitem {find\+X\+Range}, \hyperpage{13}
+    \subitem {find\+Y\+Range}, \hyperpage{14}
+    \subitem {findX}, \hyperpage{13}
+    \subitem {findY}, \hyperpage{14}
+    \subitem {get\+Threshold}, \hyperpage{14}
+    \subitem {Gray\+Img}, \hyperpage{18}
+    \subitem {Insert\+Sort}, \hyperpage{15}
+    \subitem {max\+\_\+\+Trackbar}, \hyperpage{15}
+    \subitem {min\+\_\+\+Trackbar}, \hyperpage{15}
+    \subitem {pic\+Stcer}, \hyperpage{15}
+    \subitem {pic\+Stcer\+\_\+sub}, \hyperpage{16}
+    \subitem {pre\+Prs}, \hyperpage{16}
+    \subitem {resize\+Img}, \hyperpage{16}
+    \subitem {set\+Dilate}, \hyperpage{17}
+    \subitem {set\+Erode}, \hyperpage{17}
+    \subitem {set\+Knl\+Size}, \hyperpage{17}
+    \subitem {set\+Ta}, \hyperpage{17}
+    \subitem {set\+Tb}, \hyperpage{17}
+    \subitem {show\+Img}, \hyperpage{17, 18}
+  \item {C\+V\+Lib.\+h}
+    \subitem {auto\+Stcer}, \hyperpage{20}
+    \subitem {cv\+Get\+Sub\+Image}, \hyperpage{20}
+    \subitem {find\+Min\+Rect}, \hyperpage{20}
+    \subitem {find\+Region}, \hyperpage{21}
+    \subitem {find\+X\+Range}, \hyperpage{21}
+    \subitem {find\+Y\+Range}, \hyperpage{22}
+    \subitem {findX}, \hyperpage{21}
+    \subitem {findY}, \hyperpage{21}
+    \subitem {get\+Threshold}, \hyperpage{22}
+    \subitem {H\+O\+R\+I\+Z\+O\+N\+T\+AL}, \hyperpage{20}
+    \subitem {Insert\+Sort}, \hyperpage{23}
+    \subitem {max\+\_\+\+Trackbar}, \hyperpage{23}
+    \subitem {min\+\_\+\+Trackbar}, \hyperpage{23}
+    \subitem {pic\+Stcer}, \hyperpage{23}
+    \subitem {pic\+Stcer\+\_\+sub}, \hyperpage{24}
+    \subitem {pre\+Prs}, \hyperpage{24}
+    \subitem {resize\+Img}, \hyperpage{24}
+    \subitem {set\+Dilate}, \hyperpage{25}
+    \subitem {set\+Erode}, \hyperpage{25}
+    \subitem {set\+Knl\+Size}, \hyperpage{25}
+    \subitem {set\+Ta}, \hyperpage{25}
+    \subitem {set\+Tb}, \hyperpage{25}
+    \subitem {show\+Img}, \hyperpage{25, 26}
+    \subitem {V\+E\+R\+T\+I\+C\+AL}, \hyperpage{20}
+  \item {Cam\+Ctrl}, \hyperpage{5}
+    \subitem {Cam\+Ctrl}, \hyperpage{5}
+    \subitem {opn\+Cam}, \hyperpage{5}
+    \subitem {save\+Video}, \hyperpage{5}
+  \item {Canny\+Img}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{18}
+  \item {classify}
+    \subitem {K\+N\+N\+Class}, \hyperpage{6}
+  \item {cnt\+Objects}
+    \subitem {Object\+Cnt}, \hyperpage{9, 10}
+  \item {cnt\+Pre\+Prs}
+    \subitem {Object\+Cnt}, \hyperpage{10}
+  \item {cv\+Get\+Sub\+Image}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{12}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{20}
+
+  \indexspace
+
+  \item {enhce\+Data}
+    \subitem {K\+N\+N\+Class}, \hyperpage{7}
+  \item {Exp\+Img}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{18}
+
+  \indexspace
+
+  \item {find\+Min\+Rect}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{13}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{20}
+  \item {find\+Region}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{13}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{21}
+  \item {find\+X\+Range}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{13}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{21}
+  \item {find\+Y\+Range}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{14}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{22}
+  \item {findX}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{13}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{21}
+  \item {findY}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{14}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{21}
+
+  \indexspace
+
+  \item {get\+Threshold}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{14}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{22}
+  \item {Gray\+Img}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{18}
+
+  \indexspace
+
+  \item {H\+O\+R\+I\+Z\+O\+N\+T\+AL}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{20}
+
+  \indexspace
+
+  \item {Insert\+Sort}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{15}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{23}
+
+  \indexspace
+
+  \item {K\+N\+N\+Class}, \hyperpage{6}
+    \subitem {$\sim$\+K\+N\+N\+Class}, \hyperpage{6}
+    \subitem {classify}, \hyperpage{6}
+    \subitem {enhce\+Data}, \hyperpage{7}
+    \subitem {K\+N\+N\+Class}, \hyperpage{6}
+    \subitem {load\+Data}, \hyperpage{7}
+    \subitem {self\+Test}, \hyperpage{7}
+    \subitem {set\+Class\+Quty}, \hyperpage{7}
+    \subitem {set\+File\+Path}, \hyperpage{8}
+    \subitem {set\+Smp\+Class}, \hyperpage{8}
+    \subitem {set\+Smp\+Size}, \hyperpage{8}
+    \subitem {set\+ThresA}, \hyperpage{8}
+    \subitem {set\+ThresB}, \hyperpage{9}
+    \subitem {setK}, \hyperpage{8}
+
+  \indexspace
+
+  \item {load\+Data}
+    \subitem {K\+N\+N\+Class}, \hyperpage{7}
+
+  \indexspace
+
+  \item {max\+\_\+\+Trackbar}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{15}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{23}
+  \item {min\+\_\+\+Trackbar}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{15}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{23}
+
+  \indexspace
+
+  \item {obj\+Prt\+Para}
+    \subitem {Object\+Cnt}, \hyperpage{10}
+  \item {Object\+Cnt}, \hyperpage{9}
+    \subitem {$\sim$\+Object\+Cnt}, \hyperpage{9}
+    \subitem {cnt\+Objects}, \hyperpage{9, 10}
+    \subitem {cnt\+Pre\+Prs}, \hyperpage{10}
+    \subitem {obj\+Prt\+Para}, \hyperpage{10}
+    \subitem {Object\+Cnt}, \hyperpage{9}
+  \item {opn\+Cam}
+    \subitem {Cam\+Ctrl}, \hyperpage{5}
+
+  \indexspace
+
+  \item {pic\+Stcer}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{15}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{23}
+  \item {pic\+Stcer\+\_\+sub}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{16}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{24}
+  \item {pre\+Prs}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{16}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{24}
+
+  \indexspace
+
+  \item {resize\+Img}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{16}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{24}
+
+  \indexspace
+
+  \item {save\+Video}
+    \subitem {Cam\+Ctrl}, \hyperpage{5}
+  \item {self\+Test}
+    \subitem {K\+N\+N\+Class}, \hyperpage{7}
+  \item {set\+Class\+Quty}
+    \subitem {K\+N\+N\+Class}, \hyperpage{7}
+  \item {set\+Dilate}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{17}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{25}
+  \item {set\+Erode}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{17}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{25}
+  \item {set\+File\+Path}
+    \subitem {K\+N\+N\+Class}, \hyperpage{8}
+  \item {set\+Knl\+Size}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{17}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{25}
+  \item {set\+Smp\+Class}
+    \subitem {K\+N\+N\+Class}, \hyperpage{8}
+  \item {set\+Smp\+Size}
+    \subitem {K\+N\+N\+Class}, \hyperpage{8}
+  \item {set\+Ta}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{17}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{25}
+  \item {set\+Tb}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{17}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{25}
+  \item {set\+ThresA}
+    \subitem {K\+N\+N\+Class}, \hyperpage{8}
+  \item {set\+ThresB}
+    \subitem {K\+N\+N\+Class}, \hyperpage{9}
+  \item {setK}
+    \subitem {K\+N\+N\+Class}, \hyperpage{8}
+  \item {show\+Img}
+    \subitem {C\+V\+Lib.\+cpp}, \hyperpage{17, 18}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{25, 26}
+
+  \indexspace
+
+  \item {V\+E\+R\+T\+I\+C\+AL}
+    \subitem {C\+V\+Lib.\+h}, \hyperpage{20}
+
+\end{theindex}

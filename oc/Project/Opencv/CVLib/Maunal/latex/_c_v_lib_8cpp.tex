@@ -1,0 +1,584 @@
+\hypertarget{_c_v_lib_8cpp}{}\section{/\+Users/\+Leakey/git/\+C\+V\+Lib/\+C\+V\+Lib/\+C\+V\+Lib.cpp File Reference}
+\label{_c_v_lib_8cpp}\index{/\+Users/\+Leakey/git/\+C\+V\+Lib/\+C\+V\+Lib/\+C\+V\+Lib.\+cpp@{/\+Users/\+Leakey/git/\+C\+V\+Lib/\+C\+V\+Lib/\+C\+V\+Lib.\+cpp}}
+{\ttfamily \#include \char`\"{}C\+V\+Lib.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_c_v_lib_8cpp_ad5ed0a6482b56ac3a47ed77126dbe7a6}{findX} (Ipl\+Image $\ast$Src\+Img, int $\ast$Min, int $\ast$Max)
+\begin{DoxyCompactList}\small\item\em Find the first and last effective pixel in image. \end{DoxyCompactList}\item 
+void \hyperlink{_c_v_lib_8cpp_a3e2236a9e9076ae64f31608fef9b3356}{findY} (Ipl\+Image $\ast$Src\+Img, int $\ast$Min, int $\ast$Max)
+\begin{DoxyCompactList}\small\item\em Find the first and last effective pixel in image. \end{DoxyCompactList}\item 
+Cv\+Rect \hyperlink{_c_v_lib_8cpp_a984cce2f59a90647e1a72c0957127cbd}{find\+Min\+Rect} (Ipl\+Image $\ast$Src\+Img)
+\begin{DoxyCompactList}\small\item\em Get a pic\textquotesingle{}s min non-\/empty pixel region. \end{DoxyCompactList}\item 
+Ipl\+Image $\ast$ \hyperlink{_c_v_lib_8cpp_a9c8221598d17006ec43547e816e1b7a4}{cv\+Get\+Sub\+Image} (Ipl\+Image $\ast$Src\+Img, Cv\+Rect Roi)
+\begin{DoxyCompactList}\small\item\em Crop image from a R\+OI. \end{DoxyCompactList}\item 
+Ipl\+Image $\ast$ \hyperlink{_c_v_lib_8cpp_a3217b97d6bb9e2ae5fd11e22107944b0}{pre\+Prs} (Ipl\+Image $\ast$Src\+Img, int W\+\_\+n, int H\+\_\+n, int Mode)
+\begin{DoxyCompactList}\small\item\em Prepress a pic, get a min binary region. 1 for turn pixel into $\sim$. \end{DoxyCompactList}\item 
+Ipl\+Image $\ast$ \hyperlink{_c_v_lib_8cpp_a06161f6e77a36224eca0a0bd22f9ae00}{resize\+Img} (char $\ast$File\+Path\+\_\+n, Cv\+Size Size\+\_\+n)
+\begin{DoxyCompactList}\small\item\em Resize pic into setted size. \end{DoxyCompactList}\item 
+void \hyperlink{_c_v_lib_8cpp_a46437fdfd44fd6042b6fb36ff4cee1f7}{show\+Img} (int TA, int TB)
+\begin{DoxyCompactList}\small\item\em Display image in window with para threshold setted. \end{DoxyCompactList}\item 
+void \hyperlink{_c_v_lib_8cpp_a1c6425e6ce6f188dd8cbc8d696c9cbf3}{min\+\_\+\+Trackbar} (int Threshold)
+\begin{DoxyCompactList}\small\item\em Set threshold, also as a callback func. \end{DoxyCompactList}\item 
+void \hyperlink{_c_v_lib_8cpp_aa615c2f7ab0deb0f3a031b13802a8161}{max\+\_\+\+Trackbar} (int Threshold)
+\begin{DoxyCompactList}\small\item\em Set threshold, also as a callback func. \end{DoxyCompactList}\item 
+void \hyperlink{_c_v_lib_8cpp_afc79457573457ad8214827344ddce4dd}{get\+Threshold} (Ipl\+Image $\ast$p\+Src\+Img, int $\ast$TA, int $\ast$TB)
+\begin{DoxyCompactList}\small\item\em Create a window to display image and modify threshold. \end{DoxyCompactList}\item 
+void \hyperlink{_c_v_lib_8cpp_a6e0048d615533871dbc525e0285c96ec}{get\+Threshold} (char $\ast$File\+Path\+\_\+n, int $\ast$TA, int $\ast$TB)
+\begin{DoxyCompactList}\small\item\em Create a window to display image and modify threshold. \end{DoxyCompactList}\item 
+void \hyperlink{_c_v_lib_8cpp_a3eb718a4f5a19da15b6a632b6baa83a8}{find\+Region} (Ipl\+Image $\ast$Src\+Img, int $\ast$x, int $\ast$y, int Flag)
+\begin{DoxyCompactList}\small\item\em Find the pixel region for a binary pic. \end{DoxyCompactList}\item 
+void \hyperlink{_c_v_lib_8cpp_a172516d01202f20cad866e2050876013}{find\+X\+Range} (Ipl\+Image $\ast$Src\+Img, int $\ast$Min, int $\ast$Max, int Flag)
+\begin{DoxyCompactList}\small\item\em Find the first and last effective pixel in image. \end{DoxyCompactList}\item 
+void \hyperlink{_c_v_lib_8cpp_a3d5c2941cdc1b57dd3aee94e8d377229}{find\+Y\+Range} (Ipl\+Image $\ast$Src\+Img, int $\ast$Min, int $\ast$Max, int Flag)
+\begin{DoxyCompactList}\small\item\em Find the first and last effective pixel in image. \end{DoxyCompactList}\item 
+Ipl\+Image $\ast$ \hyperlink{_c_v_lib_8cpp_a72cd0db9379e61ef1b6b09f361380ac4}{pic\+Stcer\+\_\+sub} (Ipl\+Image $\ast$ImgA, Ipl\+Image $\ast$ImgB, int mode)
+\begin{DoxyCompactList}\small\item\em Stitching pics simply. \end{DoxyCompactList}\item 
+Ipl\+Image $\ast$ \hyperlink{_c_v_lib_8cpp_a0300c63268ebfa00f537cf450bb33afb}{pic\+Stcer} (Ipl\+Image $\ast$Src\+Img\+Que\mbox{[}$\,$\mbox{]}, int lenth, int mode)
+\begin{DoxyCompactList}\small\item\em Stitching pics simply. \end{DoxyCompactList}\item 
+Ipl\+Image $\ast$ \hyperlink{_c_v_lib_8cpp_a87c68f2d32acea209b2c5cf42e2391ca}{auto\+Stcer} (Ipl\+Image $\ast$Src\+Img\+Queen\mbox{[}$\,$\mbox{]}, int lenth)
+\begin{DoxyCompactList}\small\item\em Stitching pics with feature matching. \end{DoxyCompactList}\item 
+void \hyperlink{_c_v_lib_8cpp_a031b48a4df15856e147f1dd2af45b70a}{Insert\+Sort} (unsigned char a\mbox{[}$\,$\mbox{]}, int count)
+\begin{DoxyCompactList}\small\item\em Sort algorithm. \end{DoxyCompactList}\item 
+void \hyperlink{_c_v_lib_8cpp_a143c0acfda57ede0de7662cc18a2379d}{show\+Img} (int TA, int TB, int p\+Knl\+Size, int p\+Erode, int p\+Dilate)
+\begin{DoxyCompactList}\small\item\em Create a window to display image and modify paras. \end{DoxyCompactList}\item 
+void \hyperlink{_c_v_lib_8cpp_ae24c462babd1cddd71221457811a2005}{set\+Ta} (int Threshold)
+\begin{DoxyCompactList}\small\item\em Set threshold. \end{DoxyCompactList}\item 
+void \hyperlink{_c_v_lib_8cpp_a0737e0bdce45f230afc47d432960b331}{set\+Tb} (int Threshold)
+\begin{DoxyCompactList}\small\item\em Set threshold. \end{DoxyCompactList}\item 
+void \hyperlink{_c_v_lib_8cpp_a3ad90c4b912db25057529dab15392f9f}{set\+Knl\+Size} (int p\+Knl\+Size)
+\begin{DoxyCompactList}\small\item\em Set kernel size. \end{DoxyCompactList}\item 
+void \hyperlink{_c_v_lib_8cpp_a89e893812c40f1dc53fa90162dd55781}{set\+Erode} (int p\+Erode)
+\begin{DoxyCompactList}\small\item\em Set erode times. \end{DoxyCompactList}\item 
+void \hyperlink{_c_v_lib_8cpp_a02d210587970b5f77fc81bc2a220653c}{set\+Dilate} (int p\+Dilate)
+\begin{DoxyCompactList}\small\item\em Set dilate times. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Ipl\+Image $\ast$ \hyperlink{_c_v_lib_8cpp_a6612b609d6956d75b9e271e487798f57}{Gray\+Img}
+\item 
+Ipl\+Image $\ast$ \hyperlink{_c_v_lib_8cpp_a9046ddfdfc131096aa13bd9e77c171a1}{Canny\+Img}
+\item 
+Ipl\+Image $\ast$ \hyperlink{_c_v_lib_8cpp_a21660cc37b1c1bf235411d4013709918}{Exp\+Img}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!auto\+Stcer@{auto\+Stcer}}
+\index{auto\+Stcer@{auto\+Stcer}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{auto\+Stcer(\+Ipl\+Image $\ast$\+Src\+Img\+Queen[], int lenth)}{autoStcer(IplImage *SrcImgQueen[], int lenth)}}]{\setlength{\rightskip}{0pt plus 5cm}Ipl\+Image$\ast$ auto\+Stcer (
+\begin{DoxyParamCaption}
+\item[{Ipl\+Image $\ast$}]{Src\+Img\+Queen\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{lenth}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_a87c68f2d32acea209b2c5cf42e2391ca}{}\label{_c_v_lib_8cpp_a87c68f2d32acea209b2c5cf42e2391ca}
+
+
+Stitching pics with feature matching. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Src\+Img\+Queen} & Image ptrs array \\
+\hline
+{\em lenth} & Sum width/heigh \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Stitched image 
+\end{DoxyReturn}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!cv\+Get\+Sub\+Image@{cv\+Get\+Sub\+Image}}
+\index{cv\+Get\+Sub\+Image@{cv\+Get\+Sub\+Image}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{cv\+Get\+Sub\+Image(\+Ipl\+Image $\ast$\+Src\+Img, Cv\+Rect Roi)}{cvGetSubImage(IplImage *SrcImg, CvRect Roi)}}]{\setlength{\rightskip}{0pt plus 5cm}Ipl\+Image$\ast$ cv\+Get\+Sub\+Image (
+\begin{DoxyParamCaption}
+\item[{Ipl\+Image $\ast$}]{Src\+Img, }
+\item[{Cv\+Rect}]{Roi}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_a9c8221598d17006ec43547e816e1b7a4}{}\label{_c_v_lib_8cpp_a9c8221598d17006ec43547e816e1b7a4}
+
+
+Crop image from a R\+OI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Src\+Img} & Image ptr \\
+\hline
+{\em Roi} & R\+OI \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Croped image 
+\end{DoxyReturn}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!find\+Min\+Rect@{find\+Min\+Rect}}
+\index{find\+Min\+Rect@{find\+Min\+Rect}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{find\+Min\+Rect(\+Ipl\+Image $\ast$\+Src\+Img)}{findMinRect(IplImage *SrcImg)}}]{\setlength{\rightskip}{0pt plus 5cm}Cv\+Rect find\+Min\+Rect (
+\begin{DoxyParamCaption}
+\item[{Ipl\+Image $\ast$}]{Src\+Img}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_a984cce2f59a90647e1a72c0957127cbd}{}\label{_c_v_lib_8cpp_a984cce2f59a90647e1a72c0957127cbd}
+
+
+Get a pic\textquotesingle{}s min non-\/empty pixel region. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Src\+Img} & Image ptr \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Min non-\/empty pixel region 
+\end{DoxyReturn}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!find\+Region@{find\+Region}}
+\index{find\+Region@{find\+Region}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{find\+Region(\+Ipl\+Image $\ast$\+Src\+Img, int $\ast$x, int $\ast$y, int Flag)}{findRegion(IplImage *SrcImg, int *x, int *y, int Flag)}}]{\setlength{\rightskip}{0pt plus 5cm}void find\+Region (
+\begin{DoxyParamCaption}
+\item[{Ipl\+Image $\ast$}]{Src\+Img, }
+\item[{int $\ast$}]{x, }
+\item[{int $\ast$}]{y, }
+\item[{int}]{Flag = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_a3eb718a4f5a19da15b6a632b6baa83a8}{}\label{_c_v_lib_8cpp_a3eb718a4f5a19da15b6a632b6baa83a8}
+
+
+Find the pixel region for a binary pic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Src\+Img} & Source\+Image \\
+\hline
+{\em x} & X pos \\
+\hline
+{\em y} & Y pos \\
+\hline
+{\em Flag} & White/\+Black background,1 for white, 0 for black \\
+\hline
+\end{DoxyParams}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!findX@{findX}}
+\index{findX@{findX}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{find\+X(\+Ipl\+Image $\ast$\+Src\+Img, int $\ast$\+Min, int $\ast$\+Max)}{findX(IplImage *SrcImg, int *Min, int *Max)}}]{\setlength{\rightskip}{0pt plus 5cm}void findX (
+\begin{DoxyParamCaption}
+\item[{Ipl\+Image $\ast$}]{Src\+Img, }
+\item[{int $\ast$}]{Min, }
+\item[{int $\ast$}]{Max}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_ad5ed0a6482b56ac3a47ed77126dbe7a6}{}\label{_c_v_lib_8cpp_ad5ed0a6482b56ac3a47ed77126dbe7a6}
+
+
+Find the first and last effective pixel in image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Src\+Img} & Image ptr \\
+\hline
+{\em Min} & First X pos \\
+\hline
+{\em Max} & Last X pos \\
+\hline
+\end{DoxyParams}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!find\+X\+Range@{find\+X\+Range}}
+\index{find\+X\+Range@{find\+X\+Range}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{find\+X\+Range(\+Ipl\+Image $\ast$\+Src\+Img, int $\ast$\+Min, int $\ast$\+Max, int Flag)}{findXRange(IplImage *SrcImg, int *Min, int *Max, int Flag)}}]{\setlength{\rightskip}{0pt plus 5cm}void find\+X\+Range (
+\begin{DoxyParamCaption}
+\item[{Ipl\+Image $\ast$}]{Src\+Img, }
+\item[{int $\ast$}]{Min, }
+\item[{int $\ast$}]{Max, }
+\item[{int}]{Flag = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_a172516d01202f20cad866e2050876013}{}\label{_c_v_lib_8cpp_a172516d01202f20cad866e2050876013}
+
+
+Find the first and last effective pixel in image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Src\+Img} & Image ptr \\
+\hline
+{\em Min} & First X pos \\
+\hline
+{\em Max} & Last X pos \\
+\hline
+{\em Flag} & White/\+Black background,1 for white, 0 for black \\
+\hline
+\end{DoxyParams}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!findY@{findY}}
+\index{findY@{findY}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{find\+Y(\+Ipl\+Image $\ast$\+Src\+Img, int $\ast$\+Min, int $\ast$\+Max)}{findY(IplImage *SrcImg, int *Min, int *Max)}}]{\setlength{\rightskip}{0pt plus 5cm}void findY (
+\begin{DoxyParamCaption}
+\item[{Ipl\+Image $\ast$}]{Src\+Img, }
+\item[{int $\ast$}]{Min, }
+\item[{int $\ast$}]{Max}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_a3e2236a9e9076ae64f31608fef9b3356}{}\label{_c_v_lib_8cpp_a3e2236a9e9076ae64f31608fef9b3356}
+
+
+Find the first and last effective pixel in image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Src\+Img} & Image ptr \\
+\hline
+{\em Min} & First Y pos \\
+\hline
+{\em Max} & Last Y pos \\
+\hline
+\end{DoxyParams}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!find\+Y\+Range@{find\+Y\+Range}}
+\index{find\+Y\+Range@{find\+Y\+Range}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{find\+Y\+Range(\+Ipl\+Image $\ast$\+Src\+Img, int $\ast$\+Min, int $\ast$\+Max, int Flag)}{findYRange(IplImage *SrcImg, int *Min, int *Max, int Flag)}}]{\setlength{\rightskip}{0pt plus 5cm}void find\+Y\+Range (
+\begin{DoxyParamCaption}
+\item[{Ipl\+Image $\ast$}]{Src\+Img, }
+\item[{int $\ast$}]{Min, }
+\item[{int $\ast$}]{Max, }
+\item[{int}]{Flag = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_a3d5c2941cdc1b57dd3aee94e8d377229}{}\label{_c_v_lib_8cpp_a3d5c2941cdc1b57dd3aee94e8d377229}
+
+
+Find the first and last effective pixel in image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Src\+Img} & Image ptr \\
+\hline
+{\em Min} & First Y pos \\
+\hline
+{\em Max} & Last Y pos \\
+\hline
+{\em Flag} & White/\+Black background,1 for white, 0 for black \\
+\hline
+\end{DoxyParams}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!get\+Threshold@{get\+Threshold}}
+\index{get\+Threshold@{get\+Threshold}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Threshold(\+Ipl\+Image $\ast$p\+Src\+Img, int $\ast$\+T\+A, int $\ast$\+T\+B)}{getThreshold(IplImage *pSrcImg, int *TA, int *TB)}}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Threshold (
+\begin{DoxyParamCaption}
+\item[{Ipl\+Image $\ast$}]{p\+Src\+Img, }
+\item[{int $\ast$}]{TA, }
+\item[{int $\ast$}]{TB}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_afc79457573457ad8214827344ddce4dd}{}\label{_c_v_lib_8cpp_afc79457573457ad8214827344ddce4dd}
+
+
+Create a window to display image and modify threshold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Src\+Img} & Image ptr \\
+\hline
+{\em TA} & Threshold A \\
+\hline
+{\em TB} & Threshold B \\
+\hline
+\end{DoxyParams}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!get\+Threshold@{get\+Threshold}}
+\index{get\+Threshold@{get\+Threshold}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Threshold(char $\ast$\+File\+Path\+\_\+n, int $\ast$\+T\+A, int $\ast$\+T\+B)}{getThreshold(char *FilePath_n, int *TA, int *TB)}}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Threshold (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{File\+Path\+\_\+n, }
+\item[{int $\ast$}]{TA, }
+\item[{int $\ast$}]{TB}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_a6e0048d615533871dbc525e0285c96ec}{}\label{_c_v_lib_8cpp_a6e0048d615533871dbc525e0285c96ec}
+
+
+Create a window to display image and modify threshold. 
+
+Call a window and show a pic to ensure the threshold for binary a pic.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Src\+Img} & Image path \\
+\hline
+{\em TA} & Threshold A \\
+\hline
+{\em TB} & Threshold B \\
+\hline
+\end{DoxyParams}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!Insert\+Sort@{Insert\+Sort}}
+\index{Insert\+Sort@{Insert\+Sort}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{Insert\+Sort(unsigned char a[], int count)}{InsertSort(unsigned char a[], int count)}}]{\setlength{\rightskip}{0pt plus 5cm}void Insert\+Sort (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{a\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_a031b48a4df15856e147f1dd2af45b70a}{}\label{_c_v_lib_8cpp_a031b48a4df15856e147f1dd2af45b70a}
+
+
+Sort algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Char array \\
+\hline
+{\em count} & Lenth of char array \\
+\hline
+\end{DoxyParams}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!max\+\_\+\+Trackbar@{max\+\_\+\+Trackbar}}
+\index{max\+\_\+\+Trackbar@{max\+\_\+\+Trackbar}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{max\+\_\+\+Trackbar(int Threshold)}{max_Trackbar(int Threshold)}}]{\setlength{\rightskip}{0pt plus 5cm}void max\+\_\+\+Trackbar (
+\begin{DoxyParamCaption}
+\item[{int}]{Threshold}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_aa615c2f7ab0deb0f3a031b13802a8161}{}\label{_c_v_lib_8cpp_aa615c2f7ab0deb0f3a031b13802a8161}
+
+
+Set threshold, also as a callback func. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Threshold} & Threshold needed \\
+\hline
+\end{DoxyParams}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!min\+\_\+\+Trackbar@{min\+\_\+\+Trackbar}}
+\index{min\+\_\+\+Trackbar@{min\+\_\+\+Trackbar}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{min\+\_\+\+Trackbar(int Threshold)}{min_Trackbar(int Threshold)}}]{\setlength{\rightskip}{0pt plus 5cm}void min\+\_\+\+Trackbar (
+\begin{DoxyParamCaption}
+\item[{int}]{Threshold}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_a1c6425e6ce6f188dd8cbc8d696c9cbf3}{}\label{_c_v_lib_8cpp_a1c6425e6ce6f188dd8cbc8d696c9cbf3}
+
+
+Set threshold, also as a callback func. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Threshold} & Threshold needed \\
+\hline
+\end{DoxyParams}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!pic\+Stcer@{pic\+Stcer}}
+\index{pic\+Stcer@{pic\+Stcer}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{pic\+Stcer(\+Ipl\+Image $\ast$\+Src\+Img\+Que[], int lenth, int mode)}{picStcer(IplImage *SrcImgQue[], int lenth, int mode)}}]{\setlength{\rightskip}{0pt plus 5cm}Ipl\+Image$\ast$ pic\+Stcer (
+\begin{DoxyParamCaption}
+\item[{Ipl\+Image $\ast$}]{Src\+Img\+Queen\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{lenth, }
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_a0300c63268ebfa00f537cf450bb33afb}{}\label{_c_v_lib_8cpp_a0300c63268ebfa00f537cf450bb33afb}
+
+
+Stitching pics simply. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Src\+Img\+Queen} & Image ptrs array \\
+\hline
+{\em lenth} & Sum width/heigh \\
+\hline
+{\em mode} & Vertical/\+Horizontal, 1 for vertical, 0 for horizontal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Stitched image 
+\end{DoxyReturn}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!pic\+Stcer\+\_\+sub@{pic\+Stcer\+\_\+sub}}
+\index{pic\+Stcer\+\_\+sub@{pic\+Stcer\+\_\+sub}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{pic\+Stcer\+\_\+sub(\+Ipl\+Image $\ast$\+Img\+A, Ipl\+Image $\ast$\+Img\+B, int mode)}{picStcer_sub(IplImage *ImgA, IplImage *ImgB, int mode)}}]{\setlength{\rightskip}{0pt plus 5cm}Ipl\+Image$\ast$ pic\+Stcer\+\_\+sub (
+\begin{DoxyParamCaption}
+\item[{Ipl\+Image $\ast$}]{ImgA, }
+\item[{Ipl\+Image $\ast$}]{ImgB, }
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_a72cd0db9379e61ef1b6b09f361380ac4}{}\label{_c_v_lib_8cpp_a72cd0db9379e61ef1b6b09f361380ac4}
+
+
+Stitching pics simply. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ImgA} & Image ptr A \\
+\hline
+{\em ImgB} & Image ptr B \\
+\hline
+{\em mode} & Vertical/\+Horizontal, 1 for vertical, 0 for horizontal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Stitched image 
+\end{DoxyReturn}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!pre\+Prs@{pre\+Prs}}
+\index{pre\+Prs@{pre\+Prs}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{pre\+Prs(\+Ipl\+Image $\ast$\+Src\+Img, int W\+\_\+n, int H\+\_\+n, int Mode)}{prePrs(IplImage *SrcImg, int W_n, int H_n, int Mode)}}]{\setlength{\rightskip}{0pt plus 5cm}Ipl\+Image$\ast$ pre\+Prs (
+\begin{DoxyParamCaption}
+\item[{Ipl\+Image $\ast$}]{Src\+Img, }
+\item[{int}]{W\+\_\+n, }
+\item[{int}]{H\+\_\+n, }
+\item[{int}]{Mode = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_a3217b97d6bb9e2ae5fd11e22107944b0}{}\label{_c_v_lib_8cpp_a3217b97d6bb9e2ae5fd11e22107944b0}
+
+
+Prepress a pic, get a min binary region. 1 for turn pixel into $\sim$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Src\+Img} & Image ptr \\
+\hline
+{\em W\+\_\+n} & Expectant width \\
+\hline
+{\em H\+\_\+n} & Expectant heigh \\
+\hline
+{\em Mode} & White/\+Black background \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Processed image 
+\end{DoxyReturn}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!resize\+Img@{resize\+Img}}
+\index{resize\+Img@{resize\+Img}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{resize\+Img(char $\ast$\+File\+Path\+\_\+n, Cv\+Size Size\+\_\+n)}{resizeImg(char *FilePath_n, CvSize Size_n)}}]{\setlength{\rightskip}{0pt plus 5cm}Ipl\+Image$\ast$ resize\+Img (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{File\+Path\+\_\+n, }
+\item[{Cv\+Size}]{Size\+\_\+n}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_a06161f6e77a36224eca0a0bd22f9ae00}{}\label{_c_v_lib_8cpp_a06161f6e77a36224eca0a0bd22f9ae00}
+
+
+Resize pic into setted size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em File\+Path\+\_\+n} & Pic path \\
+\hline
+{\em Size\+\_\+n} & Expectant height$\ast$width \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resized pic 
+\end{DoxyReturn}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!set\+Dilate@{set\+Dilate}}
+\index{set\+Dilate@{set\+Dilate}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{set\+Dilate(int p\+Dilate)}{setDilate(int pDilate)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Dilate (
+\begin{DoxyParamCaption}
+\item[{int}]{p\+Dilate}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_a02d210587970b5f77fc81bc2a220653c}{}\label{_c_v_lib_8cpp_a02d210587970b5f77fc81bc2a220653c}
+
+
+Set dilate times. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Dilate} & Dilate times \\
+\hline
+\end{DoxyParams}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!set\+Erode@{set\+Erode}}
+\index{set\+Erode@{set\+Erode}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{set\+Erode(int p\+Erode)}{setErode(int pErode)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Erode (
+\begin{DoxyParamCaption}
+\item[{int}]{p\+Erode}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_a89e893812c40f1dc53fa90162dd55781}{}\label{_c_v_lib_8cpp_a89e893812c40f1dc53fa90162dd55781}
+
+
+Set erode times. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Erode} & Erode times \\
+\hline
+\end{DoxyParams}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!set\+Knl\+Size@{set\+Knl\+Size}}
+\index{set\+Knl\+Size@{set\+Knl\+Size}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{set\+Knl\+Size(int p\+Knl\+Size)}{setKnlSize(int pKnlSize)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Knl\+Size (
+\begin{DoxyParamCaption}
+\item[{int}]{p\+Knl\+Size}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_a3ad90c4b912db25057529dab15392f9f}{}\label{_c_v_lib_8cpp_a3ad90c4b912db25057529dab15392f9f}
+
+
+Set kernel size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Knl\+Size} & Kernel size(width=heigh) \\
+\hline
+\end{DoxyParams}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!set\+Ta@{set\+Ta}}
+\index{set\+Ta@{set\+Ta}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{set\+Ta(int Threshold)}{setTa(int Threshold)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Ta (
+\begin{DoxyParamCaption}
+\item[{int}]{Threshold}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_ae24c462babd1cddd71221457811a2005}{}\label{_c_v_lib_8cpp_ae24c462babd1cddd71221457811a2005}
+
+
+Set threshold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Threshold} & Threshold \\
+\hline
+\end{DoxyParams}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!set\+Tb@{set\+Tb}}
+\index{set\+Tb@{set\+Tb}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{set\+Tb(int Threshold)}{setTb(int Threshold)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Tb (
+\begin{DoxyParamCaption}
+\item[{int}]{Threshold}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_a0737e0bdce45f230afc47d432960b331}{}\label{_c_v_lib_8cpp_a0737e0bdce45f230afc47d432960b331}
+
+
+Set threshold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Threshold} & Threshold \\
+\hline
+\end{DoxyParams}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!show\+Img@{show\+Img}}
+\index{show\+Img@{show\+Img}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{show\+Img(int T\+A, int T\+B)}{showImg(int TA, int TB)}}]{\setlength{\rightskip}{0pt plus 5cm}void show\+Img (
+\begin{DoxyParamCaption}
+\item[{int}]{TA, }
+\item[{int}]{TB}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_a46437fdfd44fd6042b6fb36ff4cee1f7}{}\label{_c_v_lib_8cpp_a46437fdfd44fd6042b6fb36ff4cee1f7}
+
+
+Display image in window with para threshold setted. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em TA} & Threshold A \\
+\hline
+{\em TB} & Threshold B \\
+\hline
+\end{DoxyParams}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!show\+Img@{show\+Img}}
+\index{show\+Img@{show\+Img}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{show\+Img(int T\+A, int T\+B, int p\+Knl\+Size, int p\+Erode, int p\+Dilate)}{showImg(int TA, int TB, int pKnlSize, int pErode, int pDilate)}}]{\setlength{\rightskip}{0pt plus 5cm}void show\+Img (
+\begin{DoxyParamCaption}
+\item[{int}]{TA, }
+\item[{int}]{TB, }
+\item[{int}]{p\+Knl\+Size, }
+\item[{int}]{p\+Erode, }
+\item[{int}]{p\+Dilate}
+\end{DoxyParamCaption}
+)}\hypertarget{_c_v_lib_8cpp_a143c0acfda57ede0de7662cc18a2379d}{}\label{_c_v_lib_8cpp_a143c0acfda57ede0de7662cc18a2379d}
+
+
+Create a window to display image and modify paras. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em TA} & Threshold A \\
+\hline
+{\em TB} & Threshold B \\
+\hline
+{\em p\+Knl\+Size} & Kernel size \\
+\hline
+{\em p\+Erode} & Erode times \\
+\hline
+{\em p\+Dilate} & Dilate times \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!Canny\+Img@{Canny\+Img}}
+\index{Canny\+Img@{Canny\+Img}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{Canny\+Img}{CannyImg}}]{\setlength{\rightskip}{0pt plus 5cm}Ipl\+Image$\ast$ Canny\+Img}\hypertarget{_c_v_lib_8cpp_a9046ddfdfc131096aa13bd9e77c171a1}{}\label{_c_v_lib_8cpp_a9046ddfdfc131096aa13bd9e77c171a1}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!Exp\+Img@{Exp\+Img}}
+\index{Exp\+Img@{Exp\+Img}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{Exp\+Img}{ExpImg}}]{\setlength{\rightskip}{0pt plus 5cm}Ipl\+Image$\ast$ Exp\+Img}\hypertarget{_c_v_lib_8cpp_a21660cc37b1c1bf235411d4013709918}{}\label{_c_v_lib_8cpp_a21660cc37b1c1bf235411d4013709918}
+\index{C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}!Gray\+Img@{Gray\+Img}}
+\index{Gray\+Img@{Gray\+Img}!C\+V\+Lib.\+cpp@{C\+V\+Lib.\+cpp}}
+\subsubsection[{\texorpdfstring{Gray\+Img}{GrayImg}}]{\setlength{\rightskip}{0pt plus 5cm}Ipl\+Image$\ast$ Gray\+Img}\hypertarget{_c_v_lib_8cpp_a6612b609d6956d75b9e271e487798f57}{}\label{_c_v_lib_8cpp_a6612b609d6956d75b9e271e487798f57}

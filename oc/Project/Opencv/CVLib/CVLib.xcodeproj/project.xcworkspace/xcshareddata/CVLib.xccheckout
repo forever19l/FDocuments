@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B7E55C47-E61B-4B61-8775-5287D5EEE26D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CVLib</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4C3D49C9BACD8A2C6CDD4E5DD54CD37C7C945C4D</key>
+		<string>http://iagit.intelligentgroup.cn/LeakeyFo/CVLib.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CVLib.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4C3D49C9BACD8A2C6CDD4E5DD54CD37C7C945C4D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://iagit.intelligentgroup.cn/LeakeyFo/CVLib.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4C3D49C9BACD8A2C6CDD4E5DD54CD37C7C945C4D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4C3D49C9BACD8A2C6CDD4E5DD54CD37C7C945C4D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CVLib</string>
+		</dict>
+	</array>
+</dict>
+</plist>
