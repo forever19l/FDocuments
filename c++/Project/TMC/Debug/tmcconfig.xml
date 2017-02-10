@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TMCCONFIG>
+  <TMCREQAddress>127.0.0.1</TMCREQAddress>
+  <TMCREQPort>6200</TMCREQPort>
+  <TMCREPAddress>127.0.0.1</TMCREPAddress>
+  <TMCREPPort>8100</TMCREPPort>
+  <MTMSAddress>127.0.0.1</MTMSAddress>
+  <MTMSPort>6379</MTMSPort>
+  <STATIONIP>
+    <C1>
+      <IP>169.254.1.11</IP>
+      <IP>169.254.1.111</IP>
+    </C1>
+    <C2>
+      <IP>169.254.1.12</IP>
+      <IP>127.0.0.1</IP>
+    </C2>
+    <C3>
+      <IP>169.254.1.13</IP>
+    </C3>
+    <C4>
+      <IP>169.254.1.14</IP>
+    </C4>
+  </STATIONIP>
+  <MODEL>
+    <PRE>
+      <C1>
+        <CSV>../profile/chamber1__pre.csv</CSV>
+      </C1>
+      <C2>
+        <CSV>..\profile\chamber2__pre.csv</CSV>
+      </C2>
+      <C3>
+        <CSV>..\profile\chamber3__pre.csv</CSV>
+      </C3>
+      <C4>
+        <CSV>..\profile\chamber4__pre.csv</CSV>
+      </C4>
+      <MTMS>169.254.1.111 61806</MTMS>
+    </PRE>
+    <POST>
+      <C1>
+        <CSV>..\profile\chamber1__post.csv</CSV>
+      </C1>
+      <C2>
+        <CSV>C:\\profile\\chamber2__post.csv</CSV>
+      </C2>
+      <C4>
+        <CSV>..\profile\chamber4__post.csv</CSV>
+      </C4>
+      <MTMS>169.254.1.111 61807</MTMS>
+    </POST>
+  </MODEL>
+</TMCCONFIG>

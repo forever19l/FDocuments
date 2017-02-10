@@ -1,2 +1,0 @@
-1、copy to c:/
-2、config the system path,as png.

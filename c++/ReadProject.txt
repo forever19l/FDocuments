@@ -1,6 +1,8 @@
 ###################
 #2017.1.4    v1.0.0
-DllDemo is a c++ domo for dll. http://blog.csdn.net/forever917/article/details/53780543
+DllDemo is a c++ domo for dll. http://blog.csdn.net/forever917/article/details/53780543.
+    CameraDLL is a sample demo for c++ to make dll.
+    CameraTest2 is a demo, how to import dll and make lua interface.
 
 TMC is a Test Model Controller . It’s using log4 to print and save log , search redis to init model , communicate with zmq to decide weather change MTMS(another exe for client) model.
 ###################

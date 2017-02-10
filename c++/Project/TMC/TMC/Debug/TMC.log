@@ -1,0 +1,51 @@
+﻿生成启动时间为 1/4/17 10:03:21。
+     1>项目“C:\Project\TMC\TMC\TMC.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Project\TMC\TMC\ /IC:\Project\TMC\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ConvertHelper.cpp CRedis.cpp JsonHelper.cpp TMC.cpp Util.cpp XmlHelper.cpp ZmqReplyer.cpp ZmqRequester.cpp
+         ZmqRequester.cpp
+         ZmqReplyer.cpp
+         XmlHelper.cpp
+         Util.cpp
+     1>c:\project\tmc\tmc\util.cpp(424): warning C4800: “BOOL”: 将值强制为布尔值“true”或“false”(性能警告)
+         TMC.cpp
+     1>c:\project\tmc\tmc\tmc.cpp(146): warning C4101: “lpfile”: 未引用的局部变量
+     1>c:\project\tmc\tmc\tmc.cpp(148): warning C4101: “lpparameter”: 未引用的局部变量
+     1>c:\project\tmc\tmc\tmc.cpp(233): warning C4002: “LOG_WARN”宏的实参太多
+     1>c:\project\tmc\tmc\tmc.cpp(338): warning C4002: “LOG_WARN”宏的实参太多
+     1>c:\project\tmc\tmc\tmc.cpp(386): warning C4018: “<”: 有符号/无符号不匹配
+         JsonHelper.cpp
+     1>c:\project\tmc\tmc\jsonhelper.cpp(201): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>c:\project\tmc\tmc\jsonhelper.cpp(276): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>c:\project\tmc\tmc\jsonhelper.cpp(349): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+         CRedis.cpp
+         ConvertHelper.cpp
+     1>c:\project\tmc\tmc\converthelper.cpp(194): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+         正在生成代码...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Project\TMC\Debug\TMC.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Project\TMC\TMC\ hiredis.lib libzmq.lib Win32_Interop.lib libsodium.lib log4cplusUD.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Project\TMC\Debug\TMC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Project\TMC\Debug\TMC.lib" /MACHINE:X86 Debug\ConvertHelper.obj
+         Debug\CRedis.obj
+         Debug\JsonHelper.obj
+         Debug\TMC.obj
+         Debug\Util.obj
+         Debug\XmlHelper.obj
+         Debug\ZmqReplyer.obj
+         Debug\ZmqRequester.obj
+     1>hiredis.lib(hiredis.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“hiredis.lib(hiredis.obj)”或在“C:\Project\TMC\Debug\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>hiredis.lib(net.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“hiredis.lib(net.obj)”或在“C:\Project\TMC\Debug\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>hiredis.lib(sds.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“hiredis.lib(sds.obj)”或在“C:\Project\TMC\Debug\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>Win32_Interop.lib(Win32_ANSI.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“Win32_Interop.lib(Win32_ANSI.obj)”或在“C:\Project\TMC\Debug\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>Win32_Interop.lib(Win32_Common.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“Win32_Interop.lib(Win32_Common.obj)”或在“C:\Project\TMC\Debug\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>Win32_Interop.lib(Win32_Error.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“Win32_Interop.lib(Win32_Error.obj)”或在“C:\Project\TMC\Debug\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>Win32_Interop.lib(Win32_EventLog.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“Win32_Interop.lib(Win32_EventLog.obj)”或在“C:\Project\TMC\Debug\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>Win32_Interop.lib(Win32_FDAPI.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“Win32_Interop.lib(Win32_FDAPI.obj)”或在“C:\Project\TMC\Debug\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>Win32_Interop.lib(Win32_fdapi_crt.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“Win32_Interop.lib(Win32_fdapi_crt.obj)”或在“C:\Project\TMC\Debug\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>Win32_Interop.lib(Win32_RedisLog.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“Win32_Interop.lib(Win32_RedisLog.obj)”或在“C:\Project\TMC\Debug\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>Win32_Interop.lib(win32_rfdmap.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“Win32_Interop.lib(win32_rfdmap.obj)”或在“C:\Project\TMC\Debug\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>Win32_Interop.lib(Win32_Time.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“Win32_Interop.lib(Win32_Time.obj)”或在“C:\Project\TMC\Debug\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>Win32_Interop.lib(Win32_variadicFunctor.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“Win32_Interop.lib(Win32_variadicFunctor.obj)”或在“C:\Project\TMC\Debug\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+         TMC.vcxproj -> C:\Project\TMC\Debug\TMC.exe
+     1>已完成生成项目“C:\Project\TMC\TMC\TMC.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:06.89
