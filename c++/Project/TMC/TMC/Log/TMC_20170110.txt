@@ -1,0 +1,8 @@
+2017-01-10 19:00:09,764 [9296] [DEBUG] REP Bind172.15.0.216:8200 result=0
+2017-01-10 19:00:09,775 [9296] [DEBUG] REQ Connect127.0.0.1:6200 result=0
+2017-01-10 19:00:10,849 [9296] [DEBUG] launce exe success -->>169.254.1.111 61806
+2017-01-10 19:00:36,448 [9296] [DEBUG] rep recv-->>post
+
+2017-01-10 19:00:36,469 [9296] [DEBUG] launce exe success -->>169.254.1.111 61807
+2017-01-10 19:00:37,638 [9296] [DEBUG] REQ Send->{"function":"load","id":"{98731b6f-c5c1-4ea1-872b-874f3f597c5c}","jsonrpc":"1.0","params":["C:/Users/haitao/Documents/Git/TMC/profile/Chamber__Post4.csv"]} result=155
+2017-01-10 19:00:37,643 [9296] [DEBUG] REQ Recv->{"jsonrpc": "1.0", "id": "{98731b6f-c5c1-4ea1-872b-874f3f597c5c}", "result": "C:/Users/haitao/Documents/Git/TMC/profile/Chamber__Post4.csv has been loaded"}

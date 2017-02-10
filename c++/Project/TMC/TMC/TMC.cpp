@@ -38,11 +38,49 @@ int g_port_rep;
 string g_mtms_add;
 int g_mtms_port;
 
+void Destory()
+{
+	if (REP)
+	{
+		delete REP;
+	}
+	if (REQ)
+	{
+		delete REQ;
+	}
+}
+
+BOOL WINAPI ConsoleHandler(DWORD msgType)
+{
+	if (msgType == CTRL_C_EVENT)
+	{
+		printf("Ctrl-C!\n");
+		Destory();
+		return TRUE;
+	}
+	else if (msgType == CTRL_CLOSE_EVENT)
+	{
+		printf("Close console window!\n");
+		Destory();
+		/* Note: The system gives you very limited time to exit in this condition */
+		return TRUE;
+	}
+
+	/*
+	Other messages:
+	CTRL_BREAK_EVENT         Ctrl-Break pressed
+	CTRL_LOGOFF_EVENT        User log off
+	CTRL_SHUTDOWN_EVENT      System shutdown
+	*/
+
+	return FALSE;
+}
+
 void TMCLOG(string log){
 	SYSTEMTIME st;
 	GetLocalTime(&st);
 	string time = to_string(st.wYear) + to_string(st.wMonth) + to_string(st.wDay) + "-" + to_string(st.wHour) + ":" + to_string(st.wMinute) + ":" + to_string(st.wSecond) ;
-	LOG_DEBUG("time=" << time.c_str() << " log->" << log.c_str() << "\n");
+	LOG_DEBUG(log.c_str());
 	printf_s("time->%s ;log->%s\n", time.c_str(), log.c_str());
 }
 
@@ -59,7 +97,7 @@ std::string CreateLoad(string csv)
 		fprintf(stderr, "create guid error\n");
 	}
 	_snprintf_s(uuid_buffer, sizeof(uuid_buffer),
-		"%08x-%04x-%04x-%02x%02x-%02x%02x%02x%02x%02x%02x",
+		"{%08x-%04x-%04x-%02x%02x-%02x%02x%02x%02x%02x%02x}",
 		guid.Data1, guid.Data2, guid.Data3,
 		guid.Data4[0], guid.Data4[1], guid.Data4[2],
 		guid.Data4[3], guid.Data4[4], guid.Data4[5],
@@ -148,7 +186,7 @@ bool launce_MTMS(string k){						//launce exe
 	LPCUWSTR lpparameter;
 	shell.lpParameters = stringToLPCWSTR(k);
 	//shell.lpParameters = L"169.154.1.111 61086";
-	shell.nShow = SW_SHOWNORMAL;
+	shell.nShow = SW_HIDE;
 	BOOL ret = ShellExecuteEx(&shell);
 	if (ret)
 	{
@@ -221,12 +259,13 @@ string req_send_and_recv(string send){
 	size_t _size =0;
 	int ret = 0;
 	string msg = CreateLoad(send);
+	string csv = string_replace(msg,"\\\\","\/");
 	if (!send.empty())
 	{
 		try{
 			//REQ->Send(s, strlen(s));
 			//ParseLoad(CreateLoad(send))
-			ret = REQ->SendString(msg);
+			ret = REQ->SendString(csv);
 			REQ->Recv(buffer, _size);
 		}
 		catch (exception x){
@@ -239,8 +278,10 @@ string req_send_and_recv(string send){
 	if (buffer != NULL && _size > 0){
 		sbuffer.assign(buffer, _size);
 	}
-	string log = "REQ Send" + msg + " result=" + to_string(ret) + " ; REQ recv->" + sbuffer;
-	TMCLOG(log);
+	string logSend = "REQ Send->" + csv + " result=" + to_string(ret);
+	string logRecv = "REQ Recv->" + sbuffer;
+	TMCLOG(logSend);
+	TMCLOG(logRecv);
 	return sbuffer;
 }
 
@@ -311,7 +352,7 @@ int rep_thread_proc(){
 	}
 
 	try{
-		while (true)
+		//while (true)
 		{
 			int rcv_cnt = REP->recv_n(buffer, BUFFER_SIZE);
 			if (rcv_cnt < 0)
@@ -319,16 +360,16 @@ int rep_thread_proc(){
 				TMCLOG("server error!!!!\n");
 				REP->Close();
 				init_rep();
-				continue;
+				//continue;
 			}
 			else if (0 == rcv_cnt)
 			{
 				Sleep(500);
-				continue;
+				//continue;
 			}
 			buffer[rcv_cnt] = 0;
 			string pri = buffer;
-			string log = "rep recv-->>" + pri + "\n";
+			string log = "rep recv-->>" + pri;
 			TMCLOG(log);
 			REP->send_n("OK",2);
 			dispatch_request_proc(buffer, rcv_cnt, 2000);
@@ -459,8 +500,24 @@ void read_xml_config(string path_xmlconfig){
 
 	if (!g_station.empty())
 	{
-		g_csv_pre = path_auto(xml.Child("TMCCONFIG.MODEL.PRE." + g_station + ".CSV").Value<std::string>() );
-		g_csv_post = path_auto(xml.Child("TMCCONFIG.MODEL.POST." + g_station + ".CSV").Value<std::string>());
+		XmlNode preNode = xml.Child("TMCCONFIG.MODEL.PRE." + g_station + ".CSV");
+		if (preNode.isValid())
+		{
+			g_csv_pre = path_auto(preNode.Value<std::string>());
+		}
+		else
+		{
+			TMCLOG("TMCCONFIG.MODEL.PRE." + g_station + ".CSV is NULL");
+		}
+		XmlNode postNode = xml.Child("TMCCONFIG.MODEL.POST." + g_station + ".CSV");
+		if (postNode.isValid())
+		{
+			g_csv_post = path_auto(postNode.Value<std::string>());
+		}
+		else
+		{
+			TMCLOG("TMCCONFIG.MODEL.PRE." + g_station + ".CSV is NULL");
+		}
 	}
 	string log = "GSTATION=" + g_station + " ;CSV-pre=" + g_csv_pre + " CSV-post=" + g_csv_post;
 	TMCLOG(log);
@@ -468,18 +525,21 @@ void read_xml_config(string path_xmlconfig){
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	SetConsoleCtrlHandler(ConsoleHandler, TRUE);
 	SYSTEMTIME st;
 	GetLocalTime(&st);
 	char filename[100] = { 0 };
-	sprintf_s(filename, "TMC_%d%02d%02d_%02d%02d%02d.txt", st.wYear, st.wMonth, st.wDay, st.wHour, st.wMinute, st.wSecond);
-	INIT_LOG(filename);
+	sprintf_s(filename, "\\Log\\TMC_%d%02d%02d.txt", st.wYear, st.wMonth, st.wDay);
 	setvbuf(stdout, NULL, _IONBF, 0);
 
 	char p[MAX_PATH];
 	_getcwd(p, MAX_PATH);
 	string p1 = p;
-	string path = p1 + +"\\tmcconfig.xml";
+	string path = p1 +"\\tmcconfig.xml";
 	read_xml_config(path);//get station , model and so on
+	
+	string filepath = p1.append(filename);
+	INIT_LOG(filepath);
 
 	init_rep();
 	init_req();
@@ -492,7 +552,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	redis->ReadElement("CurrentLotID", lotid);
 	redis->ReadHashElement(lotid, "StepName", model);
 	redis->Quit();
-	
+	model = "Pre";
 	//start MTMS 61806/61807
 	if (model.find("Pre") != string::npos || model.find("pre") != string::npos || model.find("PRE") != string::npos)
 	{

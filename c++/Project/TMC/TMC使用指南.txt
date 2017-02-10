@@ -1,0 +1,30 @@
+TMC开启
+1、创建log”TMC_当前时间.txt“，位于exe同级目录下。
+2、读取与exe同级目录下的tmcconfig.xml，读取本地ip，获取当前机台的站号
+3、查询redis，获取模式，如果模式包含“PRE”,"Pre","pre","POST","Post","post"等，将启动相应的MTMS，并发送相应站的csv路径（如果存在）。csv路径可用完整路径，如果用 ”../profile/...“ 路径则需要profile目录与exe存放目录位于同一级。 如当前exe的Debug目录和Profile目录是同一级。
+4、开启poller，等待mainUI的消息。消息为pre或post，mainUI发送什么，TMC则返回什么。
+4.1、消息为pre时，如果查询redis启动时就位pre则不会重启MTMS，否则会重启MTMS。
+4.2、消息为post时，同pre.
+4.3、向sequencer发送相应的csv路径（如果存在）,不存在则发送pre_model_get_non_csv或post_model_get_non_csv
+
+log分析
+1、启动TMC时，解析xml时打印 GSTATION 和csv路径, 如果xml文件解析有问题则打印parse xml failed from+路径
+2、初始化rep（对接mainUI），req（对接TM），失败则有失败提示或异常提示。
+3、查询redis，查询不到stepname时打印ERROR:get model from redis wrong -->> ，查询到并成功拉起MTMS打印launce exe success -->>，失败则打印launce exe failed -->>
+4、rep收到消息后打印rep recv-->> + 信息，并返回OK ,或打印异常
+5、改变模式时打印发送消息，如果xml配置无csv路径信息，则打印get pre from mainUI and pre_model_get_non_csv
+6、req发送消息打印格式为  "REQ Send" + 发送消息 + " result=" + 发送结果 + " ; REQ recv->" + 返回消息，result<0且无返回消息则失败。
+
+
+更新内容
+16.12.30
+    添加json解析部分，添加setvbuf(stdout, NULL, _IONBF, 0)缓存设置
+
+
+
+实验用例：
+redis—》龚慧兵
+mtms—》赖岩
+zmq->模拟mainUI，在debug下req_ui.lua
+zmq->模拟sequencer，使用978内Driver/tools/Reply.lua
+

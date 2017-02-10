@@ -1,0 +1,50 @@
+2017-01-11 16:59:42,314 [9140] [DEBUG] REP Bind127.0.0.1:8100 result=0
+2017-01-11 16:59:42,323 [9140] [DEBUG] REQ Connect127.0.0.1:6200 result=0
+2017-01-11 16:59:43,369 [9140] [DEBUG] launce exe success -->>169.254.1.111 61806
+2017-01-11 16:59:43,374 [9140] [DEBUG] REQ Send->{"function":"load","id":"{9b8ac4f8-cae6-409e-984f-bc898215a814}","jsonrpc":"1.0","params":["C:/Users/haitao/Documents/Git/TMC//profile//chamber1__pre.csv"]} result=156
+2017-01-11 16:59:43,380 [9140] [DEBUG] REQ Recv->{"jsonrpc": "1.0", "id": "{9b8ac4f8-cae6-409e-984f-bc898215a814}", "error": {"message": "[Errno 2] No such file or directory: u'c:/users/haitao/documents/git/tmc//profile//chamber1__pre.csv'", "code": -32602}}
+2017-01-11 17:02:35,301 [7332] [DEBUG] REP Bind127.0.0.1:8100 result=0
+2017-01-11 17:02:35,311 [7332] [DEBUG] REQ Connect127.0.0.1:6200 result=0
+2017-01-11 17:02:36,363 [7332] [DEBUG] launce exe success -->>169.254.1.111 61806
+2017-01-11 17:02:36,369 [7332] [DEBUG] REQ Send->{"function":"load","id":"{027b6329-87f1-4b76-b3dc-6b11d5df648a}","jsonrpc":"1.0","params":["C:/Users/haitao/Documents/Git/TMC//profile//chamber1__pre.csv"]} result=156
+2017-01-11 17:02:36,376 [7332] [DEBUG] REQ Recv->{"jsonrpc": "1.0", "id": "{027b6329-87f1-4b76-b3dc-6b11d5df648a}", "error": {"message": "[Errno 2] No such file or directory: u'c:/users/haitao/documents/git/tmc//profile//chamber1__pre.csv'", "code": -32602}}
+2017-01-11 17:11:09,037 [7592] [DEBUG] REP Bind127.0.0.1:8100 result=0
+2017-01-11 17:11:09,048 [7592] [DEBUG] REQ Connect127.0.0.1:6200 result=0
+2017-01-11 17:11:10,087 [7592] [DEBUG] launce exe success -->>169.254.1.111 61806
+2017-01-11 17:11:13,092 [7592] [DEBUG] REQ Send->{"function":"load","id":"{6530f3b7-ca08-42df-bdfd-ea1129327f69}","jsonrpc":"1.0","params":["C:/Users/haitao/Documents/Git/TMC//profile//chamber1__pre.csv"]} result=156
+2017-01-11 17:11:13,096 [7592] [DEBUG] REQ Recv->
+2017-01-11 17:11:38,435 [8144] [DEBUG] REP Bind127.0.0.1:8100 result=0
+2017-01-11 17:11:38,448 [8144] [DEBUG] REQ Connect127.0.0.1:6200 result=0
+2017-01-11 17:11:39,489 [8144] [DEBUG] launce exe success -->>169.254.1.111 61806
+2017-01-11 17:11:42,494 [8144] [DEBUG] REQ Send->{"function":"load","id":"{94fc140b-6a00-47fc-a35c-b185286d134d}","jsonrpc":"1.0","params":["C:/Users/haitao/Documents/Git/TMC//profile//chamber1__pre.csv"]} result=156
+2017-01-11 17:11:42,498 [8144] [DEBUG] REQ Recv->
+2017-01-11 17:15:27,837 [116] [DEBUG] REP Bind127.0.0.1:8100 result=0
+2017-01-11 17:15:27,844 [116] [DEBUG] REQ Connect127.0.0.1:6200 result=0
+2017-01-11 17:15:28,886 [116] [DEBUG] launce exe success -->>169.254.1.111 61806
+2017-01-11 17:15:28,891 [116] [DEBUG] REQ Send->{"function":"load","id":"{5af237a5-ba73-4dea-b636-072375ac5115}","jsonrpc":"1.0","params":["C:/Users/haitao/Documents/Git/TMC//profile//chamber1__pre.csv"]} result=156
+2017-01-11 17:15:28,898 [116] [DEBUG] REQ Recv->{"jsonrpc": "1.0", "id": "{5af237a5-ba73-4dea-b636-072375ac5115}", "error": {"message": "[Errno 2] No such file or directory: u'c:/users/haitao/documents/git/tmc//profile//chamber1__pre.csv'", "code": -32602}}
+2017-01-11 17:24:38,472 [1532] [DEBUG] REP Bind127.0.0.1:8100 result=0
+2017-01-11 17:24:38,481 [1532] [DEBUG] REQ Connect127.0.0.1:6200 result=0
+2017-01-11 17:24:39,535 [1532] [DEBUG] launce exe success -->>169.254.1.111 61806
+2017-01-11 17:24:39,540 [1532] [DEBUG] REQ Send->{"function":"load","id":"{7a15a8cf-6624-40d1-ae07-8a28eb112be3}","jsonrpc":"1.0","params":["C:/Users/haitao/Documents/Git/TMC//profile//chamber1__pre.csv"]} result=156
+2017-01-11 17:24:39,545 [1532] [DEBUG] REQ Recv->{"jsonrpc": "1.0", "id": "{7a15a8cf-6624-40d1-ae07-8a28eb112be3}", "error": {"message": "[Errno 2] No such file or directory: u'c:/users/haitao/documents/git/tmc//profile//chamber1__pre.csv'", "code": -32602}}
+2017-01-11 18:08:32,188 [5908] [DEBUG] REP Bind127.0.0.1:8100 result=0
+2017-01-11 18:08:32,195 [5908] [DEBUG] REQ Connect127.0.0.1:6200 result=0
+2017-01-11 18:08:33,249 [5908] [DEBUG] launce exe success -->>169.254.1.111 61806
+2017-01-11 18:08:36,254 [5908] [DEBUG] REQ Send->{"function":"load","id":"{f821c942-138d-4175-9154-a1c902dd969d}","jsonrpc":"1.0","params":["C:/Users/haitao/Documents/Git/TMC//profile//chamber1__pre.csv"]} result=156
+2017-01-11 18:08:36,257 [5908] [DEBUG] REQ Recv->
+2017-01-11 18:08:55,589 [8048] [DEBUG] REP Bind127.0.0.1:8100 result=0
+2017-01-11 18:08:55,597 [8048] [DEBUG] REQ Connect127.0.0.1:6200 result=0
+2017-01-11 18:08:56,648 [8048] [DEBUG] launce exe success -->>169.254.1.111 61806
+2017-01-11 18:08:59,653 [8048] [DEBUG] REQ Send->{"function":"load","id":"{595ddd3e-5df4-4be5-a936-a607bef4393f}","jsonrpc":"1.0","params":["C:/Users/haitao/Documents/Git/TMC//profile//chamber1__pre.csv"]} result=156
+2017-01-11 18:08:59,657 [8048] [DEBUG] REQ Recv->
+2017-01-11 18:09:11,646 [6436] [DEBUG] REP Bind127.0.0.1:8100 result=0
+2017-01-11 18:09:11,654 [6436] [DEBUG] REQ Connect127.0.0.1:6200 result=0
+2017-01-11 18:09:12,700 [6436] [DEBUG] launce exe success -->>169.254.1.111 61806
+2017-01-11 18:09:15,704 [6436] [DEBUG] REQ Send->{"function":"load","id":"{8ed5c5ec-9cf8-4ec0-a7c8-7ade96d4d532}","jsonrpc":"1.0","params":["C:/Users/haitao/Documents/Git/TMC//profile//chamber1__pre.csv"]} result=156
+2017-01-11 18:09:15,707 [6436] [DEBUG] REQ Recv->
+2017-01-11 18:09:24,637 [4616] [DEBUG] REP Bind127.0.0.1:8100 result=0
+2017-01-11 18:09:24,644 [4616] [DEBUG] REQ Connect127.0.0.1:6200 result=0
+2017-01-11 18:09:25,693 [4616] [DEBUG] launce exe success -->>169.254.1.111 61806
+2017-01-11 18:09:28,697 [4616] [DEBUG] REQ Send->{"function":"load","id":"{046af47b-f4ce-4650-bf3a-8a2bad8d9519}","jsonrpc":"1.0","params":["C:/Users/haitao/Documents/Git/TMC//profile//chamber1__pre.csv"]} result=156
+2017-01-11 18:09:28,701 [4616] [DEBUG] REQ Recv->

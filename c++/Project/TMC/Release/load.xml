@@ -1,0 +1,30 @@
+<root>
+	<Item name="pub">
+		<ip>127.0.0.1</ip>
+		<port>6250</port>
+	</Item>
+	<Item name="req">
+		<ip>127.0.0.1</ip>
+		<port>8585</port>
+	</Item>
+  <Item name="req_napa_port7">
+		<ip>169.254.1.111</ip>
+		<port>61807</port>
+	</Item>
+  <Item name="req_napa_port6">
+    <ip>169.254.1.253</ip>
+    <port>61806</port>
+     </Item>
+  <Item name="req_napa_port5">
+    <ip>169.254.1.253</ip>
+    <port>61805</port>
+     </Item>
+<Item name="req_napa_port4">
+    <ip>169.254.1.111</ip>
+    <port>61807</port>
+     </Item>
+  <Item name="PortAdapter">
+    <port1>ALPH,ALPR,BMPF</port1>
+    <port2>FLDI,C1ES,VTST</port2>
+  </Item>
+</root>

@@ -1,0 +1,28 @@
+2017-01-11 17:01:22
+received message:{"data": {"group": "MTCP Info Init", "to_pdca": false, "high": "", "low": "", "tid": "TSCR#DUT_SN#DUT_SN", "unit": ""}, "event": 2}
+2017-01-11 17:01:22
+received message:{"data": {"tid": "TSCR#DUT_SN#DUT_SN", "to_pdca": false, "result": true, "value": ""}, "event": 3}
+2017-01-11 17:01:22
+received message:{"data": {"group": "MTCP Info Init", "to_pdca": false, "high": "", "low": "", "tid": "TSCR#SOCKET_ID#SOCKET_ID", "unit": ""}, "event": 2}
+2017-01-11 17:01:22
+received message:{"data": {"tid": "TSCR#SOCKET_ID#SOCKET_ID", "to_pdca": false, "result": true, "value": 0}, "event": 3}
+2017-01-11 17:01:22
+received message:{"data": {"group": "MTCP Info Init", "to_pdca": false, "high": "", "low": "", "tid": "TSCR#SOCKET_SN#SOCKET_SN", "unit": ""}, "event": 2}
+2017-01-11 17:01:22
+received message:{"data": {"tid": "TSCR#SOCKET_SN#SOCKET_SN", "to_pdca": false, "result": true, "value": ""}, "event": 3}
+2017-01-11 17:01:22
+received message:{"data": {"group": "MTCP Info Init", "to_pdca": false, "high": "", "low": "", "tid": "TSCR#TEST_MODE#TEST_MODE", "unit": ""}, "event": 2}
+2017-01-11 17:01:22
+received message:{"data": {"tid": "TSCR#TEST_MODE#TEST_MODE", "to_pdca": false, "result": true, "value": 1}, "event": 3}
+2017-01-11 17:01:22
+received message:{"data": {"group": "MTCP Info Init", "to_pdca": false, "high": "", "low": "", "tid": "TSCR#STATION_SW_VER#STATION_SW_VER", "unit": ""}, "event": 2}
+2017-01-11 17:01:22
+received message:{"data": {"tid": "TSCR#STATION_SW_VER#STATION_SW_VER", "to_pdca": false, "result": true, "value": "V2.4.1"}, "event": 3}
+2017-01-11 17:01:22
+received message:{"data": {"group": "MTCP Info Init", "to_pdca": false, "high": "", "low": "", "tid": "TSCR#STATION_ID#STATION_ID", "unit": ""}, "event": 2}
+2017-01-11 17:01:22
+received message:{"data": {"tid": "TSCR#STATION_ID#STATION_ID", "to_pdca": false, "result": true, "value": ""}, "event": 3}
+2017-01-11 17:01:22
+received message:{"data": {"group": "MTCP Info Init", "to_pdca": false, "high": "", "low": "", "tid": "TSCR#SEND#send", "unit": ""}, "event": 2}
+2017-01-11 17:01:22
+received message:{"data": {"tid": "TSCR#SEND#send", "to_pdca": false, "result": true, "value": "SKIP NOW"}, "event": 3}

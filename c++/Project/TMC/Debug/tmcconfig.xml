@@ -8,8 +8,7 @@
   <MTMSPort>6379</MTMSPort>
   <STATIONIP>
     <C1>
-      <IP>169.254.1.11</IP>
-      <IP>169.254.1.111</IP>
+      <IP>172.15.0.216</IP>
     </C1>
     <C2>
       <IP>169.254.1.12</IP>
@@ -25,28 +24,22 @@
   <MODEL>
     <PRE>
       <C1>
-        <CSV>../profile/chamber1__pre.csv</CSV>
+        <CSV>..\profile\Chamber__pre1.csv</CSV>
       </C1>
       <C2>
-        <CSV>..\profile\chamber2__pre.csv</CSV>
+        <CSV>..\profile\Chamber__pre2.csv</CSV>
       </C2>
       <C3>
-        <CSV>..\profile\chamber3__pre.csv</CSV>
+        <CSV>..\profile\Chamber__pre3.csv</CSV>
       </C3>
-      <C4>
-        <CSV>..\profile\chamber4__pre.csv</CSV>
-      </C4>
       <MTMS>169.254.1.111 61806</MTMS>
     </PRE>
     <POST>
       <C1>
-        <CSV>..\profile\chamber1__post.csv</CSV>
+        <CSV>..\profile\Chamber__post1.csv</CSV>
       </C1>
-      <C2>
-        <CSV>C:\\profile\\chamber2__post.csv</CSV>
-      </C2>
       <C4>
-        <CSV>..\profile\chamber4__post.csv</CSV>
+        <CSV>..\profile\Chamber__post4.csv</CSV>
       </C4>
       <MTMS>169.254.1.111 61807</MTMS>
     </POST>

@@ -1,0 +1,9 @@
+GROUP,TID,DESCRIPTION,FUNCTION,TIMEOUT,PARAM1,PARAM2,UNIT,LOW,HIGH,KEY,VAL
+CAMERA,CONNECT,CONNECT,connect,,,,,,,,
+CAMERA,Parameter,Parameter,parameter,,0.58,,,,,,
+CAMERA,MoveTo_Position1_Dark,MoveTo_Position1_Dark,moveto_position1_dark,10000000,,,,,,,
+CAMERA,Postion1_Dark_Capture,Postion1_Dark_Capture,capture_position1_dark,10000000,,,,,,,
+CAMERA,MoveTo_Position2_Dark,MoveTo_Position2_Dark,moveto_position2_dark,10000000,,,,,,,
+CAMERA,Postion2_Dark_Capture,Postion2_Dark_Capture,capture_position2_dark,10000000,,,,,,,
+CAMERA,MoveTo_Position3_Dark,MoveTo_Position3_Dark,moveto_position3_dark,10000000,,,,,,,
+CAMERA,Postion3_Dark_Capture,Postion3_Dark_Capture,capture_position3_dark,10000000,,,,,,,
