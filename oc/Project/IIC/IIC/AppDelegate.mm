@@ -11,8 +11,11 @@
 #define KEY_SETTING_IIC @"settingIIC"
 #import "IICConfigWinDelegate.h"
 #define __module_debug__ 1
-int iAuthor = 0;
+#define red [NSColor redColor]
+#define green [NSColor greenColor]
 
+int iAuthor = 0;
+NSSize bucksize = CGSizeMake(2.0,2.0);
 CFixture * pFixture = NULL;
 IICController* g_FixtureController;
 @implementation IICController
@@ -79,8 +82,6 @@ NSArray * LimitArr=[[NSArray alloc] initWithObjects :
                     @"Nil",
                     @"Nil",nil];
 
-// read address: @"RE 0015 1"; "1" means 1 byte adress; "4" meas 4 bytes adress from 0015 to 0018;
-// write adress: @WE 0015 0"; "0" means set the data to "0" for the adress of 0015 to 0018; "1" means set to 1;
 
 -(id)init
 {
@@ -166,9 +167,23 @@ NSArray * LimitArr=[[NSArray alloc] initWithObjects :
     [self performSelectorOnMainThread:@selector(fnErrMsg:) withObject:msg waitUntilDone:NO];
 }
 
+//-(void)ShowPic
+//{
+//    NSImageView *t0 = [NSImageView alloc];//initWithFrame:CGRectMake(235, 100, 70, 70)];//self.view.frame.size.width
+//    t0.image = [NSImage imageNamed:@"t1.png"];
+//
+//    [self performSelectorOnMainThread:@selector(fnErrMsg:) withObject:t0 waitUntilDone:NO];
+//}
+
 -(void)fnErrMsg:(id)par
 {
     NSRunAlertPanel(@"Fixture Controlller Information", @"%@", @"OK", nil, nil, par);
+}
+
+-(void)showpic:(id)sender
+{
+    [sparepart center];
+    [sparepart makeKeyAndOrderFront:sender];
 }
 
 -(void)showPanel:(id)sender
@@ -350,7 +365,6 @@ NSArray * LimitArr=[[NSArray alloc] initWithObjects :
     [hexDic setObject:@"1011" forKey:@"b"];
     [hexDic setObject:@"1010" forKey:@"a"];
 
-    
     NSMutableString *binaryString=[[NSMutableString alloc] init];
     for (int i=0; i<[hex length]; i++) {
         NSRange rage;
@@ -364,6 +378,59 @@ NSArray * LimitArr=[[NSArray alloc] initWithObjects :
     return binaryString;
 }
 
+-(NSString *)binarytohex:(NSString *)b
+{
+    NSMutableDictionary  *hexDic = [[NSMutableDictionary alloc] init];
+    hexDic = [[NSMutableDictionary alloc] initWithCapacity:4];
+    [hexDic setObject:@"0" forKey:@"0000"];
+    [hexDic setObject:@"1" forKey:@"0001"];
+    [hexDic setObject:@"2" forKey:@"0010"];
+    [hexDic setObject:@"3" forKey:@"0011"];
+    [hexDic setObject:@"4" forKey:@"0100"];
+    [hexDic setObject:@"5" forKey:@"0101"];
+    [hexDic setObject:@"6" forKey:@"0110"];
+    [hexDic setObject:@"7" forKey:@"0111"];
+    [hexDic setObject:@"8" forKey:@"1000"];
+    [hexDic setObject:@"9" forKey:@"1001"];
+    [hexDic setObject:@"a" forKey:@"1010"];
+    [hexDic setObject:@"b" forKey:@"1011"];
+    [hexDic setObject:@"c" forKey:@"1100"];
+    [hexDic setObject:@"d" forKey:@"1101"];
+    [hexDic setObject:@"e" forKey:@"1110"];
+    [hexDic setObject:@"f" forKey:@"1111"];
+
+    NSMutableString *hex=[[NSMutableString alloc] init];
+    for (int i=0; i<([b length]/4); i++) {
+        NSRange rage;
+        rage.length = 4;
+        rage.location = 4*i;
+        NSString *key = [b substringWithRange:rage];
+//        NSLog(@"%@",[NSString stringWithFormat:@"%@",[hexDic objectForKey:key]]);
+//        binaryString = [NSString stringWithFormat:@"%@%@",binaryString,[NSString stringWithFormat:@"%@",[hexDic objectForKey:key]]];
+        [hex insertString:[hexDic objectForKey:key] atIndex:i];
+    }
+    NSLog(@"转化后的16进制为:%@",hex);
+    return hex;
+}
+
+-(NSString *) Binaotbina:(NSString *)str :(int)x
+{
+    NSLog(@"str=%@;x=%d",str,x);
+    NSString *flag = @"";
+    NSMutableAttributedString *writeflag = [[NSMutableAttributedString alloc]initWithString:str];
+    
+    flag =[str substringWithRange:NSMakeRange(x, 1)];
+    if ([flag isEqualToString:@"1"])
+    {
+        [writeflag replaceCharactersInRange:NSMakeRange(x, 1) withString:@"0"];
+    }
+    else
+    {
+        [writeflag replaceCharactersInRange:NSMakeRange(x, 1) withString:@"1"];
+    }
+    NSString *bi = [[NSString stringWithFormat:@"%@",writeflag] substringWithRange:NSMakeRange(0, 16)];
+    return bi;
+}
 
 -(BOOL)Searchsn:(NSString*)str //search sn from file
 {
@@ -453,6 +520,8 @@ NSArray * LimitArr=[[NSArray alloc] initWithObjects :
     [m_pSerialPort WaitDetect] ;
     NSString *iicread = [m_pSerialPort ReadStringValue];
     NSLog(@"iicread %@ \r\n",iicread);
+    iicread = @"Read EEPROM is: 33 33 83 40 01 00 00 00 06 02 00 00 00 00 00 00 02 00 00 00 00 ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 12 19 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff 00 00 11 01";
+    NSLog(@"fake data %@",iicread);
     return iicread;
 }
 
@@ -666,12 +735,96 @@ NSArray * LimitArr=[[NSArray alloc] initWithObjects :
 -(NSString *) ReadAdress:(NSString*)adress
 {
     [m_pSerialPort SetDetectString:@"@_@"];
-    NSMutableString * cmd= [[NSMutableString alloc] initWithString:@"RE "];
-    cmd=[[cmd stringByAppendingString:adress] stringByAppendingString:@" "]; //stringByAppendingString:Num];//num无用
+    NSString *cmd = [NSString stringWithFormat:@"RE %@\r",adress]; //stringByAppendingString:Num];//num无用
     [m_pSerialPort WriteStringValue:cmd];
     [m_pSerialPort WaitDetect] ;
     NSString *read = [m_pSerialPort ReadStringValue];
     return read;
+}
+
+-(NSString *)getdetail:(NSString*)iicread
+{
+    NSString *failcode = [iicread substringWithRange:NSMakeRange(414, 12)];//高位在后0x85
+    NSLog(@"failcode=%@",failcode);
+    NSString *f1 = [failcode substringWithRange:NSMakeRange(10, 2)];
+    NSString *f2 = [failcode substringWithRange:NSMakeRange(7, 2)];
+    NSString *failure = [NSString stringWithFormat:@"%@%@",f1,f2];
+    NSString *detailflag = [self getBinaryByhex:failure];
+    NSUInteger counts = 0;
+    NSString * string2 = @"1";
+    NSMutableString *flagindex = [[NSMutableString alloc] init];
+    for (int i = 0; i < detailflag.length - string2.length + 1; i++)
+    {
+        if ([[detailflag substringWithRange:NSMakeRange(i, string2.length)] isEqualToString:string2])
+        {
+            counts++;
+            if (i==14){[flagindex insertString:@"Screw," atIndex:0];}
+            else if (i==13){[flagindex insertString:@"Left arm," atIndex:0];}
+            else if (i==12){[flagindex insertString:@"Right arm," atIndex:0];}
+            else if (i==11){[flagindex insertString:@"Top Probe Plate," atIndex:0];}
+            else if (i==10){[flagindex insertString:@"Left block," atIndex:0];}
+            else if (i==9){[flagindex insertString:@"Right block," atIndex:0];}
+            else if (i==8){[flagindex insertString:@"Spring," atIndex:0];}
+            else if (i==7){[flagindex insertString:@"Screw nut," atIndex:0];}
+            else if (i==6){[flagindex insertString:@"big Buck probe," atIndex:0];}
+            else if (i==5){[flagindex insertString:@"small BUCK Probe," atIndex:0];}
+        }
+    }
+    NSString *faillog = [NSString stringWithFormat:@"%@COUNTS=%ld",flagindex,counts];
+    return faillog;
+}
+
+
+-(IBAction)flagstation:(id)sender
+{
+    NSString *iic = [self BUCKREAD];
+    NSString *iicread = [iic substringWithRange:NSMakeRange(415, 11)];
+//    NSString *iicread = @"ff ff ff 0f";
+    NSLog(@"iicread=%@",iicread);
+    NSString *f1 = [iicread substringWithRange:NSMakeRange(6, 2)];
+    NSString *f2 = [iicread substringWithRange:NSMakeRange(9, 2)];
+    NSString *readflag = [NSString stringWithFormat:@"%@%@",f2,f1];
+    NSString *binary = [self getBinaryByhex:readflag];
+    NSString *beetohex = @"";
+    int t = [sender tag];
+    int x = 14-t;
+    for(int i=0;i<10;i++)
+    {
+        if (t == i) {
+            beetohex = [self Binaotbina:binary :x];
+        }
+    }
+    NSString *bthex = [self binarytohex:beetohex];
+    NSString *h1 = [bthex substringWithRange:NSMakeRange(0, 2)];
+    NSString *h2 = [bthex substringWithRange:NSMakeRange(2, 2)];
+    NSLog(@"%@;%@",h2,h1);
+    NSString *finalstr = [NSString stringWithFormat:@"WE 0085 00 00 %@ %@\r",h2,h1];
+    [m_pSerialPort WriteStringValue:finalstr];
+    [NSThread sleepForTimeInterval:1];
+    if (t == 0) {[self backcolor:b1];}
+    if (t == 1) {[self backcolor:b2];}
+    if (t == 2) {[self backcolor:b3];}
+    if (t == 3) {[self backcolor:b4];}
+    if (t == 4) {[self backcolor:b5];}
+    if (t == 5) {[self backcolor:b6];}
+    if (t == 6) {[self backcolor:b7];}
+    if (t == 7) {[self backcolor:b8];}
+    if (t == 8) {[self backcolor:b9];}
+    if (t == 9) {[self backcolor:b10];}
+    
+//    [self ShowMsg:finalstr];
+}
+
+-(void)backcolor:(NSTextField*)b
+{
+    if (b.backgroundColor == red)
+    {
+        [b setBackgroundColor:green];
+    }
+    else
+    {
+        [b setBackgroundColor:red];
+    }
 }
 
 - (IBAction)btnLogIn:(id)sender
@@ -706,9 +859,8 @@ NSArray * LimitArr=[[NSArray alloc] initWithObjects :
 
 -(IBAction)btnRead:(id)sender
 {
-    
-        NSString *iicread = @"Read EEPROM is: 33 33 83 40 01 00 00 00 06 02 00 00 00 00 00 00 02 00 00 00 00 ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 12 19 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff 00 00 11 01";
-    
+//    NSString *iicread = @"Read EEPROM is: 33 33 83 40 01 00 00 00 06 02 00 00 00 00 00 00 02 00 00 00 00 ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 12 19 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff 00 00 11 01";
+    NSString *iicread = [self BUCKREAD];
 
     if ([iicread  isEqual: @"Please Check Hardware!\r\n"]) {
         [self ShowMsg:iicread];
@@ -737,6 +889,7 @@ NSArray * LimitArr=[[NSArray alloc] initWithObjects :
         for(int i=0; i<[ItemArr count];i++)
         {
             SerialPortView *di = nil;
+
             if (i==0) {di=d1;}
             else if(i==1){di=d2;}
             else if(i==2){di=d3;}
@@ -787,8 +940,9 @@ NSArray * LimitArr=[[NSArray alloc] initWithObjects :
             }
             else if([ItemArr[i] hasSuffix:@"Time"])
             {
-                NSString *datecode = [iicread substringWithRange:NSMakeRange(198, 12)];//0x3D
-                int datesp = [self getdatesp:datecode];
+//                NSString *datecode = [iicread substringWithRange:NSMakeRange(198, 12)];//0x3D
+//                int datesp = [self getdatesp:datecode];
+                int datesp = [self getdatesp:dealarry[i]];
                 NSDate *showdate = [NSDate dateWithTimeInterval:(-86400*datesp) sinceDate:[self getnowdate]];
                 NSString *strxxx = [NSString stringWithFormat:@"%@",showdate];
                 [di setString:strxxx];
@@ -800,6 +954,7 @@ NSArray * LimitArr=[[NSArray alloc] initWithObjects :
             }
             else
             {
+//                di.sizeToFit ;
                 [di setString:dealarry[i]];
             }
         }
@@ -864,7 +1019,7 @@ NSArray * LimitArr=[[NSArray alloc] initWithObjects :
 -(IBAction)IICCheckin:(id)sender
 {
     NSString * iicread = [self BUCKREAD];
-    //    NSString *iicread = @"Read EEPROM is: 33 33 83 40 01 00 00 00 06 02 00 00 00 00 00 00 02 00 00 00 00 ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 12 19 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff 00 00 11 01";
+//        NSString *iicread = @"Read EEPROM is: 33 33 83 40 01 00 00 00 06 02 00 00 00 00 00 00 02 00 00 00 00 ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 12 19 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff 00 00 11 01";
     
     //获取sn
     NSString *checkinsn = [self ReadBuckSN:iicread];
@@ -893,7 +1048,6 @@ NSArray * LimitArr=[[NSArray alloc] initWithObjects :
         }
         else
         {
-            
             //查询failcode内详细的spare part flag
             NSUInteger counts = 0;
             NSString * string2 = @"1";
@@ -915,14 +1069,12 @@ NSArray * LimitArr=[[NSArray alloc] initWithObjects :
                     else if (i==6){[flagindex insertString:@"big Buck probe\r" atIndex:0];}
                     else if (i==5){[flagindex insertString:@"small BUCK Probe\r" atIndex:0];}
                     else if (i==4){[flagindex insertString:@"Maintenance date code\r" atIndex:0];}
-                    
                 }
             }
-            //                NSLog(@"index:%@ \r counts:%lu",flagindex,(unsigned long)counts);
             
             //check maintenance flag
-            NSString *resetflag = [iicread substringWithRange:NSMakeRange(402, 12)];
-            if([resetflag isEqualToString:@"00 00 00 01 "])
+            NSString *resetflag = [iicread substringWithRange:NSMakeRange(403,11)];
+            if([resetflag isEqualToString:@"00 00 00 01"])
             {
                 [self ShowMsg:@"THE BUCK IS IN <maintenance station> !"];
             }
@@ -945,18 +1097,22 @@ NSArray * LimitArr=[[NSArray alloc] initWithObjects :
                 //显示checkin信息
                 NSString *checkin = [NSString stringWithFormat:@"SN:%@ \r\n date:%@ \r\n \r\n Detail failure flag:\r\n%@ \r\n",checkinsn,showdate,flagindex];
                 [self ShowMsg:checkin];
-                [self savelog:checkin];
                 [_IICView setString:checkin];
                 [self OutPutLog:[iicread substringWithRange:NSMakeRange(79, 347)]];//show spare part cycletime
+                
+                NSString * logdetail = [self getdetail:iicread];
+                NSString *checkinlog = [NSString stringWithFormat:@"SN=%@,DATE=%@,MAINTENANCE FLAG=%@,DETAIL=%@\r\n",checkinsn,showdate,resetflag,logdetail];
+                [self savelog:checkinlog];
             }
         }
     }
 }
 
+
 -(IBAction)IICcheckout:(id)sender
 {
     NSString * iicread = [self BUCKREAD];
-    //    NSString *iicread = @"Read EEPROM is: 33 33 83 40 01 00 00 00 06 02 00 00 00 00 00 00 02 00 00 00 00 ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 12 19 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff 00 00 11 01";
+//    NSString *iicread = @"Read EEPROM is: 33 33 83 40 01 00 00 00 06 02 00 00 00 00 00 00 02 00 00 00 00 ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 12 19 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff 00 00 11 01";
     
     if ([iicread  isEqual: @"Please Check Hardware!\r\n"]) {
         [self ShowMsg:iicread];
@@ -970,12 +1126,12 @@ NSArray * LimitArr=[[NSArray alloc] initWithObjects :
         [self OutPutLog:[iicread substringWithRange:NSMakeRange(79, 347)]];
         //read SN
         NSString *checkoutsn = [self ReadBuckSN:iicread];
-        //        [_IICView.textStorage appendAttributedString:checkoutsn];
+//      [_IICView.textStorage appendAttributedString:checkoutsn];
         
         //check flag = 1? 为1则进入下一步,不为1则提示FA
-        NSString *mainflag = [iicread substringWithRange:NSMakeRange(402, 12)];//高位在后0x81
+        NSString *mainflag = [iicread substringWithRange:NSMakeRange(403, 11)];//高位在后0x81
         NSLog(@"mainflag:%@",mainflag);
-        if([mainflag isEqualToString:@"00 00 00 00 "])
+        if([mainflag isEqualToString:@"00 00 00 00"])
         {
             [self ShowMsg:@"FLAG ISN'T 1 \r\nPlease take it to <Check In station> !"];
         }
@@ -1025,7 +1181,11 @@ NSArray * LimitArr=[[NSArray alloc] initWithObjects :
     [self ShowMsg:checkout];
     [_IICView setString:checkout];
     
-    
+    NSString *checkoutsn = [self ReadBuckSN:iicread];
+    NSString * logdetail = [self getdetail:iicread];
+    NSString *resetflag = [iicread substringWithRange:NSMakeRange(403, 11)];
+    NSString *checkinlog = [NSString stringWithFormat:@"SN=%@,DATE=%@,MAINTENANCE FLAG=%@,DETAIL=%@\r\n",checkoutsn,writedate,resetflag,logdetail];
+    [self savelog:checkinlog];
 }
 
 -(IBAction)IICCompare:(id)sender

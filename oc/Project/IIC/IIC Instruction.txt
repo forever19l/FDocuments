@@ -1,9 +1,0 @@
-1、IIC Checkin
-	连接好硬件后，点击read按钮，得到结果。
-	a、error信息，按照相应的弹窗error信息改正。
-	b、normal，对应spare part图贴上相应部件error的标签，进入维修工站。
-
-2、IIC Checkout
-	连接好硬件后，点击read按钮，得到结果。
-	a、error信息，按照相应的弹窗error信息改正。
-	b、normal，得到sn和pass的弹窗，reset按钮可用，点击reset，成功后提示reset的spare part。完成reset后即可离开维修工站，进入正常工作的工站。

@@ -23,6 +23,7 @@
     IBOutlet SerialPortView * _IICView;      //串口消息显示
     IBOutlet NSWindow * winIICConfig;       //串口config配置
     IBOutlet NSWindow * winIICMain;         //主界面设定
+    IBOutlet NSWindow * sparepart;
 //    IBOutlet NSTextView * IICResult;        //搜索对比结果显示
 //    IBOutlet NSTextView * IICData;          //TXT消息显示
 //    IBOutlet NSTextField * IICpath;         //权限及sn维护框
@@ -31,7 +32,6 @@
     IBOutlet NSButton * IICCheckin;
     IBOutlet NSButton * IICCheckout;
     IBOutlet NSButton * IICRESET;
-//    IBOutlet NSButton * flagreset;
     
     SerialportEx * m_pSerialPort;           //串口的object
 
@@ -81,6 +81,16 @@
     IBOutlet SerialPortView * d29;
     IBOutlet NSWindow * winflagreset;
     IBOutlet NSWindow * winUser;
+    IBOutlet NSTextField *b1;
+    IBOutlet NSTextField *b2;
+    IBOutlet NSTextField *b3;
+    IBOutlet NSTextField *b4;
+    IBOutlet NSTextField *b5;
+    IBOutlet NSTextField *b6;
+    IBOutlet NSTextField *b7;
+    IBOutlet NSTextField *b8;
+    IBOutlet NSTextField *b9;
+    IBOutlet NSTextField *b10;
 
 @public
 //    NSMutableString *IICACTSN;              //全局操作的sn，添加删除
