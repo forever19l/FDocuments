@@ -14,4 +14,8 @@ add projects.
 
 ##2017.2.23
 - /spider/taobao_spider.py
-	-  
+	-  use xpath to replace re
+
+##2017.2.25
+- /spider/taobao_spider.py
+	- don't parse the classified of taobao, because it has too much different xml style. Now, we can search what we want directly.
