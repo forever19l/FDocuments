@@ -4,7 +4,7 @@
   - CameraTest2 is a demo, how to import dll and make lua interface.
 - TMC is a Test Model Controller . It’s using log4 to print and save log , search redis to init model , communicate with zmq to decide weather change MTMS(another exe for client) model.
 
-##2017.3.10	
+##2017.2.10	
 - TMC Update
   - 1.modify xml.
   - 2.modify mtms launsh model.
@@ -13,4 +13,5 @@
   - 5.add log file path
   - 6.handle Console close event to delete zmq object
 
-##2017.3.17
+##2017.2.28
+- Add BeckHoff project, it's a TCP client and import lua interface 
