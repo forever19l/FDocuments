@@ -1,0 +1,24 @@
+﻿生成启动时间为 2/28/17 10:37:14。
+     1>项目“C:\Project\BeckHoffDll\BeckHoffDll\BeckHoffDll.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\lua\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D BECKHOFFDLL_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt BeckHoff.cpp BeckhoffDll.cpp CTcpClient.cpp LuaAMDllExport_wrap.cxx
+         LuaAMDllExport_wrap.cxx
+     1>c:\project\beckhoffdll\beckhoffdll\luaamdllexport_wrap.cxx(2602): warning C4244: “参数”: 从“lua_Number”转换到“lua_Integer”，可能丢失数据
+     1>c:\project\beckhoffdll\beckhoffdll\luaamdllexport_wrap.cxx(2613): warning C4244: “初始化”: 从“long”转换到“char”，可能丢失数据
+         CTcpClient.cpp
+         BeckhoffDll.cpp
+         BeckHoff.cpp
+     1>c:\project\beckhoffdll\beckhoffdll\beckhoff.cpp(120): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+         正在生成代码...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Project\BeckHoffDll\Debug\BeckHoffDll.dll" /INCREMENTAL /NOLOGO lua.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Project\BeckHoffDll\Debug\BeckHoffDll.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Project\BeckHoffDll\Debug\BeckHoffDll.lib" /MACHINE:X86 /DLL Debug\BeckHoff.obj
+         Debug\BeckhoffDll.obj
+         Debug\CTcpClient.obj
+         Debug\LuaAMDllExport_wrap.obj
+            正在创建库 C:\Project\BeckHoffDll\Debug\BeckHoffDll.lib 和对象 C:\Project\BeckHoffDll\Debug\BeckHoffDll.exp
+         BeckHoffDll.vcxproj -> C:\Project\BeckHoffDll\Debug\BeckHoffDll.dll
+     1>已完成生成项目“C:\Project\BeckHoffDll\BeckHoffDll\BeckHoffDll.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.90
