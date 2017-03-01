@@ -1,0 +1,15 @@
+LUA_USE_MACOSX
+
+
+Lable_Command 2,562,68,17
+txt_CMD:69,567,353,22
+Lable_append 430,562,53,17
+check_Append 483,565,86,20
+bt_Send,599,566,70,21,
+check_showlog 683,561,90,14
+
+view:2 530 786 530
+
+
+AppendString
+Txt_CMD

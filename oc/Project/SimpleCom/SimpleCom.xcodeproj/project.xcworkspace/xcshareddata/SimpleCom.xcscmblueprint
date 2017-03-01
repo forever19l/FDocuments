@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5A3A70721B03B5F67C5A2D3647C59D02048CA0D2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "43D4A3D927C19BACE5CCABD880E4FD79E882141E" : 0,
+    "5A3A70721B03B5F67C5A2D3647C59D02048CA0D2" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "783845FE-ED0C-413D-AF10-FDF535772999",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "43D4A3D927C19BACE5CCABD880E4FD79E882141E" : "T881_Pro\/SourceCode\/IATestManager\/TMLibrary\/",
+    "5A3A70721B03B5F67C5A2D3647C59D02048CA0D2" : "T881_Pro\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SimpleCom",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SourceCode\/IATestManager\/ExtendModule\/SimpleCom\/SimpleCom.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/iagit.intelligentgroup.cn\/Tiger\/Tiger_Platform.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "43D4A3D927C19BACE5CCABD880E4FD79E882141E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/iagit.intelligentgroup.cn\/Tiger\/T881_Pro.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5A3A70721B03B5F67C5A2D3647C59D02048CA0D2"
+    }
+  ]
+}

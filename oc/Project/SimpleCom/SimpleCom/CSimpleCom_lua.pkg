@@ -1,0 +1,20 @@
+//
+//  FCTDemo.h
+//  FCTDemo
+//
+//  Created by Louis on 13-8-14.
+//  Copyright (c) 2013年 Louis. All rights reserved.
+//
+
+$#include "SimpleCom.h"
+
+class CSimpleCom {
+public:
+    bool WriteString(const char*szDeviceName,const char *szCMD);
+    void AddLabelString(const char*szDeviceName,const char*LabelStr);
+    const char* ReadString(const char*szDeviceName);
+    const char* ReadStringRegex(const char*szDeviceName,const char*Regex,int timeout);
+    int SetDetectString(const char*szDeviceName,const char *regex);
+    int WaitForString(const char*szDeviceName,int iTimeout);
+    void ClearBuffer(char*szDeviceName);
+};

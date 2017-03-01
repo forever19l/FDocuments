@@ -7,3 +7,9 @@
 - halcon, camera api with baumer SDK.
 - CVLib, image processing.
 - TMLibrary, Using NSTask to launch external app.
+
+##2017.3.1
+- add project/simplecom
+	- It's can add to a project and provide connection interface.Such as serialport/TCP/Lan and so on.
+	- Provide lua interface to connect,close,send,recv and so on.
+	- Use plist to save config, and can auto connect the ID.
