@@ -168,10 +168,10 @@ bool GetStackTop(LinkStack S, int *e)  //获取栈顶元素e
 {
     if (S.top != NULL)
     {
-        *e = S.top->data
-        return TRUE
+        *e = S.top->data;
+        return true;
     }
-    return FALSE
+    return false;
 }
 
 bool Push(LinkStack* S,int e)  //插入e为新栈顶元素
@@ -222,7 +222,7 @@ BOOL InitQueue(SqQueue* Q)
 {
     Q->rear=0;
     Q->front=0;
-    return TRUE;
+    return true;
 }
 
 int QueueLength(SqQueue Q)
@@ -234,22 +234,22 @@ BOOL EnQueue(SqQueue* Q,QElemType e)
 {
     if ((Q->rear+1)%100==Q->front)//队列满判断
     {
-        return FALSE;
+        return false;
     }
     Q->data[Q->rear]=e;
     Q->rear=(Q->rear+1)%100;//移到下一位置
-    return TRUE;
+    return true;
 }
 
 BOOL DeQueue(SqQueue* Q,QElemType *e)
 {
     if (Q->front==Q->rear)//队列空判断
     {
-        return FALSE;
+        return false;
     }
     *e=Q->data[Q->front];
     Q->front=(Q->front+1)%100;
-    return TRUE;
+    return true;
 }
 
 
@@ -370,13 +370,13 @@ BOOL SearchBST(BitTree T,int key,BitTree f,BitTree*p)//f为T的双亲，初始�
     if (!T)
     {
         *p=f;
-        return FALSE;
+        return false;
     }
 
     else if (key==T->data)
     {
         *p=T;
-        return TRUE;
+        return true;
     }
     else if (key<T->data)
     {
@@ -404,16 +404,16 @@ BOOL InsertBST(BitTree *T,int key)
         }
         else
             p->rchild=s;
-        return TRUE;
+        return true;
     }
-    return FALSE;
+    return false;
 }
 
 BOOL DeleteBST(BitTree* T,int key)//二叉排序树删除元素
 {
     if (!*T)
     {
-        return FALSE;
+        return false;
     }
 
     else
@@ -458,7 +458,7 @@ BOOL Delete(BitTree*p)
             q->lchild=s->lchild;
         free(s);
     }
-    return TRUE;
+    return true;
 }
 
 void R_Rotate(BitTree* P)//二叉排序树右旋处理
@@ -555,20 +555,20 @@ BOOL InsertAVL(BitTree*T,int e,BOOL* taller)
         (*T)->data=e;
         (*T)->lchild=(*T)->rchild=NULL;
         (*T)->bf=EH;
-        *taller=TRUE;
+        *taller=true;
     }
     else
     {
         if (e==(*T)->data)
         {
-            *taller=FALSE;
-            return FALSE;
+            *taller=false;
+            return false;
         }
         if(e<(*T)->data)//应继续在T的左子树中进行搜索
         {
             if (!InsertAVL(&(*T)->lchild,e,taller))//未插入
             {
-                return FALSE;
+                return false;
             }
             if (*taller)//已经插入到T的左子树中且左子树长高
             {
@@ -576,15 +576,15 @@ BOOL InsertAVL(BitTree*T,int e,BOOL* taller)
                 {
                 case LH:
                     LeftBalance(T);
-                    *taller=FALSE;
+                    *taller=false;
                     break;
                 case EH:
                     (*T)->bf=LH;
-                    *taller=TRUE;
+                    *taller=true;
                     break;
                 case RH:
                     (*T)->bf=EH;
-                    *taller=FALSE;
+                    *taller=false;
                     break;
                 }
             }
@@ -593,7 +593,7 @@ BOOL InsertAVL(BitTree*T,int e,BOOL* taller)
         {
             if (!InsertAVL(&(*T)->rchild,e,taller))//应该在T的右子树中查找
             {
-                return FALSE;
+                return false;
             }
             if (*taller)//已经插入到T的右子树且右子树长高
             {
@@ -601,22 +601,22 @@ BOOL InsertAVL(BitTree*T,int e,BOOL* taller)
                 {
                 case LH:
                     (*T)->bf=EH;
-                    *taller=FALSE;
+                    *taller=false;
                     break;
                 case EH:
                     (*T)->bf=RH;
-                    *taller=TRUE;
+                    *taller=true;
                     break;
                 case RH:
                     RightBalance(T);
-                    *taller=FALSE;
+                    *taller=false;
                     break;
 
                 }
             }
         }
     }
-    return TRUE;
+    return true;
 }
 
 //平衡二叉树 AVL//有序查找
@@ -722,59 +722,29 @@ void swap(SqList*L,int i,int j)//交换函数，频繁用到
     L->r[j]=temp;
 }
 
-void BubbleSort0(SqList*L)//简单的冒泡排序，简单的交换排序
+//冒泡排序O(n^2)，将相邻数据进行比较，然后将较大的移到后面(由小到大)。
+void BubbleSort(SqList *L)
 {
-    int i,j;
-    for (i=1;i<L->length;i++)
+    int i=1;
+    int j;
+    bool flag=true;//标记
+    while(flag)             //如果flag为true，说明有数据交换，为false说明无数据交换，可停止循环了
     {
-        for (j=i+1;j<=L->length;j++)
+        flag=false;
+        for (j=L->length-1; j>=i; j--)
         {
-            if (L->r[i]>L->r[j])
-            {
-                swap(L,i,j);
-            }
-        }
-    }
-}
-
-void BubbleSort(SqList*L)//正宗的冒泡法，两两比较，反序交换
-{
-    int i,j;
-    for (i=1;i<L->length;i++)
-    {
-        for (j=L->length-1;j>=i;j--)//从后面开始
-        {
-            if (L->r[j]>L->r[j+1])
+            if (L->r[j] > L->r[j+1])
             {
                 swap(L,j,j+1);
+                flag=true;  //有数据交换，则值为真。
             }
         }
+        i++;                //最小值已到第一位，不用再比较
     }
 }
 
-void BubbleSort2(SqList*L)//优化后的冒泡算法
-{
-    int i,j;
-    BOOL flag=TRUE;//标记
-    for (i=1;i<L->length&&flag;i++) //如果flag为true，说明有数据交换，为false说明无数据交换，可停止循环了
-    {
-        flag=FALSE;
-        for (j=L->length-1;j>=i;j--)
-        {
-            if (L->r[j]>L->r[j+1])
-            {
-                swap(L,j,j+1);
-                flag=TRUE;//有数据交换，则值为真。
-            }
-        }
-        if (!flag)
-        {
-            return;
-        }
-    }
-}
-
-void SelectSort(SqList*L)//简单的选择排序，依次比较将最小的，然后与第一个位置交换
+//选择排序O(n^2)，以第一个为基准值，向右扫描，找到最小的与之交换。然后基准值右移一位循环扫描交换，直至最后一个元素。
+void SelectSort(SqList*L)
 {
     int i,j,min;
     for (i=1;i<L->length;i++)
@@ -787,95 +757,97 @@ void SelectSort(SqList*L)//简单的选择排序，依次比较将最小的，�
                 min=j;
             }
         }
-        if (i!=min)
-        {
+        // if (i!=min)
+        // {
             swap(L,i,min);
-        }
+        // }
     }
 }
 
-void InsertSort(SqList*L)//直接插入排序,将一个记录插入到已经排好序的有序表中，得到一个新的、记录数增1的有序表
+//直插排序O(n^2),将一个记录插入到已经排好序的有序表x中，得到一个新的、记录数增1的有序表
+void InsertSort(SqList *L, int x)
 {
     int i,j;
-    for (i=2;i<=L->length;i++)//i从2开始就是假设1处为已经排好的值，其他值就是插入到它左侧还是右侧的问题
+    for (i = x; i <= L->length; i++)    //前x是有序的（对于本数据结构，0位置无效）
     {
-        if (L->r[i]<L->r[i-1])//
+        if (L->r[i]<L->r[i-1])
         {
-            L->r[0]=L->r[i];//设置哨兵
-            for (j=i-1;L->r[j]>L->r[0] && j >= 0;j--)
-            {
-                L->r[j+1]=L->r[j];
-            }
-            L->r[j+1]=L->r[0];
+            L->r[0]=L->r[i];            //temp
+            for (j=i-1; L->r[j]>L->r[0] && j >= 0; j--)
+                L->r[j+1]=L->r[j];      //元素比temp大，后移一位
+            L->r[j+1]=L->r[0];          //找到比temp小的值，跳出循环在其位置后插入元素
         }
     }
 }
 
-void ShellSort(SqList*L)//希尔排序
+//希尔排序,先以步长分组，再进行直插排序
+void ShellSort(SqList*L)
 {
     int i,j;
-    int increment=L->length;
+    int gap = L->length;
     do
     {
-        increment=increment/3+1; //增量序列，每次距离减小
-        for (i=increment+1;i<=L->length;i++)
+        gap = gap/2;                        //步长，wiki更多步长选择
+        for (i = gap+1; i<=L->length; i++)  //+1适应本数据结构
         {
-            if (L->r[i]<L->r[i-increment])
+            if (L->r[i] < L->r[i-gap])
             {
-                L->r[0]=L->r[i];
-                for (j=i-increment;j>0&&L->r[0]<L->r[j];j-=increment)
+                L->r[0] = L->r[i];          //temp
+                for (j = i-gap; j>0 && L->r[0] < L->r[j]; j -= gap)
                 {
-                    L->r[j+increment]=L->r[j];//记录后移，查找插入位置
+                    L->r[j+gap]=L->r[j];    //记录后移，查找插入位置
                 }
-                L->r[j+increment]=L->r[0];//插入
+                L->r[j+gap]=L->r[0];        //插入
             }
         }
-    } while (increment>1);
+    } while (gap>1);
 }
 
-//堆排序，适用于完全二叉树，元素个数为2的n次方+1
+//堆排序O(n*log2n) ，适用于完全二叉树（除了最深的一层，其他层次都是满节点）
+//i结点的父结点下标就为(i – 1) / 2。它的左右子结点下标分别为2i + 1和2i + 2。如第0个结点左右子结点下标分别为1和2。
 void HeapSort(SqList *L)
 {
     int i;
-    for (i=L->length/2;i>0;i--)//将原始序列转为堆序列，为什么是length/2,？因为根据完全二叉树的性质，每个双亲访问其子孩子可完全遍历整棵树
+    for (i=L->length/2;i>0;i--)//将原始序列转为堆序列，为什么是length/2？因为根据完全二叉树的性质，每个双亲访问其子孩子可完全遍历整棵树
     {
-        HeapAdjust(L,i,L->length);
+        MaxHeapAdjust(L,i,L->length);
     }
 
     for (i=L->length;i>1;i--)//将堆顶元素与最末元素交换，继续调整序列为堆序列
     {
         swap(L,1,i);
-        HeapAdjust(L,1,i-1);
+        MaxHeapAdjust(L,1,i-1);
     }
 }//最终L为有序序列
 
-void HeapAdjust(SqList*L,int s,int m)
+void MaxHeapAdjust(SqList *L,int st,int n)   //大顶堆调整,st开始节点，n总结点数
 {
-    int temp,j;
-    temp=L->r[s];
-    for (j=2*s;j<=m;j*=2)
+    int j = 2*st;
+    int temp = L->r[st];
+    // while(j<=n)
+    for (j; j <= n; j*=2)
     {
-        if (j<m&&L->r[j]<L->r[j+1])
+        if (j<n && L->r[j] < L->r[j+1])
         {
             ++j;
         }
-        if (temp>=L->r[j])
+        if (temp >= L->r[j])
         {
             break;
         }
-        L->r[s]=L->r[j];
-        s=j;
+        L->r[st] = L->r[j];
+        st = j;
     }
-    L->r[s]=temp;//插入
+    L->r[st] = temp;//插入
 }
 
-//归并排序，占用内存较多
+//归并排序O(n*log2n) ，占用内存较多
 void MergeSort(SqList*L)
 {
     MSort(L->r,L->r,1,L->length);
 }
 
-void MSort(int SR[],int TR1[],int s,int t)
+void MSort(int SR[],int TR1[],int s,int t)  //s-start, t-lenth
 {
     int m;
     int TR2[MAXSIZE+1];
@@ -885,47 +857,53 @@ void MSort(int SR[],int TR1[],int s,int t)
     }
     else
     {
-        m=(s+t)/2;//将SR[s……t]平分为SR[s……m]和ST[m+1……t]
-        MSort(SR,TR2,s,m);//递归将SR[s……m]归并为有序的TR2[s……m]
-        MSort(SR,TR2,m+1,t);//递归将SR[m+1……t]归并为有序TR2[m+1……t]
-        merge(TR2,TR1,s,m,t);//将TR2[s……m]和TR2[m+1……t]归并到TR1[s……t]
+        m=(s+t)/2;              //将SR[s……t]平分为SR[s……m]和ST[m+1……t]
+        MSort(SR,TR2,s,m);      //递归将SR[s……m]归并为有序的TR2[s……m]
+        MSort(SR,TR2,m+1,t);    //递归将SR[m+1……t]归并为有序TR2[m+1……t]
+        Merge(TR2,TR1,s,m,t);   //将TR2[s……m]和TR2[m+1……t]归并到TR1[s……t]
     }
 }
 
-void Merge(int SR[],int TR[],int i,int m,int n)//将有序的SR[s……m]和ST[m+1……t]归并为有序的TR[i……n]
+void Merge(int SR[],int TR[],int i,int m,int n)//将有序的SR[i……m]和SR[m+1……t]归并为有序的TR[i……n]
 {
-    int j,k,l;
-    for (j=m+1,k=i;i<=m&&j<=n;k++)//将SR中记录由小到大归并乳TR
+    int j=m+1 ,k ;
+    while(i<=m && j<=n)//将SR中记录由小到大归并入TR
     {
-        if (SR[i]<SR[j])
-        {
-            TR[k]=SR[i++];
-        }
+        if (SR[i] < SR[j])
+            TR[k++] = SR[i++];
         else
-            TR[k]=SR[j++];
+            TR[k++] = SR[j++];
     }
 
-    if(i<=m)//将剩余的SR[i……m]复制到TR
-    {
-        for (l=0;l<=m-i;l++)
-        {
-            TR[k+l]=SR[i+1];
-        }
+    while (i <= m)
+        TR[k++] = SR[i++];
 
-    }
-
-    if (j<=n)//将剩余的SR[j……n]复制到TR
-    {
-        for (l=0;l<=n-j;l++)
-        {
-            TR[k+l]=SR[j+1];
-        }
-    }
+    while (j <= n)
+        TR[k++] = SR[j++];
 }
+
+void MemeryArray(int a[], int n, int b[], int m, int c[])  //将a,b合并到c; n=a.lenth, m=b.lenth
+{  
+    int i, j, k;  
+    i = j = k = 0;  
+    while (i < n && j < m)  
+    {  
+        if (a[i] < b[j])  
+            c[k++] = a[i++];  
+        else  
+            c[k++] = b[j++];   
+    }  
+  
+    while (i < n)  
+        c[k++] = a[i++];  
+  
+    while (j < m)  
+        c[k++] = b[j++];  
+} 
 
 void MergeSort2(SqList* L)//不用递归的归并排序
 {
-    int* TR=(int*)malloc(L->length*sizeof(int));//申请额外空间
+    int* TR = (int*)malloc(L->length*sizeof(int));//申请额外空间
     int k=1;
     while (k<L->length)
     {
@@ -951,77 +929,51 @@ void MergePass(int SR[],int TR[],int s,int n)//将SR中相邻长度为s的子序
 
     }
     else
+    {
         for (j=i;j<=n;j++)
-        {
             TR[j]=SR[j];
-        }
+    }
 }
 
-//快速排序
+//快速排序O(n*log2n) ,分治法。
 void QuickSort(SqList*L)
 {
     QSort(L,1,L->length);
 }
 void QSort(SqList*L,int low,int high)//对顺序表L中的子序列L->r[low...high]做快速排序
 {
-    int pivot;
     if (low<high)
     {
-        pivot=Partition(L,low,high);//将L->r[low...high]一分为二,算出枢轴值pivot
-        QSort(L,low,pivot-1);//对低子表递归排序
-        QSort(L,pivot+1,high);//对高子表递归排序
+        //        pivot=Partition(L,low,high);//将L->r[low...high]一分为二,算出枢轴值pivot
+        int i = low, j = high;
+        L->r[0] = L->r[i];                      //用子表的第一个记录做枢轴记录，存于0，其位置i为坑位
+        while (i<j)
+        {
+            while (i<j && L->r[j] >= L->r[0])   //倒序查找较小值，并填入r[i]
+                j--;                            //找到较小值，并记录下一个大坑位置
+            if (i<j)
+                L->r[i++] = L->r[j];            //将较小值填入小坑位r[i]中，i++右移一位减少一次判断
+            while (i<j && L->r[i] <= L->r[0])   //正序查找较大值，并填入r[j]
+                i++;                            //找到较大值，并记录下一个小坑位置
+            if (i<j)
+                L->r[j--] = L->r[i];            //将较大值填入大坑位r[j]中，j--左移一位减少一次判断
+        }
+        L->r[i] = L->r[0];                      //相对中枢值查找完毕，i=j将中枢值填入坑位
+        QSort(L,low,i-1);                       //对低子表递归排序
+        QSort(L,i+1,high);                      //对高子表递归排序
     }
 }
 
-//partition作用就是选取序列当中的一个关键字，想尽办法将其放到一个位置，使得它左边的值都比它小，右边都比它大，这样的关键字称为枢轴
-int Partition(SqList*L,int low,int high)
+//partition作用就是选取序列当中的一个关键字，正序逆序挖坑填入，使得它左边的值都比它小，右边都比它大，这样的关键字称为枢轴
+int Partition(SqList*L,int low,int high)//优化不必要的交换
 {
-    int pivotKey;
-    //优化选取枢轴值 三值取中 开始
- //     int m=low+(high-low)/2;
- //     if (L->r[low]>L->r[high])
- //     {
- //         swap(L,low,high);
- //     }
- //     if (L->r[m]>L->r[high])
- //     {
- //         swap(L,high,m);
- //     }
- //     if (L->r[m]>L->r[low])
- //     {
- //         swap(L,m,low);
- //     }
-    //此时L->r[low]已经为整个序列左中右三个关键字的中间值
-    //优化选取枢轴值 三值取中 结束
-
-    pivotKey=L->r[low];//用子表的第一个记录做枢轴记录
-    while (low<high)//从表的两端交替向中间扫描
-    {
-        while (low<high&&L->r[high]>=pivotKey)
-        {
-            high--;
-        }
-        swap(L,low,high);//将比枢轴记录小的记录交换到低端
-        while (low<high&&L->r[low]<=pivotKey)
-        {
-            low++;
-        }
-        swap(L,low,high);//将比枢轴记录大的记录交换到高端
-    }
-    return low;//返回枢轴所在位置
-}
-
-int Partition1(SqList*L,int low,int high)//优化不必要的交换
-{
-    int pivotkey;
-    pivotkey=L->r[low];
-    L->r[0]=pivotkey;//将枢轴值备份到L->r[0]
+    L->r[0] = L->r[low];//将枢轴值备份到L->r[0]
     while (low<high)
     {
-        while(low<high&&L->r[high]>=pivotkey)
+        while(low<high && L->r[high] >= L->r[low])
             high--;
         L->r[low]=L->r[high];//采用替换而不是交换的方式进行操作
-        while(low<high&&L->r[low]<=pivotkey)
+        while(low<high && L->r[low] <= L->r[low])
             low++;
         L->r[high]=L->r[low];//采用替换而不是交换的方式进行操作
     }
@@ -1030,39 +982,24 @@ int Partition1(SqList*L,int low,int high)//优化不必要的交换
 }
 
 //优化小数组时的排序方案，小数组排序直接插入式简单排序中性能最好的
-#define MAX_LENGTH_INSERT_SORT 7
-void QSort(SqList&L,int low,int high)
-{
-    int pivot;
-    if ((high-low)>MAX_LENGTH_INSERT_SORT)
-    {
-        pivot=Partition(&L,low,high);
-
-        QSort(&L,low,pivot-1);
-        QSort(&L,pivot+1,high);
-    }
-    else
-        InsertSort(&L);
-}
-
 //优化递归操作，用到了以上的优化内容，可以说是总的优化
-void QSort1(SqList*L,int low,int high)
+#define MAX_LENGTH_INSERT_SORT 7
+void FSort(SqList*L,int low,int high)
 {
-    int pivot;
     if ((high-low)>MAX_LENGTH_INSERT_SORT)
     {
         while(low<high)
         {
-            pivot=Partition1(L,low,high);
-            QSort1(L,low,pivot-1);
+            int pivot=Partition(L,low,high);
+            FSort(L,low,pivot-1);
             low=pivot+1;
         }
     }
     else
         InsertSort(L);
 }
+//排序总结http://download.csdn.net/detail/morewindows/4560056
 
-//图
 //图的存储结构
 //邻接矩阵   用两个数组来表示图，一维数组存储顶点信息，二维数组存储边或弧的信息
 typedef char VertexType;
