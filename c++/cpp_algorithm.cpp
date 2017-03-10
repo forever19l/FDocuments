@@ -944,7 +944,7 @@ void QSort(SqList*L,int low,int high)//对顺序表L中的子序列L->r[low...hi
 {
     if (low<high)
     {
-        //        pivot=Partition(L,low,high);//将L->r[low...high]一分为二,算出枢轴值pivot
+        // pivot=Partition(L,low,high);//将L->r[low...high]一分为二,算出枢轴值pivot
         int i = low, j = high;
         L->r[0] = L->r[i];                      //用子表的第一个记录做枢轴记录，存于0，其位置i为坑位
         while (i<j)
