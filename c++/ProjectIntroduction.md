@@ -14,9 +14,12 @@
   - 6.handle Console close event to delete zmq object
 
 ##2017.2.27
-- Add BeckHoff project, it's a TCP client and import lua interface 
+- Add BeckHoff project, it's a TCP client and import lua interface   
 
 ##2017.2.28
 - change BeckHoff to BeckHoffDll
 	- BeckHoff can't make release version, caused by the stdafx.
-	- The old BeckHoff.dll need the msvcr120d.dll and msvcp120d in SysWOW64, because it's debug version.
+	- The old BeckHoff.dll need the msvcr120d.dll and msvcp120d in SysWOW64, because it's debug version.  
+
+##2017.6.13
+- add CommonLib
