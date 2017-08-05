@@ -19,3 +19,8 @@ add projects.
 ##2017.2.25
 - /spider/taobao_spider.py
 	- don't parse the classified of taobao, because it has too much different xml style. Now, we can search what we want directly.
+
+##2017.8.5
+- /spider/pixiv.py
+	- for get pic from pixiv
+	- bug to be fix:('Connection aborted.', BadStatusLine("''",))
