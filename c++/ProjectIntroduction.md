@@ -23,3 +23,6 @@
 
 ##2017.6.13
 - add CommonLib
+
+##2017.10.21
+- add dijkstra algorithm for the shortest path problem
