@@ -1,0 +1,38 @@
+2018-05-15 16:19:39,180 [ ERROR ]   MES->127.0.0.1:7600 -> [Errno 61] Connection refused
+2018-05-15 16:19:39,181 [ ERROR ]   PLC_L01.OP020->127.0.0.1:7601 -> [Errno 61] Connection refused
+2018-05-15 16:20:50,604 [ ERROR ]   MES->127.0.0.1:7600 -> [Errno 61] Connection refused
+2018-05-15 16:20:50,604 [ ERROR ]   PLC_L01.OP020->127.0.0.1:7601 -> [Errno 61] Connection refused
+2018-05-15 16:21:04,397 [ ERROR ]   MES->127.0.0.1:7600 -> [Errno 61] Connection refused
+2018-05-15 16:21:04,397 [ ERROR ]   PLC_L01.OP020->127.0.0.1:7601 -> [Errno 61] Connection refused
+2018-05-15 16:22:46,822 [ ERROR ]   MES->127.0.0.1:8800 -> [Errno 61] Connection refused
+2018-05-15 16:22:46,823 [ ERROR ]   PLC_L01.OP020->127.0.0.1:8901 -> [Errno 61] Connection refused
+2018-05-15 16:24:43,187 [ ERROR ]   MES->127.0.0.1:8800 -> [Errno 61] Connection refused
+2018-05-15 16:24:43,187 [ ERROR ]   PLC_L01.OP020->127.0.0.1:8901 -> [Errno 61] Connection refused
+2018-05-15 16:24:53,736 [ ERROR ]   MES->127.0.0.1:8800 -> [Errno 61] Connection refused
+2018-05-15 16:24:53,736 [ ERROR ]   PLC_L01.OP020->127.0.0.1:8901 -> [Errno 61] Connection refused
+2018-05-15 16:25:08,392 [ ERROR ]   MES->127.0.0.1:8800 -> [Errno 61] Connection refused
+2018-05-15 16:25:08,393 [ ERROR ]   PLC_L01.OP020->127.0.0.1:8901 -> [Errno 61] Connection refused
+2018-05-15 16:25:26,658 [ ERROR ]   MES->127.0.0.1:8800 -> [Errno 61] Connection refused
+2018-05-15 16:25:26,658 [ ERROR ]   PLC_L01.OP020->127.0.0.1:8901 -> [Errno 61] Connection refused
+2018-05-15 17:10:43,059 [ INFO ]   Start Server to spy 127.0.0.1:8901
+2018-05-15 17:10:52,761 [ INFO ]   Start Server to spy 127.0.0.1:8901
+2018-05-15 17:10:52,762 [ INFO ]   Start Server to spy 127.0.0.1:8800
+2018-05-15 17:13:14,691 [ INFO ]   Start Server to spy 127.0.0.1:8901
+2018-05-15 17:16:15,769 [ INFO ]    :-) MES->127.0.0.1:8800Success!!!!!!
+2018-05-15 17:16:15,769 [ INFO ]    :-) PLC_L01.OP020->127.0.0.1:8901Success!!!!!!
+2018-05-15 17:16:15,769 [ INFO ]   start read background thread || MES -> MES->127.0.0.1:8800
+2018-05-15 17:16:15,770 [ INFO ]   start read background thread || PLC_L01.OP020 -> PLC_L01.OP020->127.0.0.1:8901
+2018-05-15 17:16:15,771 [ INFO ]    :-) 127.0.0.1 Connected Success!!!!!!
+2018-05-15 17:21:53,210 [ ERROR ]   :-( socket to (PLC_L01.OP020->127.0.0.1:8901) disconnect
+2018-05-15 17:21:53,212 [ INFO ]   Exit read background thread
+2018-05-15 17:24:06,524 [ INFO ]   Start Server to spy 127.0.0.1:8901
+2018-05-15 17:24:06,525 [ INFO ]   Start Server to spy 127.0.0.1:8800
+2018-05-15 17:24:34,696 [ INFO ]    :-) MES->127.0.0.1:8800Success!!!!!!
+2018-05-15 17:24:34,696 [ INFO ]    :-) PLC_L01.OP020->127.0.0.1:8901Success!!!!!!
+2018-05-15 17:24:34,696 [ INFO ]   start read background thread || MES -> MES->127.0.0.1:8800
+2018-05-15 17:24:34,696 [ INFO ]   start read background thread || PLC_L01.OP020 -> PLC_L01.OP020->127.0.0.1:8901
+2018-05-15 17:24:34,696 [ INFO ]    :-) 127.0.0.1 Connected Success!!!!!!
+2018-05-15 17:27:58,638 [ ERROR ]   :-( socket to (PLC_L01.OP020->127.0.0.1:8901) disconnect
+2018-05-15 17:27:58,640 [ INFO ]   Exit read background thread
+2018-05-15 17:39:10,291 [ ERROR ]   MES->127.0.0.1:8800 -> [Errno 61] Connection refused
+2018-05-15 17:39:10,292 [ ERROR ]   PLC_L01.OP020->127.0.0.1:8901 -> [Errno 61] Connection refused
